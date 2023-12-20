@@ -39,13 +39,19 @@ Filename: volunteerform.php
 </html>
 
 <?php
-$occupation = $_POST["occupation"];
-$skill = $_POST["skill"];
-$cleaning = $_POST["cleaning"];
+$occupation = null;
+$skill = null;
+$cleaning = null;
+
 
 if(isset($_POST['volunteersubmitbutton'])){
-    echo "{$occupation}, {$skill}, {$cleaning}";
-} else {
-    echo "Please fill in the form!";
+    if(empty($_POST["occupation"])||empty($_POST["skill"])||empty($_POST["cleaning"])){
+        echo "Please fill in the form!";
+    } else {
+        $occupation = $_POST["occupation"];
+        $skill = $_POST["skill"];
+        $cleaning = $_POST["cleaning"];
+        echo "{$occupation}, {$skill}, {$cleaning}";
+    }
 }
 ?>
