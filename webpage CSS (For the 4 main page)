@@ -1,0 +1,346 @@
+
+
+body{
+    margin: 0px;
+    display: flow-root;
+}
+
+.clear{
+    clear:both;
+}
+
+
+
+/* TOOLBAR */
+
+
+
+#toolbar{
+    background-color: white;
+    border: solid 3px;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    z-index: 1;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+#websitename{
+    margin-top: 0px;
+    margin-left: 120px;
+    text-align: left;
+    color: rgb(250, 159, 79);
+    position: absolute;
+}
+
+#functiongroup{
+    margin-left: 640px;
+    margin-top: 100px;
+}
+
+.function{
+    height: 30px;
+    width: 140px;
+    float: left;
+    padding: 0px;
+    background-color:white;
+    margin-left: 10px;
+    position: inline-block;
+    cursor: pointer;
+}
+
+.function:hover{
+    background-color: lightgrey;
+    box-shadow: 0px 0px 15px grey;
+}
+
+#account{
+    height: 40px;
+    width: 40px;
+    border: solid 2px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 95px;
+    margin-left: 1275px;
+}
+
+#pfpblock{
+    width: 160px;
+    height: 235px;
+    background-color: white;
+    position: absolute;
+    border: solid 2px;
+    left: -70px;
+    top: 40px;
+    display: none;
+    visibility: none;
+    padding: 10px;
+}
+
+#account:hover #pfpblock{
+    display: block;
+    visibility: visible;
+}
+
+#account:hover{
+    background-color: lightgrey;
+    border: solid 2px grey;
+}
+
+#accountpfp{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+#userpfp{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    border: solid 2px;
+    border-radius: 50%;
+    left: 18px;
+    top: 18px;
+}
+
+#accountinfo{
+    width: 158px;
+    height: 15px;
+    position: absolute;
+    top: 165px;
+    text-align: center;
+    font-size: 0.9em;
+    overflow: clip;
+    overflow-clip-margin: 15px;
+}
+
+.accountbtn{
+    width: 158px;
+    height: 25px;
+    border: outset 2px black;
+    border-radius: 3px;
+    display: block;
+}
+
+#editprofilebtn{
+    background-color: white;
+    position: absolute;
+    top: 195px;
+}
+
+#logoutbtn{
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 225px;
+}
+
+.accountbtn:hover{
+    border: inset 2px white;
+}
+
+#toolbarspace{
+    width: 100%;
+    height: 150px;
+    visibility: hidden;
+}
+
+
+
+
+/* Volunteer Page */ 
+
+
+
+main{
+    height: auto;
+    width: 1000px;
+    border: solid 3px;
+    background-color: white;
+    margin: auto;
+    padding: 15px;
+    display: flow-root;
+}
+
+#whyimg{
+    height: 200px;
+    width: 200px;
+    border: solid 2px;
+    margin: 10px;
+    float: left;
+
+}
+
+#whatimg{
+    height: 200px;
+    width: 200px;
+    border: solid 2px;
+    margin: 10px;
+    float: right;
+
+}
+
+#howimg{
+    height: 200px;
+    width: 200px;
+    border: solid 2px;
+    margin: 10px;
+    float: left;
+
+}
+
+#whereimg{
+    height: 200px;
+    width: 200px;
+    border: solid 2px;
+    margin: 10px;
+    float: right;
+}
+
+#endsection{
+    height: 150px;
+    width: auto;
+    border: solid 3px;
+    background-color: white;
+    position: relative;
+    bottom: 0px;
+}
+
+#signupbtnholder{
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    border: solid 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 675px;
+    text-align: center;
+}
+
+#signupbtn{
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+#signupbtn:hover{
+    background-color: lightgrey;
+    box-shadow: 0px 0px 25px grey;
+}
+
+@keyframes raynbow{
+    14%{background-color: red;}
+    28%{background-color: orange;}
+    42%{background-color: yellow;}
+    56%{background-color: green;}
+    70%{background-color: rgb(37, 117, 255);}
+    85%{background-color: blue;}
+    100%{background-color: purple;}
+}
+
+#signupbtn:active{
+    animation: raynbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+
+/* Adopt/Foster Page */
+
+
+
+
+#main2{
+    width: 905px;
+    height: auto;
+    border: solid 3px;
+    margin: auto;
+    position: relative;
+    overflow: auto;
+}
+
+#petbar{
+    width: 905px;
+    height: 100px;
+    border-left: solid 3px;
+    border-right: solid 3px;
+    margin: auto;
+    position: relative;
+}
+
+#petbuttongroup{
+    position: absolute;
+    width: 612px;
+    height: 70px;
+    margin-top: 25px;
+    margin-left: 147px;
+}
+
+#petbutton{
+    height: 50px;
+    width: 120px;
+    margin-left: 20px;
+    position: inline-block;
+    border: outset 3px lightgrey;
+    background-color: white;
+    float: left;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#petbutton:hover{
+    background-color: lightgrey;
+    border: inset 3px grey;
+}
+
+#petframe{
+    width:300px;
+    height: 350px;
+    border: solid 1px;
+    float: left;
+    position: relative;
+}
+
+#petbox{
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    border: solid 2px;
+    margin: 30px 29px;
+}
+
+#petinfo{
+    width: 240px;
+    height: 40px;
+    position: absolute;
+    top: 274px;
+    left: 30px;
+    text-align: center;
+}
+
+
+
+/* Donation Page */
+
+
+
+#donationposter{
+    height: 750px;
+    width: 1200px;
+    margin-left: auto;
+}
