@@ -253,7 +253,7 @@ main{
 
 #signupbtn:active{
     animation: raynbow;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
 }
 
