@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer</title>
+    <link rel="stylesheet" href="webpagestyle.css">
+    <script src="https://kit.fontawesome.com/5156eb7752.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="toolbar">
+        <div>
+            <img src="pawprinthub.jpg" alt="" id="logo">
+        </div>
+        <div id="websitename">
+            <h1>Paw Print Hub</h1><p>- Connecting Paws, Connecting Stories -</p>
+        </div>
+        <div id="functiongroup">
+            <a href="aboutus.html"><button class="function">About Us</button></a>
+            <a href="adoptfoster.html"><button class="function">Adopt/Foster</button></a>
+            <a href="volunteer.html"><button class="function">Volunteer</button></a>
+            <a href="donation.html"><button class="function">Donation</button></a>
+        </div>
+        <div id="account">
+            <img src="smurfcat.jpg" alt="" id="accountpfp">
+            <div id="pfpblock">
+                <img src="smurfcat.jpg" alt="" id="userpfp">
+                <div id="accountinfo"><b>Lee Aik Yen</b></div>
+                <a href="">
+                    <button class="accountbtn" id="editprofilebtn">Edit Profile</button><br>
+                    <button class="accountbtn"id="logoutbtn"><b>LOGOUT</b></button>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    <div id="toolbarspace"></div>
+
+    <main>
+        <img src="box.png" alt="" id="whyimg">
+        <h3><b>Why Volunteer?</b><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quisquam earum unde quo, voluptatum obcaecati ad id tenetur voluptates, doloribus dolorem minima repellendus architecto harum eum laborum, incidunt deserunt ipsum?</h3>
+        <div class="clear"></div>
+        <img src="box.png" alt="" id="whatimg">
+        <h3><b>What we do?</b><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et consequuntur assumenda excepturi nemo dolores illum vel nesciunt ratione nostrum laboriosam amet possimus saepe, explicabo error, accusamus maiores dolor quia eaque.</h3>
+        <div class="clear"></div>
+        <img src="box.png" alt="" id="howimg">
+        <h3><b>How to do?</b><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in beatae id commodi hic esse voluptatum ipsam tempore officia dolorem doloribus obcaecati ducimus sit, sint optio fuga nemo. Repudiandae, deleniti.</h3>
+        <div class="clear"></div>
+        <img src="box.png" alt="" id="whereimg">
+        <h3><b>Where to do?</b><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus itaque placeat voluptatum deserunt error vero hic iusto, accusantium sapiente ab natus dolorum voluptatem sequi ratione quis sunt dolor cupiditate!</h3>
+        <div class="clear"></div>
+    </main>
+    <br><br><br><br>
+
+    <div id="endsection">
+        <div id="signupbtnholder">
+            <a href="volunteerform.php" target="_blank">
+                <button id="signupbtn">
+                    <h1><i class="fa-solid fa-newspaper fa-2xl"></i></h1><h2>Sign Up</h2>
+                </button>
+            </a>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>
