@@ -1,0 +1,203 @@
+/* Under header */
+.header{
+    border-color: black;
+    height: 50%;
+    min-height: 150px;
+    width: 100%;
+    background-color:rgba(204, 226, 245, 0.5);
+    
+}
+
+#logo{
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+}
+
+.name_motto{
+    float: left; 
+    margin-top: 10px; 
+    margin-left: 50px;
+    width: 300px;
+    position: relative;
+}
+
+#nav{ /*Naviagation bar*/
+    top: 50px;
+    left: 150px;
+    position: relative;
+}
+
+#nav ul{
+    text-align: center;
+    display: inline;
+    margin: 10px;
+    padding: 15px 5px 15px 0;
+}
+#nav ul li{
+    display: inline-block;
+    margin-right: -10px; 
+    position: relative;
+    padding: 10px 10px;
+    width: 130px;
+    height: 20px;
+    font-size: 20px;
+}
+#nav ul li:hover{
+    color: blueviolet;
+}
+#nav ul li ul{ 
+    padding: 0;
+    position: absolute; 
+    top: 40px;
+    left: 0;
+    width: 200px;
+    display: none;
+    opacity: 0;
+    visibility: hidden; 
+
+}
+#nav ul li ul li{
+    background: #555555;
+    display: block;
+    color: #fff;
+}
+#nav ul li ul li:hover{
+    background: #666;
+    color:beige;
+}
+#nav ul li:hover ul{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Under about us */
+.aboutus{
+    height: 550px;
+    border: 5px;
+    border-color: black;
+    font-size: large;
+    background-color: rgba(253, 243, 226, 0.5);
+    display: flex;
+}
+#aboutustext{
+    flex: 1;
+    text-align: justify;
+    padding: 20px 10px 0px 10px;
+}
+#imgaboutus{
+    height: 450px;
+    width: auto;
+    /* height: 450px;
+    width: 450px; */
+}
+
+/* Under mission and vision */
+.mvs{
+    height: 550px;
+    border: 5px;
+    border-color: black;
+    background-color: #f1f3fc;
+    /* #f4f4cd; */
+}
+
+#mvsbox{
+    height: 300px;
+    width: 450px;
+    background-color:#fce9e9;
+     /* #e2e6fb; */
+    border-radius: 30px;
+    position: relative;
+    float: left;
+    padding: 0px 20px 0 30px;
+    margin: 60px 50px 0px 120px;
+    font-size: large;
+}
+
+/* Under achievement */
+.achievement{
+    height: 550px;
+    border: 5px;
+    border-color: black;
+    background-color: azure;
+}
+
+#achievementimg{
+    border-radius: 200px;
+    border: 1px;
+    padding: 30px;
+    float: left;
+    height: 200px;
+    width: 250px;
+}
+
+#imgwrapper{
+    margin:10px 100px 0 250px;
+    width: 1400px;
+}
+
+#contenttext{
+    text-align: center;
+    font-size: 20px;
+    padding: 0 10px 0 60px;
+}
+
+/* Under operation hour */
+.opthour{
+    height: 450px;
+    border: 5px;
+    border-color: black;
+    background-color: beige;
+}
+
+.optimg{
+    width: 150px;
+    height: 150px;
+    border-radius: 120px;
+    float: left;
+    display: block;
+    margin-left: 70px;
+}
+
+#optinfo{
+    height: 200px;
+    width: 200px;
+    float: left;
+    padding: 10px 30px 0 200px;
+}
+
+#opturgents{
+    height: 300px;
+    width: 300px;
+    float: left;
+    text-align: justify;
+    padding: 10px 30px 0 200px;
+}
+
+.footer{
+    height: 135px;
+    border: 5px;
+    border-color: black;
+    background-color: #B4BDFF;
+}
+
+#footericon{
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.mainpage{
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Itim', cursive;
+}
+
+#clear{
+    clear: both;
+}
