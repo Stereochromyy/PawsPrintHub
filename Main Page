@@ -1,1 +1,47 @@
-test 123
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws Print Hub | Malaysia</title>
+    <link rel="stylesheet" href="PPH.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <a href="PawsPrintHub.html">
+            <img src="images/logo.png" alt="Paws Print Hub Logo" id="logo">
+        </a>
+
+        <div id="info">
+            <h2>Paws Print Hub</h2>
+            <p>Connecting Paws, Creating Stories</p>
+        </div>
+
+        <nav id="navbar">
+            <a href="aboutus.html">Adopt/Foster</a>
+            <a href="donation.html">Donation</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="contactus.html">Contact Us</a>
+            <div>
+                <a href="loginPPH.php"><i class="far fa-user" id="icon"></i></a>
+            </div> 
+        </nav>
+    </header>
+
+    <main>
+        <div class="box">
+            <h3>About Us</h3>
+            <p>Welcome to Paws Print Hub, where we are passionate about...</p>
+            <p>Our mission is to provide...</p>
+        </div>
+
+        <div class="box">
+            <h3>Mission & Vission</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </main>
+</body>
+</html>
