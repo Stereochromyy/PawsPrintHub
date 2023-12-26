@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google font link: Itim font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
     <title>Main Page</title>
-    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="Main Page.css"> <!--CSS for Main Page-->
 </head>
 
 <body>
@@ -21,8 +24,8 @@
         </div>
 
         <div id="nav" style="float: left;"> <!--Navigation bar-->
-            <ul>
-                <li>Adopt/Foster</li>
+            <ul><!--Add the id here for linking to other pages-->
+                <li>Adopt/Foster</li> 
                 <li>Donation</li>
                 <li>Volunteer</li>
                 <li>Contact us</li>
@@ -39,7 +42,7 @@
     </div>
     <div class="mainpage">
         <div class="aboutus" id="clear">
-            <div>
+            <div> <!--About us section-->
             <h1 style="padding: 10px 0 0 10px;">About us</h1>
             <img src="https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-cute-cat-animal-png-image_10149335.png" alt="cat image" id="imgaboutus">
             </div>
@@ -62,10 +65,10 @@
             </div>
             
         </div>
-        <div class="mvs"> <!--Mission and vision-->
-            <div style="padding: 20px 0 0 10px;"><h1>Mission and Vission</h1>
+        <div class="mvs-container"> <!--Mission and vision-->
+            <div style="padding-left: 10px;"><h1>Mission and Vission</h1>
             <p style="font-size: large;">We are dedicated to provide service as animal welfare communities with trust and respect at the forefront of our mission. Heightening socaial consciousness and civic movement.</p></div>
-            <div id="mvsbox">
+            <div class="mvs" id="mvsbox">
                 <h1>Mission</h1>
             <ul>
                 <li>Rescue and rehabilitate animals in need.</li><br>
@@ -74,7 +77,7 @@
             </ul>
             </div>
 
-            <div id="mvsbox">
+            <div class="mvs" id="mvsbox">
                 <h1>Vision</h1>
                 <ul>
                     <li>Foster a community actively engaged in animal rescue and care.</li><br>
@@ -83,29 +86,31 @@
                 </ul>
             </div>
         </div>
-        <div class="achievement">
+        <div class="achievements"> <!--Achievements section-->
             <h1 style="text-align: center;">Achievement</h1>
-            <div id="imgwrapper">
-            <div id="achievementimg">
-                <img id="achievementimg" src="https://images.unsplash.com/photo-1611003228941-98852ba62227?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFieSUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Dog">
-                <br><br>
-                <p id="contenttext">More than <br><b style="font-size: xx-large; color: rgb(39, 179, 118);">6500</b><br> had found their homes</p>
+            <div class="achievementcontainer">
+            <div class="achievement">
+                <img src="https://images.unsplash.com/photo-1611003228941-98852ba62227?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFieSUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Dog">
+                <p>More than <br><b style="font-size: xx-large; color: rgb(39, 179, 118);">6500</b><br> had found their homes
+                </p>
             </div>
-            <div id="achievementimg">
-        
-                <img id="achievementimg" src="https://img.freepik.com/free-photo/cute-domestic-kitten-sits-window-staring-outside-generative-ai_188544-12519.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703548800&semt=ais" alt="Cat">
-                <br>
-                <p id="contenttext">More than <br><b style="font-size: xx-large; color: rgb(39, 179, 118);">10,000</b><br> cats and dogs(stray and pets) neutured in Klang Valley since 2000</p>
-                
+            <div class="achievement">
+                <img src="https://img.freepik.com/free-photo/cute-domestic-kitten-sits-window-staring-outside-generative-ai_188544-12519.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703548800&semt=ais"
+                    alt="Cat">
+                <p>More than <br><b style="font-size: xx-large; color: rgb(39, 179, 118);">10,000</b><br> cats and dogs (stray
+                    and pets) neutered in Klang Valley since 2000</p>
             </div>
-            <div id="achievementimg">
-                <img id="achievementimg" src="https://www.iams.com/cdn-cgi/image/height=617,f=auto,quality=90/sites/g/files/fnmzdf3396/files/2023-02/german-sheperd-pink-collar-1360_0.jpg" alt="Dog">
-                <p id="contenttext"><br><b style="font-size: xx-large; color: rgb(39, 179, 118);">200</b><br> Fed and cared for every month</p>
-            </div>
+            <div class="achievement">
+                <img src="https://www.iams.com/cdn-cgi/image/height=617,f=auto,quality=90/sites/g/files/fnmzdf3396/files/2023-02/german-sheperd-pink-collar-1360_0.jpg"
+                    alt="Dog">
+                <p><br><b style="font-size: xx-large; color: rgb(39, 179, 118);">200</b><br> Fed and cared for every month
+                </p>
             </div>
         </div>
-        <div class="opthour"> <!--Operation hours-->
+        <div class="opthour"> <!--Operation hours section -->
             <h1 style="padding: 20px 0 0 10px;">Operation hours</h1>
+            <div class="optcontainer">
             <div id="optinfo">
                 <h2>Sunday - Closed</h2>
                 <h2>Monday-Saturday: <br> 9am - 4pm</h2>
@@ -115,26 +120,24 @@
                 <p style="font-size:x-large;">Jalan XYZ <br> Subang Jaya, <br>47100 Subang </p>
             </div>
             <div id="opturgents">
-                <h2>Animal in urgents</h2>
+                <h2 style="text-align: center;">Animal in urgents</h2><br>
                 <p>If there's any emergency, feel free to contact us at 01-2345 6789 (9am - 4pm, Monday-Saturday) to lodge your report on animals requiring our help. If the incidents occurs outside of the operating hours, here are ways you could follow:</p>
 
-                <a href="https://oacu.oir.nih.gov/system/files/media/file/2023-12/b12-PainDistress.pdf"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/219/582/small/illustration-of-book-icon-free-vector.jpg" alt="animal distress manual" class="optimg"></a>
+                <a href="https://oacu.oir.nih.gov/system/files/media/file/2023-12/b12-PainDistress.pdf" target="_blank"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/219/582/small/illustration-of-book-icon-free-vector.jpg" alt="animal distress manual" class="optimg" ></a>
             </div>
-        </div>
-        <div class="footer" id="clear">
-            <img id="logo" src="logo.jpg" alt="Logo" height="100px" width="100px">
-            <div style="padding: 50px 10px 0 20px;">
-            <div><a href="https://www.facebook.com/"><img src="https://png.pngtree.com/element_our/sm/20180515/sm_5afaf0c36298b.jpg" alt="Facebook" id="footericon"></a></div>
-
-            <div><a href="https://www.instagram.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" id="footericon"></a></div>
-
-            <div><a href="https://twitter.com/"><img src="https://store-images.s-microsoft.com/image/apps.60673.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.5d82b7eb-9734-4b51-b65d-a0383348ab1b?h=307" alt="Twitter" id="footericon"></a></div>
-            </div>
-
-            <p style="float: right; margin-top: 50px; margin-right: 10px;">Copyright &copy; 2024 Paw Print Hub Selangor. All Right Reserved.</p>
-
         </div>
     </div>
+    </div>
+    </div>
+    <div class="footer"> <!--Footer-->
+        <img id="logo" src="logo.jpg" alt="Logo" height="100px" width="100px">
+        <div class="footer-icons">
+            <div><a href="https://www.facebook.com/" target="_blank"><img src="https://png.pngtree.com/element_our/sm/20180515/sm_5afaf0c36298b.jpg" alt="Facebook" class="footer-icons"></a></div>
+            <div><a href="https://www.instagram.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" class="footer-icons"></a></div>
+            <div><a href="https://twitter.com/" target="_blank"><img src="https://store-images.s-microsoft.com/image/apps.60673.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.5d82b7eb-9734-4b51-b65d-a0383348ab1b?h=307" alt="Twitter" class="footer-icons"></a></div>
+        </div>
+        <p class="copyright">Copyright &copy; 2024 Paw Print Hub Selangor. All Right Reserved.</p>
+    </div>
+    </div>
 </body>
-
 </html>
