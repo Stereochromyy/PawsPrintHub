@@ -52,7 +52,6 @@ body {
 
 #navbar a {
     margin-right: 60px;
-    /* Remove hyperlink line */
     text-decoration:none;
     color:#333;
     font-weight: 500;
