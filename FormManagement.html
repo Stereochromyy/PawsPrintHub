@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Management</title>
+    <link rel="stylesheet" href="PPH.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background: url(images/background.jpg) no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-size: 17px;
+        }
+
+        #header {
+            position: fixed;
+            height: 120px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #EEF5FF;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+        }
+
+        #logo {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            display:inline-block;
+        }
+
+        /* Slogan, Motto*/
+        #info {
+            display: inline-block;
+            margin-left: 110px;
+            position: fixed;
+        }
+
+        /* Navigation bar */
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1;
+        }
+
+        #navbar a {
+            margin-right: 60px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        #navbar a:hover {
+            color: blueviolet;
+        }
+
+        #icon {
+        margin-right: 90px;
+        font-size: 19px;
+        }
+        
+        #fbody {
+            overflow: hidden;
+        }
+
+        .fmbox {
+            margin: auto;
+            height: auto;
+            width: 70%;
+            margin-top: 125px;
+            margin-bottom: -90px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: relative;
+            padding: 50px;
+            border-radius: 25px;
+            border: 2px solid;
+        }
+
+        .fmbox a {
+            text-decoration: none;
+            text-align: center;
+            font-size: large;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="fbody">
+    <header id="header">
+        <a href="AdminHomePage.html">
+            <img src="images/logo.png" alt="Paws Print Hub Logo" id="logo">
+        </a>
+
+        <nav id="navbar">
+            <a href="#">Donation Record</a>
+            <a href="FormManagement.html">Form Management</a>
+            <a href="#">User Management</a>
+            <a href="#">Pet Management</a>
+            <div>
+                <a href=""><i class="far fa-user" id="icon"></i></a>
+            </div> 
+        </nav>
+    </header>
+
+    <main>
+       <div class="fmbox">
+            <a href="#">
+                <h2>View Adoption Application</h2>
+            </a>
+        </div>
+        <div class="fmbox">
+            <a href="#">
+                <h2>View Fostering Application</h2>
+            </a>
+        </div>
+        <div class="fmbox">
+            <a href="VolunteerApplication.html">
+                <h2>View Volunteer Application</h2>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
