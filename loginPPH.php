@@ -1,14 +1,6 @@
 <?php
-    $server = '127.0.0.1';
-    $user = 'root'; //default user
-    $password = '';
-    $database = 'pph';
-
-    $connection = mysqli_connect($server, $user, $password, $database);
-
-    if ($connection === false) {
-        die("Database connection failed: ". mysqli_connect_error());
-    }
+    session_start();
+    include 'dbConn.php';
 
     if (isset($_POST['btnLogin'])) {
         $email = $_POST['txtEmail'];
@@ -18,7 +10,12 @@
         if (mysqli_num_rows($results) == 1) {
             $row = mysqli_fetch_assoc($results);
             echo 'record found';
-            header("Location: PawsPrintHub.html");
+            
+            //Set session variables
+            $_SESSION['email'] = $row['email_address'];
+            $_SESSION['password'] = $row['password'];
+
+            header("Location: PawsPrintHub.php");
             exit();
         } else {
             echo 'record not found';
