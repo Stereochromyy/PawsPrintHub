@@ -1,0 +1,6 @@
+<?php
+    session_start(); //log out and unset with destroy the session
+    session_unset();
+    session_destroy();
+    header("Location: Main Page.php"); // go back to main page
+?> 
