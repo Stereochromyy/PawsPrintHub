@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,14 +31,26 @@
         <div id="nav" style="float: left;"> <!--Navigation bar-->
             <ul><!--Add the id here for linking to other pages-->
                 <li>Adopt/Foster</li> 
-                <li>Donation</li>
+                <li><a href="Donation Portal.html" target="_blank"> Donation</a></li>
                 <li>Volunteer</li>
-                <li>Contact us</li>
+                <li><a href="#contactus">Contact us</a></li>
                 <li id="clear"><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
                     <ul>
-                        <li>Log in/Sign Up</li>
-                        <li>View profile</li>
-                        <li>Log Out</li>
+                        
+                        <?php
+                            if (!isset($_SESSION['email'])){                    
+                        ?>
+                            <li><a href="loginPPH.php" target="_blank">Log in/Sign Up</a></li>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <li><a href="User Profile Structure.php">View profile</a></li>
+
+                            <li><a href="Log Out.php"> Log Out</a></li>
+                        <?php        
+                            }
+                        ?>  
                     </ul>
                     </li>
             </ul>
@@ -108,7 +125,7 @@
                 </p>
             </div>
         </div>
-        <div class="opthour"> <!--Operation hours section -->
+        </a><div class="opthour" id="contactus"> <!--Operation hours section -->
             <h1 style="padding: 20px 0 0 10px;">Operation hours</h1>
             <div class="optcontainer">
             <div id="optinfo">
