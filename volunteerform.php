@@ -1,9 +1,13 @@
 <?php
+    session_start();
     include 'dbConn.php';
+
+    $email = $_SESSION['email'];
+    $password =  $_SESSION['password'];
 
     if (isset($_POST['volunteersubmitbutton'])) {
         // Storing under variable
-        $past_experience = $_POST['level'];
+        $past_experience = $_POST['comment'];
         $emergency_contact_num = $_POST['emergencyContact'];
         $date = date("Y/m/d");
 
@@ -46,12 +50,21 @@
         </p>
 
         <form action="" method="post" id="vform">
-            <h3>Question 1: <br>Have you had any previous experience with animal volunteering?</h3>
-            <input type="radio" name="level" value = "beginner" required> Beginner <br>
-            <input type="radio" name="level" value = "intermediate"> Intermediate <br>
-            <input type="radio" name="level" value = "advanced"> Advanced <br>
-            <input type="radio" name="level" value = "none"> None<br>
-            
+        <?php
+        //include("checkaccount.php");
+        //if(!account){
+        //}
+        if (!isset($_SESSION['email']) || $_SESSION['email'] === null || !isset($_SESSION['password']) || $_SESSION['password'] === null) { 
+            header('Location: loginPPH.php');        
+            ?>
+            <h1>Name</h1>
+            <?php
+        }
+        else{
+
+        ?>
+            <h3>Question 1: <br>Could you share and describe any previous experience you have with animal volunteering?</h3>
+            <textarea name="comment" form="vform" cols="100" rows="5"></textarea>
             <br>
 
             <h3>Question 2: <br>In case of an emergency, please provide the contact number of someone we can reach out to.</h3>
@@ -62,6 +75,10 @@
 
             <input type="submit" value="Submit" id="vsubmitbtn"  name="volunteersubmitbutton">
         </form>
+        <?php
+        }
+   
+    ?>
     </main>
 </body>
 </html>
