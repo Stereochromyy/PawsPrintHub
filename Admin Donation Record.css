@@ -128,16 +128,38 @@ li a:visited{
     border: 1px solid black;
     border-radius: 20px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.content h3{
+    margin-left: 22%;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.content img{
+    height: 120px;
+    width: 120px;
+    margin-top: 120px;
+    margin-left: -45%;
+}
+
+.content p{
+    margin-top: 150px;
+    margin-left: 10%;
+    font-size: larger;
 }
 
 .record{
-    height: 100px;
+    height: auto;
     width: 85%;
     min-width: 400px;
     border: 1px solid black;
     margin: 30px auto;
     display: flex;
     flex-direction: row;
+    clear: both;
 }
 
 .profile{
@@ -156,4 +178,16 @@ li a:visited{
 p{
     margin-top: 10px;
     margin-left: 20px;
+}
+
+.option{
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+}
+
+.donation{
+    margin-top: 35px;
+    float: right;
+    margin-left: 30px;
 }
