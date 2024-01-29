@@ -38,7 +38,7 @@
                     <ul>
                         
                         <?php
-                            if (!isset($_SESSION['email'])){                    
+                            if(!isset($_SESSION['email']) || $_SESSION['email'] === null || !isset($_SESSION['password']) || $_SESSION['password'] === null){                    
                         ?>
                             <li><a href="loginPPH.php" target="_blank">Log in/Sign Up</a></li>
                         <?php
