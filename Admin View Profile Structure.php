@@ -152,7 +152,7 @@
                 <h4>Address:</h4>
                 <div>
                 <textarea name="txtAddress" id="" cols="30" rows="10" readonly><?php echo $address; ?></textarea>
-            </div><br><br><br>
+            </div><br><br><br><br>
 
             <div>
                 <h4>Adopted Pet:</h4>
