@@ -260,7 +260,7 @@
                 <textarea name="txtAddress" id="" cols="30" rows="10"><?php echo $address; ?></textarea>
                     
                 </div>
-            </div><br><br><br>
+            </div><br><br><br><br>
             <div>
                 <h4>Adopted Pet:</h4>
                 <div class="petimage">
