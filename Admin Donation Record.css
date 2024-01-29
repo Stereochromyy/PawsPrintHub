@@ -130,7 +130,7 @@ li a:visited{
 }
 
 .info{ /*Adjust the content position*/
-    margin: 0 auto;
+    margin: 120px auto;
     width: 80%;
     max-width: 1000px;
     height: 70%;
@@ -150,6 +150,7 @@ li a:visited{
     background-color: rgb(223, 247, 242); 
     text-align: center;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 .content{
