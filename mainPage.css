@@ -69,21 +69,34 @@ body{
     display: none;
     opacity: 0;
     visibility: hidden; 
-
 }
 #nav ul li ul li{
-    background: #555555;
+    background: white;
     display: block;
-    color: #fff;
+    color: black;
 }
 #nav ul li ul li:hover{
-    background: #666;
+    background: whitesmoke;
     color:beige;
 }
 #nav ul li:hover ul{
     display: block;
     opacity: 1;
     visibility: visible;
+}
+
+a{
+    color: #121212;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blueviolet;
+    text-decoration: none;
+}
+a:visited{
+    color: #121212;
+    text-decoration: none;
 }
 
 /* Under about us */
