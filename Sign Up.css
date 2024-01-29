@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body{
-    /* background-color: #EEF5FF; */
-    font-family: 'Itim', cursive;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: #f5f9ff; */
     background-color: snow;
 }
 
@@ -29,7 +29,7 @@ body{
     float: left; 
     margin-top: 10px; 
     margin-left: 50px;
-    width: 300px;
+    width: 350px;
     position: relative;
 } 
 
@@ -44,7 +44,7 @@ body{
 .info{ /*Adjust the content position*/
     margin: 10px auto;
     width: 80%;
-    max-width: 700px;
+    max-width: 730px;
     height: 70%; 
     display: flex;
     flex-direction: column;
@@ -72,7 +72,7 @@ input[type=text], input[type=email], input[type=password], input[type=date]{
     background: rgb(228, 227, 227,0.5);
     color: #312e2e;
     border-radius: 20px;
-    font-family: Itim, cursive;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
 
@@ -151,7 +151,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, inp
     padding: 10px;
     margin-top: 20px;
     margin-left: 180px;
-    height: 250px;
+    height: 300px;
     width: fit-content;
     border-radius: 20px;
 }
