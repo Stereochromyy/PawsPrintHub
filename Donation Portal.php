@@ -1,43 +1,55 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google font link: Itim font style -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    
-    <title>Donation Page</title>
+    <title>Paws Print Hub | Malaysia</title>
     <link rel="stylesheet" href="Main Page.css">
     <link rel="stylesheet" href="Donation Portal.css">
 </head>
+
 <body>
-    <div class="header">
-        
-        <img id="logo" src="logo.jpg" alt="Logo" height="100px" width="100px">
-        <div class="name_motto"> <!--Name and motto-->
-            <h2>Paw Print Hub</h2>
-            <h4>- Connecting Paws, Connecting Stories -</h4>
+    <header id="header">
+        <a href="Main Page.php">
+            <img src="images/logo.png" alt="Paws Print Hub Logo" id="logo">
+        </a>
+
+        <div id="info"> <!--Name and Motto-->
+            <h2>Paws Print Hub</h2>
+            <p>Connecting Paws, Creating Stories</p>
         </div>
 
-        <div id="nav" style="float: left;"> <!--Navigation bar-->
-            <ul><!--Add the id here for linking to other pages-->
-                <li>Adopt/Foster</li> 
-                <li>Donation</li>
-                <li>Volunteer</li>
-                <li><a href="Main Page.html#contactus">Contact us</a></li>
-                <li id="clear"><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
+        <nav id="nav" style="float: left;">
+            <ul>
+                <li><a href="adoptfoster.php">Adopt/Foster</a></li>
+                <li><a href="Donation Portal.php">Donation</a></li>
+                <li><a href="volunteer.php">Volunteer</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+                <li><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo">
                     <ul>
-                        <li><a href="Sign Up.php" target="_blank">Log in/Sign Up</a></li>
-                        <li>View profile</li>
-                        <li>Log Out</li>
+                        <?php
+                            if (!isset($_SESSION['email'])){                    
+                        ?>
+                            <li><a href="loginPPH.php" target="_blank">Log in/Sign Up</a></li>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <li><a href="User Profile Structure.php">View profile</a></li>
+
+                            <li><a href="logout.php"> Log Out</a></li>
+                        <?php        
+                            }
+                        ?> 
                     </ul>
-                    </li>
+                </li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <!-- Rectangle for design purpose -->
     <div class="rectangle"> </div>
@@ -67,7 +79,7 @@
 
     <!-- Footer for additional info -->
     <div id="footer">
-        <p style="margin-left: 30px;">If you have any enquiries, feel free to drop us a message at 01-2345 6789 or email us at pawprinthub@gmail.com. <br><br> *All donations are tax-exempted. You will be mailed a tax-exempt receipt within 2-3 weeks.</p>
+        <p style="margin-left: 30px; padding-top:10px;">If you have any enquiries, feel free to drop us a message at 01-2345 6789 or email us at pawprinthub@gmail.com. <br><br> *All donations are tax-exempted. You will be mailed a tax-exempt receipt within 2-3 weeks.</p>
 
         <footer>Copyright &copy; 2024 Paw Print Hub Selangor. All Right Reserved.</footer>
 
