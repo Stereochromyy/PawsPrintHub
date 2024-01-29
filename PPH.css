@@ -1,143 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-    background: url(images/background.jpg) no-repeat;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#header {
-    position: fixed;
-    height: 120px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #EEF5FF;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-}
-
-#logo {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    display:inline-block;
-}
-
-#info {
-    display: inline-block;
-    margin-left: 110px;
-    position: fixed;
-}
-
-#navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1;
-}
-
-#navbar a {
-    margin-right: 60px;
-    text-decoration:none;
-    color:#333;
-    font-weight: 500;
-    font-size: 19px;
-    cursor: pointer;
-}
-
-#icon {
-   margin-right: 90px;
-   font-size: 19px;
-}
-
-.box {
-    margin: auto;
-    height: auto;
-    width: 80%;
-    margin-top: 125px;
-    margin-bottom: -90px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: left;
-    position: relative;
-}
-
-.box h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-}
-
-.box p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    margin-left: 15px;
-}
-
-#va {
-    max-width: 800px;
-    margin: 25px auto; /* Center the form on the page */
-    background-color: #F7FBFC;
-    padding: 20px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-#va p {
-    text-align: justify;
-    color: #555;
-    line-height: 1.8;
-}
-
-#va h1 {
-    text-align: center;
-    font-size: 3em;
-}
-
-#va form {
-    margin-top: 25px;
-}
-
-#va form h3 {
-    margin-bottom: 10px;
-}
-
-#vform input[type="radio"] {
-    margin-bottom: 10px;
-}
-
-#vsubmitbtn {
-    background-color: lightskyblue;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 17px;
-    cursor: pointer;
-    font-size: large;
-}
-
-#vsubmitbtn:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 /*----------------------------------------------------------------------------------*/
 /* PawPrintHub.html */
 * {
@@ -391,4 +253,487 @@ body {
 .clear {
     clear: both;
     text-align: center;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* adoptfoster.html */
+#main2 {
+    width: 100%;
+    height: 100vh;
+    margin: 120px 0 -120px 0;
+    position: relative;
+}
+
+#petbar {
+    height: 100px;
+    position: relative;
+    margin: 120px 0 -120px 0;
+    background-color: #F7FBFC;
+}
+
+#petbuttongroup {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    margin-top: 25px;
+}
+
+.petbutton {
+    height: 50px;
+    width: 120px;
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 0 -400px 0 450px;
+}
+
+.petbutton:hover {
+    background-color: lavender;
+}
+
+.petframe {
+    width: 303.8px;
+    height: 350px;
+    border: solid 1px;
+    float: left;
+    position: relative;
+    background-color: snow;
+}
+
+.petbox {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    margin: 30px 31.9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.petinfo {
+    width: 240px;
+    height: 40px;
+    position: absolute;
+    top: 280px;
+    left: 30px;
+    text-align: center;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* donation.html */
+.donation{
+    margin: 0 auto;
+    font-family: "Itim", cursive;
+    width: 80%;
+    max-width: 1000px;
+    height: 100%;
+    min-height: 1000px;
+    display: flex;
+    border: 1px solid rgb(250, 249, 249);
+    flex-direction: column;
+    background-color: hsl(60, 9%, 98%);
+}
+
+/* Donation info */
+.donationinfo{
+    height: 770px;
+    width: 85%;
+    max-width: 900px;
+    display: flex;
+    border: 1px solid rgb(193, 181, 181);
+    position: relative;
+    margin: 30px auto;
+    flex-direction: column;
+    background-image:url('Frame for dogs and cats.avif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /*cover the whole donation info [height X width]*/
+    z-index: 1;
+}
+
+#text{
+    text-align: center;
+}
+
+.infotext{
+    margin-top: 160px;
+}
+
+#text p{
+    margin: 10px 110px 0 110px;
+    font-size: 20px;
+}
+
+/* Container for the option */
+.container{
+    display: flex;
+    float: left;
+}
+
+/* Button */
+.donationoption1,.donationoption2{
+    height: 80px;
+    width: 25%;
+    display:flex;
+    border: 1px solid rgb(127, 124, 124);
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+    border-radius: 10px;
+}
+
+/*#icon{
+    margin: 20px 25px 0 10px;
+}*/
+
+#footer{
+    height: 75px;
+    width: auto;
+    margin: 120px auto;
+    line-height: 18px;
+    background-color: snow;
+    font-size: small;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* contactus.html */
+#cubox {
+    height: 100vh;
+    width: auto;
+    margin: 120px 0 -120px 0;
+    background-color: #F7FBFC;
+    position: relative;
+}
+
+#cucontainer {
+    width: 60%;
+    margin: 20px auto;
+    padding: 0 40px;
+    border-radius: 5px;
+    line-height: 3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: seashell;
+    text-align: center;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* loginPPH.php */
+.leftside, .rightside {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logincontainer {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.rightside {
+    background-color: snow;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 120px 0 -120px 0;
+    }
+
+    .leftside, .rightside {
+        width: 100%; /* Full width when stacked */
+        height: 70vh; /* Adjusted height for responsiveness */
+    }
+}
+
+#loginimg{
+    height: 100vh;
+    width: auto;
+}
+
+#content p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+input[type="email"], input[type="password"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: lightskyblue;
+    color: black;
+    cursor: pointer;
+    font-size: large;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* FormManagement.html */
+#fbody {
+    overflow: hidden;
+}
+
+.fmbox {
+    margin: auto;
+    height: auto;
+    width: 70%;
+    margin-top: 125px;
+    margin-bottom: -90px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    padding: 50px;
+    border-radius: 25px;
+    border: 2px solid;
+}
+
+.fmbox a {
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+    cursor: pointer;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* AdminHomePage.html */
+#title {
+    margin: auto;
+    height: auto;
+    margin-top: 130px;
+    margin-bottom: -90px;
+    text-align: center;
+    font-size: larger;
+}
+
+.info1 {
+    display: inline-block;
+    width: 300px;
+    height: 55px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: medium;
+    margin: 125px 25px 20px 25px;
+}
+
+.info2 {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: -480px 25px 20px 25px;
+}
+
+.info3 {
+    display: inline-block;
+    width: 250px;
+    height: 55px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: medium;
+    margin: 0 50px 20px 50px;
+}
+
+.info3 p {
+    text-align: center;
+    font-size: xx-large;
+}
+
+#ahpinfo {
+    padding: 50px 50px 0 50px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#ahpinfo h2 {
+    margin-left: 280px;
+
+}
+
+#count {
+    height: 150px;
+    width: 1000px;
+    border-radius: 35px;
+    border: 2px solid;
+    margin: 0 auto 25px auto;
+    background-color: #f9f9f9;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: medium;
+}
+
+#count p {
+    font-size: xx-large;
+    padding: 50px;
+    margin: 0 200px 0 200px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* volunteer.php */
+.volunteer h2 {
+    margin-top: 25px;
+    font-size: 28px;
+    margin-left: 25px;
+}
+
+.volunteer p {
+    margin-left: 25px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+    text-align: justify
+}
+
+#leftimg {
+    height: 280px;
+    width: 280px;
+    margin: 25px;
+    float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#rightimg {
+    height: 280px;
+    width: 280px;
+    margin: 25px;
+    float: right;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#endsection {
+    height: 130px;
+    width: auto;
+    border: solid 1px;
+    background-color: snow;
+    position: relative;
+    bottom: 0px;
+    margin-top: 120px;
+}
+
+#signupbtnholder {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 675px;
+    text-align: center;
+}
+
+#signupbtn {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+#signupbtn:hover {
+    background-color: lightgrey;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
+/* adoptform.php, volunteerform.php */
+#va {
+    max-width: 800px;
+    margin: 25px auto; /* Center the form on the page */
+    background-color: #F7FBFC;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#va p {
+    text-align: justify;
+    color: #555;
+    line-height: 1.8;
+}
+
+#va h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+#va form {
+    margin-top: 25px;
+}
+
+#va form h3 {
+    margin-bottom: 10px;
+}
+
+#vform input[type="radio"] {
+    margin-bottom: 10px;
+}
+
+#vsubmitbtn {
+    background-color: lightskyblue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: large;
+}
+
+#vsubmitbtn:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/*----------------------------------------------------------------------------------*/
+/* petdetails.php */
+#petdetails {
+    margin: 120px auto auto;
+    font-family: "Itim", cursive;
+    width: 80%;
+    max-width: 1000px;
+    height: 100%;
+    min-height: 1000px;
+    background-color: hsl(60, 9%, 98%);
+}
+
+.imgpet1 {
+    width: 240px;
+    height: 240px;
+    float: left;
+    margin: 25px 45px;
+    border: 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
