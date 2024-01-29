@@ -39,18 +39,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google font link: Itim font style -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&family=Roboto:wght@100&display=swap" rel="stylesheet">
-
     <title>Donation Record</title>
 
     <link rel="stylesheet" href="Admin Donation Record.css">
 </head>
 <body>
     <div class="header">
-        <img id="logo" src="logo.jpg" alt="Logo" height="100px" width="100px">
+        <img id="logo" src="images/logo.png" alt="Logo" height="100px" width="100px">
         <div class="name_motto"> <!--Name and motto-->
             <h2>Paw Print Hub</h2>
             <h4>- Connecting Paws, Connecting Stories -</h4>
@@ -59,9 +54,9 @@
         <div id="nav" style="float: left;"> <!--Navigation bar-->
             <ul>
                 <li><a href="Admin Donation Record.php">Donation Record</a></li> 
-                <li>Form Management</li>
+                <li><a href="Form Management.php">Form Management</a></li>
                 <li><a href="Admin user management.php"> User Management</a></li>
-                <li>Pet Management</li>
+                <li><a href="Pet Management.php">Pet Management</a></li>
                 <li id="clear"><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
                     <ul>
                         
