@@ -46,17 +46,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google font link: Itim font style -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&family=Roboto:wght@100&display=swap" rel="stylesheet">
-
     <title>Sign Up</title>
     <link rel="stylesheet" href="Sign Up.css">
 </head>
 <body>
     <div class="header">
-        <img id="logo" src="logo.jpg" alt="Logo" height="100px" width="100px">
+        <img id="logo" src="images/logo.png" alt="Logo" height="100px" width="100px">
         <div class="name_motto"> <!--Name and motto-->
             <h2>Paw Print Hub</h2>
             <h4>- Connecting Paws, Connecting Stories -</h4>
@@ -69,7 +64,7 @@
             <div>
                 <!-- Full name -->
                 <div class="aside">
-                    <label>Full Name <br><br><input type="text" name="txtname" placeholder="Full Name as per IC" id="name" pattern= "/^[a-zA-Z]*$/" required></label>
+                    <label>Full Name <br><br><input type="text" name="txtname" placeholder="Full Name as per IC" id="name" pattern= "/^[a-zA-Z-' ]*$/" required></label>
                 </div>
                 <!-- Date of birth -->
                 <div class="aside">
