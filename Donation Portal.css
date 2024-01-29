@@ -35,7 +35,7 @@ body{
     position: relative;
     margin: 120px auto;
     flex-direction: column;
-    background-image:url('Frame for dogs and cats.avif');
+    background-image:url('images/Frame\ for\ dogs\ and\ cats.avif');
     background-repeat: no-repeat;
     background-size: 100% 100%; /*cover the whole donation info [height X width]*/
     z-index: 0;
