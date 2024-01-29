@@ -1,35 +1,42 @@
 <?php
+    session_start();
     include 'dbConn.php';
-    if (isset($_POST['btnsignup'])){
-        // Storing under variable
-        $name = $_POST['txtname'];
-        $dob = $_POST['datedob'];
-        $email = $_POST['txtemail'];
-        $contactnum = $_POST['txtphonenum'];
-        $gender = $_POST['rdogender'];
-        $address = $_POST['txtaddress'];
-        $password = $_POST['txtpswd']; 
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        if (isset($_POST['btnsignup'])){
+            // Storing under variable
+            $name = $_POST['txtname'];
+            $dob = $_POST['datedob'];
+            $email = $_POST['txtemail'];
+            $contactnum = $_POST['txtphonenum'];
+            $gender = $_POST['rdogender'];
+            $address = $_POST['txtaddress'];
+            $password = $_POST['txtpswd']; 
 
-        // Insert into the database
-        $query= "INSERT INTO `user`(`name`, `dob`, `gender`, `email_address`, `password`, `contactnum`, `address`, `userroleID`) VALUES ('$name','$dob','$gender','$email','$password','$contactnum','$address','U1')";
-        
-        // Show message whether the registration successful/failure
-        if (mysqli_query($connection, $query)){
-?>
-        <script>
-            window.alert("Registered succesfully"); //successful pop up
-        </script>
+            // Hashing for password
+            $password = password_hash($password, PASSWORD_DEFAULT);
+                    
+            // Insert into the database
+            $query= "INSERT INTO `user`(`name`, `dob`, `gender`, `email_address`, `password`, `contactnum`, `address`, `userroleID`) VALUES ('$name','$dob','$gender','$email','$password','$contactnum','$address','U1')";
+            
+            // Show message whether the registration successful/failure
+            if (mysqli_query($connection, $query)){
+    ?>
+            <script>
+                window.alert("Registered succesfully"); //successful pop up
+            </script>
+    <?php
+                header("refresh: 1"); 
+                exit();
+            }else{
+    ?>
+            <script>
+                window.alert("Registration failed."); //failure pop up
+            </script>
 <?php
-            header("refresh: 1"); 
-        }else{
-?>
-    <script>
-        window.alert("Registration failed."); //failure pop up
-    </script>
-<?php
+            }
         }
-        }
-        mysqli_close($connection);
+    }
+    mysqli_close($connection);
 ?>
 
 
@@ -57,12 +64,12 @@
 
         <h1>Sign Up</h1>
     </div>
-    <form action="#" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="info">
             <div>
                 <!-- Full name -->
                 <div class="aside">
-                    <label>Full Name <br><br><input type="text" name="txtname" placeholder="Full Name as per IC" required></label>
+                    <label>Full Name <br><br><input type="text" name="txtname" placeholder="Full Name as per IC" id="name" pattern= "/^[a-zA-Z]*$/" required></label>
                 </div>
                 <!-- Date of birth -->
                 <div class="aside">
@@ -72,11 +79,11 @@
             <div>
                 <!-- email -->
                 <div class="aside">
-                    <label>Email Address <br><br><input type="email" name="txtemail" id="" placeholder="email@mail.com" required></label>
+                    <label>Email Address <br><br><input type="email" name="txtemail" id="" placeholder="email@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></label>
                 </div>
                 <!-- phone num. -->
                 <div class="aside">
-                    <label>Phone Number <br><br><input type="text" name="txtphonenum" id="" placeholder="+(99) 99-999 9999" required></label><br><br>
+                    <label>Phone Number <br><br><input type="text" name="txtphonenum" id="phone_num" placeholder="999-999-9999" pattern="\d{3}-\d{3}-\d{4}" required></label><br><br>
                 </div>
             </div>
             <div>
@@ -125,6 +132,7 @@
             </div>
         </div>
     </form>
+    
     <script>
         // Store variable with id from password key in
         var input = document.getElementById("pswd");
