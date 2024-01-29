@@ -134,3 +134,261 @@ body {
 #vsubmitbtn:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*----------------------------------------------------------------------------------*/
+/* PawPrintHub.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/background.jpg) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 17px;
+}
+
+#header {
+    position: fixed;
+    height: 120px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EEF5FF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+#logo {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+}
+
+/* Slogan, Motto*/
+#info {
+    display: inline-block;
+    margin-left: 110px;
+    position: fixed;
+}
+
+/* Navigation bar */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav ul {
+    text-align: center;
+    display: inline;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#nav ul li {
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 15px 20px;
+    width: 180px;
+}
+
+#nav ul li img {
+    margin-right: 60px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: -10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#nav a:hover{
+    color: blueviolet;
+}
+
+#nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#nav ul li ul li {
+    background-color: azure;
+    display: block;
+}
+
+#nav ul li ul li:hover {
+    color:#EEF5FF;
+    background:white;
+}
+
+#nav ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+#box {
+    height: auto;
+    width: auto;
+    margin: 120px 0 -120px 0;
+    background-color: #F7FBFC;
+    position: relative;
+    display: flex;
+}
+
+#imgaboutus{
+    height: 370px;
+    width: auto;
+    margin: 75px 0 0 25px;
+    border-radius: 120px / 100px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#aboutustext{
+    flex: 1;
+    text-align: justify;
+    padding: 20px 10px 0px 10px;
+    line-height: 1.5;
+    margin: 0 0 20px 15px;
+}
+
+#aboutustext h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#aboutustext p {
+    margin-bottom: 10px;
+}
+
+#aboutustext li, ul {
+    margin-left: 35px;
+}
+
+.mvs h2, .opthour h2 {
+    font-size: 28px;
+    margin: 10px 0 10px 25px;
+}
+
+#mvsbox {
+    height: 300px;
+    width: 450px;
+    background-color:#fce9e9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 70% 10% 70% 10% / 10% 70% 10% 70%;
+    float: left;
+    padding: 20px 30px 20px 30px;
+    margin: 50px 0 50px 190px;
+    font-size: large;
+}
+
+#mvsbox h3 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.ach h2 {
+    font-size: 28px;
+    margin: 10px 660px;
+}
+
+.achievementcontainer{
+    display: flex;
+    justify-content: space-around; /*Provide some space for item in container*/
+    flex-wrap: wrap;
+}
+
+.achievement {
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.achievement img {
+    max-width: 80%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.achievement p {
+    margin: 10px 0;
+}
+
+#optinfo{
+    width: 480px;
+    float: left;
+    padding: 30px 0 0 200px;
+}
+
+#opturgents{
+    width: 480px;
+    float: left;
+    text-align: left;
+    padding: 30px 30px 0 100px;
+}
+
+.optimg{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    float: left;
+    display: block;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+#logo2 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+#footericon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    float: left;
+    margin: 0 0 0 25px;
+}
+
+#wrapper {
+    width: 900px;
+    align-items: center;
+    margin: 80px 590px;
+}
+
+.clear {
+    clear: both;
+    text-align: center;
+}
