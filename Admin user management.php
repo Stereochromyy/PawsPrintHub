@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include 'dbConn.php';
 
 ?>
@@ -10,18 +9,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google font link: Itim font style -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&family=Roboto:wght@100&display=swap" rel="stylesheet">
-
     <title>User Management</title>
 
     <link rel="stylesheet" href="Admin user management.css">
 </head>
 <body>
     <div class="header">
-        <img id="logo" src="logo.jpg" alt="Logo" height="100px" width="100px">
+        <img id="logo" src="images/logo.png" alt="Logo" height="100px" width="100px">
         <div class="name_motto"> <!--Name and motto-->
             <h2>Paw Print Hub</h2>
             <h4>- Connecting Paws, Connecting Stories -</h4>
@@ -29,10 +23,10 @@
 
         <div id="nav" style="float: left;"> <!--Navigation bar-->
             <ul>
-                <li>Donation Record</li> 
-                <li>Form Management</li>
+                <li><a href="Admin Donation Record.php">Donation Record</a></li> 
+                <li><a href="Form Management.php">Form Management</a></li>
                 <li><a href="Admin user management.php"> User Management</a></li>
-                <li>Pet Management</li>
+                <li><a href="Pet Management.php">Pet Management</a></li>
                 <li id="clear"><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
                     <ul>
                         
@@ -55,6 +49,7 @@
             </ul>
         </div>
     </div>
+    
     <div class="info">
         <?php
         //User details
@@ -82,39 +77,42 @@
             }
         
         ?>
-        <div class="userinfo">
-            <div class="profile">
-                <?php
-                //Check if the profile is empty or exist
-                    if(empty($imglink)){
-                ?>
-                    <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png" alt="Profile picture">
-                <?php
-                    }
-                    else{
-                ?>
-                    <img src="<?php echo $imglink; ?>" alt="Profile picture">
-                <?php
-                    }
-                ?>
-            </div>
-            <div class="name">
-                <?php echo $name;?>
-            </div>
-            <div class="details">
-                <h4>User ID: </h4>
-                <div class="output">
-                    <?php echo $userID; ?>
-                </div>
         
-                <h4>Email Address: </h4> 
-                <!-- style="width: 350px" -->
-                <div >
-                <textarea name="" id="" cols="30" rows="10" class="output" readonly><?php echo $email; ?></textarea> 
-                <!-- readonly: not allow admin to modify the email -->
-                    
+        <div class="userinfo">
+            <a href="Admin View Profile Structure.php?userID=<?php echo $userID; ?>"> <!--Pass the userID to admin view profile structure-->
+                <div class="profile">
+                    <?php
+                    //Check if the profile is empty or exist
+                        if(empty($imglink)){
+                    ?>
+                        <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png" alt="Profile picture">
+                    <?php
+                        }
+                        else{
+                    ?>
+                        <img src="<?php echo $imglink; ?>" alt="Profile picture">
+                    <?php
+                        }
+                    ?>
                 </div>
-            </div>
+                <div class="name">
+                    <?php echo $name;?>
+                </div>
+                <div class="details">
+                    <h4>User ID: </h4>
+                    <div class="output">
+                        <?php echo $userID; ?>
+                    </div> <br>
+            
+                    <h4>Email Address: </h4> 
+                    <!-- style="width: 350px" -->
+                    <div >
+                    <textarea name="" id="" cols="30" rows="10" class="output" readonly><?php echo $email; ?></textarea> 
+                    <!-- readonly: not allow admin to modify the email -->
+                        
+                    </div>
+                </div>
+            </a>
         </div>
     <?php
         }
