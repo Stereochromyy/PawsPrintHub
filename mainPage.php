@@ -25,7 +25,7 @@
         <img id="logo" src="logo.jpg" alt="Logo" height="100px" width="100px">
         <div class="name_motto"> <!--Name and motto-->
             <h2>Paw Print Hub</h2>
-            <h4>- Connecting Paws, Connecting Stories -</h4>
+            <h4>- Connecting Paws, Creating Stories -</h4>
         </div>
 
         <div id="nav" style="float: left;"> <!--Navigation bar-->
