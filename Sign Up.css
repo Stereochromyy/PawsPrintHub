@@ -43,17 +43,13 @@ body{
 
 .info{ /*Adjust the content position*/
     margin: 10px auto;
-    /* border: 1px solid rgb(211, 205, 205); */
     width: 80%;
     max-width: 700px;
     height: 70%; 
     display: flex;
     flex-direction: column;
     font-size: 22px;
-    /* background-color: white; */
     background-color: snow;
-    border-radius: 70px;
-    
 }
 
 .aside{ /*Adjust alignment*/
