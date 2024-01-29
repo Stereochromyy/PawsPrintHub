@@ -1,84 +1,115 @@
-body{
-    font-family: 'Itim', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
     margin: 0;
-    padding: 0; 
-    display: flex; /*Set flexible length on the items in screen*/
-    flex-direction: column; /*Set elements vertically*/
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.mainpage{
-    margin: 0 auto;
+body {
     width: 100%;
-    font-family: 'Itim', cursive; /*Refer to html with google font link*/
-} 
-
-/* Under header */
-.header{
-    border-color: black;
-    background-color:rgba(204, 226, 245, 0.5);
-    padding: 10px;
-    flex: 1; /*Length of item*/
+    min-height: 100vh;
+    background: url(images/background.jpg) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 17px;
 }
 
-#logo{
+.header {
+    position: fixed;
+    height: 120px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EEF5FF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+#logo {
     border-radius: 50%;
-    margin-left: 20px;
-    margin-top: 20px;
-    float: left;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
 }
 
-.name_motto{
-    float: left; 
-    margin-top: 10px; 
-    margin-left: 50px;
-    width: 300px;
-    position: relative;
-} 
-
-/*Naviagation bar*/
-#nav{ 
-    padding: 30px 20px 20px 100px;
-    position: relative;
+/* Slogan, Motto*/
+#info {
+    display: inline-block;
+    margin-left: 110px;
+    position: fixed;
 }
 
-#nav ul{
+/* Navigation bar */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav ul {
     text-align: center;
     display: inline;
-    margin: 10px;
-    padding: 15px 5px 15px 0;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
 }
-#nav ul li{
+
+#nav ul li {
     display: inline-block;
-    margin-right: -10px; 
+    margin-right: -4px;
     position: relative;
-    padding: 10px 10px;
-    width: 130px;
-    height: 20px;
+    padding: 15px 20px;
+    width: 180px;
+}
+
+#nav ul li img {
+    margin-right: 60px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: -10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
     font-size: 20px;
 }
-#nav ul li:hover{
+
+#nav a:hover{
     color: blueviolet;
 }
-#nav ul li ul{ 
+
+#nav ul li ul {
     padding: 0;
-    position: absolute; 
-    top: 40px;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 200px;
     display: none;
     opacity: 0;
-    visibility: hidden; 
+    visibility: hidden;
 }
-#nav ul li ul li{
-    background: white;
+
+#nav ul li ul li {
+    background-color: azure;
     display: block;
-    color: black;
 }
-#nav ul li ul li:hover{
-    background: whitesmoke;
-    color:beige;
+
+#nav ul li ul li:hover {
+    color:#EEF5FF;
+    background-color: azure;
 }
-#nav ul li:hover ul{
+
+#nav ul li:hover ul {
     display: block;
     opacity: 1;
     visibility: visible;
@@ -89,17 +120,17 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+li a:hover{
     color: blueviolet;
     text-decoration: none;
 }
-a:visited{
+li a:visited{
     color: #121212;
     text-decoration: none;
 }
 
 .info{ /*Adjust the content position*/
-    margin: 0 auto;
+    margin: 120px auto;
     width: 80%;
     max-width: 1000px;
     height: 70%;
@@ -119,14 +150,19 @@ a:visited{
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    margin: 30px auto;
+    margin: 20px auto;
+}
+
+.userinfo a:hover{
+    margin: 10px;
+    box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.2), 3px 4px 3px 4px rgb(0,0,0,0.2);
 }
 
 .profile{
     border-radius: 50%;
     height: 150px;
     width: 150px;
-    margin: 30px 0 30px 70px;
+    margin: 30px 0 70px 80px;
     border: 1px solid black;
 }
 
@@ -137,17 +173,18 @@ a:visited{
 
 .name{
     height: 50px;
-    width: 200px;
+    width: 220px;
     border: 1px solid black;
-    margin-left: 50px;
+    margin: -40px 0 10px 50px;
     background-color: rgb(242, 252, 252);
     text-align: center;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .details{
     margin-left: 50%;
-    margin-top: -270px;
+    margin-top: -200px;
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
 }
@@ -173,7 +210,6 @@ h4{
     text-align: center;
     word-wrap: break-word; /*Add word wrap property*/
     box-sizing: border-box; 
-    font-family: 'Itim', cursive;
-    font-size: large;
+    font-size: 18px;
 }
 
