@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*----------------------------------------------------------------------------------*/
+/* PawPrintHub.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/background.jpg) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 17px;
+}
+
+#header {
+    position: fixed;
+    height: 120px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EEF5FF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+#logo {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+}
+
+/* Slogan, Motto*/
+#info {
+    display: inline-block;
+    margin-left: 110px;
+    position: fixed;
+}
+
+/* Navigation bar */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav ul {
+    text-align: center;
+    display: inline;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#nav ul li {
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 15px 20px;
+    width: 180px;
+}
+
+#nav ul li img {
+    margin-right: 60px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: -10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#nav a:hover{
+    color: blueviolet;
+}
+
+#nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#nav ul li ul li {
+    background-color: azure;
+    display: block;
+}
+
+#nav ul li ul li:hover {
+    color:#EEF5FF;
+    background:white;
+}
+
+#nav ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+#main2 {
+    width: 100%;
+    height: 150vh;
+    margin: 120px 0 -120px 0;
+    position: relative;
+}
+
+#petbar {
+    height: 100px;
+    position: relative;
+    margin: 120px 0 -120px 0;
+    background-color: #F7FBFC;
+}
+
+#petbuttongroup {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    margin-top: 25px;
+}
+
+.petbutton {
+    height: 50px;
+    width: 120px;
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 0 -400px 0 450px;
+}
+
+.petbutton:hover {
+    background-color: lavender;
+}
+
+.petframe {
+    width: 303.8px;
+    height: 400px;
+    border: solid 1px;
+    float: left;
+    position: relative;
+    background-color: snow;
+}
+
+.view{
+    color: red;
+}
+
+.petbox {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    margin: 30px 31.9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.petinfo {
+    width: 240px;
+    height: 40px;
+    position: absolute;
+    top: 280px;
+    left: 30px;
+    text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+    height: 115%;
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.petprofile{
+    display: flex;
+    float: left;
+}
+
+.petprofile1{
+    height: 220px;
+    width: 200px;
+    border: 1px solid black;
+    margin-left: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2), 0 6px 20px 0 rgb(0,0,0,0.2);
+}
+
+.petprofile1 img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.petdetails{
+    height: 45%;
+    width: 50%;
+    border: 1px solid black;
+    margin: 260px auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+.position{
+    display: flex;
+    flex-direction: row;
+}
+
+.button{
+    height: 100px;
+    width: 200px;
+    border: 1px solid black;
+    margin: -200px auto;
+    opacity: 0.8;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2), 0 6px 20px 0 rgb(0,0,0,0.2);
+}
+
+.button:hover{
+    opacity: 1;
+}
+
+.button img{
+    height: 50px;
+    width: 50px;
+}
