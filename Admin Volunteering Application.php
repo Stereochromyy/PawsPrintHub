@@ -1,8 +1,6 @@
 <?php
     session_start();
-
     include 'dbConn.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +15,13 @@
 </head>
 <body>
     <div class="header">
-        <img id="logo" src="images/logo.png" alt="Logo" height="100px" width="100px">
-        <div class="name_motto"> <!--Name and motto-->
-            <h2>Paw Print Hub</h2>
-            <h4>- Connecting Paws, Connecting Stories -</h4>
+        <a href="AdminHomePage.php">
+            <img src="images/logo.png" alt="Paws Print Hub Logo" id="logo">
+        </a>
+
+        <div id="info"> <!--Name and Motto-->
+            <h2>Paws Print Hub</h2>
+            <p>Connecting Paws, Creating Stories</p>
         </div>
 
         <div id="nav" style="float: left;"> <!--Navigation bar-->
