@@ -31,17 +31,6 @@
         }
     }
 
-    //USER PROFILE
-    $query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID'";
-
-    $result2 = mysqli_query($connection, $query2); 
-
-    if (mysqli_num_rows ($result2) > 0){
-        while ($row = mysqli_fetch_assoc($result2)){
-            $imglink = $row['user_image_link'];
-        }
-    }
-
     //ADOPTED PETS
     $animalquery = "SELECT `animalID` FROM `adoption` WHERE `userID`='$userID'";
 
@@ -73,6 +62,63 @@
             }
     }
 
+    // Check if a file is being uploaded
+    $tempImageURL = null;
+    $target_file = "default_value";
+    if (isset($_FILES["profileImage"]["tmp_name"]) && !empty($_FILES["profileImage"]["tmp_name"])) {
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["profileImage"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        
+        //Check file size
+        if ($_FILES["profileImage"]["size"] > 500000) {
+        ?>
+        <script>
+            window.alert("Sorry, your file is too large.");
+        </script>
+        <?php
+        }
+
+        // Allow certain file formats
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" && $imageFileType != "avif") {
+        ?>
+        <script>
+            window.alert("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
+        </script>
+        <?php
+        }
+
+        // Check if file already exists
+        if (file_exists($target_file)) {
+        ?>
+        <script>
+            window.alert("Sorry, file already exists.");
+        </script>
+        <?php
+        }
+
+        // Move the uploaded file to the target directory
+        if (move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file)) {
+            // Use the path to create the URL
+            $tempImageURL = $target_file;
+            $updateProfile = "INSERT INTO `user_image`(`user_image_link`, `userID`) VALUES ('$target_file','$userID')";
+
+            $profileResult = mysqli_query($connection, $updateProfile);
+
+            $success = mysqli_query($connection, $query);
+        }   
+        else {
+        ?>
+            <script>
+                window.alert("Sorry, there was an error uploading your file.");
+            </script>
+        <?php
+        }
+        
+    }
+
     if (isset($_POST['txtSavechanges'])){
         $name = $_POST['txtName'];
         $email = $_POST['txtEmail'];
@@ -81,85 +127,11 @@
 
         // Update the database
         $query= "UPDATE `user` 
-        SET `name`='$name',`email_address`='$email',`contactnum`='$contactnum',`address`='$address' WHERE `email_address`='$_SESSION[email]'";
-        
-        $target_dir = "uploads/";
-        $target_file = $target_dir . basename($_FILES["profileImage"]["name"]);
-        $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        SET `name`='$name',`email_address`='$email',`contactnum`='$contactnum',`address`='$address' WHERE `email_address`='$_SESSION[email]' LIMIT 1";
 
-        // Check if image file is a actual image or fake image
-        if(isset($_POST["submit"])) {
-        $check = getimagesize($_FILES["profileImage"]["tmp_name"]);
-        if($check !== false) {
-            //echo "File is an image - " . $check["mime"] . ".";
-            $uploadOk = 1;
-        } else {
-        ?>
-        <script>
-            windows.alert("File is not an image.");
-        </script>    
-        <?php
-            $uploadOk = 0;
-        }
-        }
+        // $updateProfile = "INSERT INTO `user_image`(`user_image_link`, `userID`) VALUES ('$target_file','$userID')";
 
-        // Check if file already exists
-        if (file_exists($target_file)) {
-        ?>
-        <script>
-            windows.alert("Sorry, file already exists.");
-        </script>
-        <?php
-            $uploadOk = 0;
-        }
-
-        // Check file size
-        if ($_FILES["profileImage"]["size"] > 500000) {
-        ?>
-        <script>
-            windows.alert("Sorry, your file is too large.");
-        </script>
-        <?php
-            $uploadOk = 0;
-        }
-
-        // Allow certain file formats
-        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-        && $imageFileType != "gif" ) {
-        ?>
-        <script>
-            windows.alert("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
-        </script>
-        <?php
-            $uploadOk = 0;
-        }
-
-        // Check if $uploadOk is set to 0 by an error
-        if ($uploadOk == 0) {
-            ?>
-            <script>
-                windows.alert("Sorry, your file was not uploaded.");
-            </script>
-            <?php
-        // if everything is ok, try to upload file
-        } 
-        else {
-            if (move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file)) {
-            //echo "The file ". htmlspecialchars( basename( $_FILES["profileImage"]["name"])). " has been uploaded.";
-        } 
-        else {
-        ?>
-        <script>
-            windows.alert("Sorry, there was an error uploading your file.");
-        </script>
-        <?php
-        }
-        }
-
-        $updateProfile = "INSERT INTO `user_image`(`user_image_link`, `userID`) VALUES ('$target_file','$userID')";
-
-        $profileResult = mysqli_query($connection, $updateProfile);
+        // $profileResult = mysqli_query($connection, $updateProfile);
 
     // Show message whether the update successful/failure
     if (mysqli_query($connection, $query)) {
@@ -168,7 +140,18 @@
     <?php
     
     }
-}
+    }
+
+    //USER PROFILE
+    $query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID'";
+
+    $result2 = mysqli_query($connection, $query2); 
+
+    if (mysqli_num_rows ($result2) > 0){
+        while ($row = mysqli_fetch_assoc($result2)){
+            $imglink = $row['user_image_link'];
+        }
+    }
 
     // Close the database connection
     mysqli_close($connection);
@@ -188,21 +171,22 @@
     </div>
     <div class="container"> 
         <form action="#" method="POST" enctype="multipart/form-data">
+        
         <div class="profile">
-            <?php
-            //Check if the profile is empty or exist
-                if(empty($imglink)){
+            <?php 
+            if ($tempImageURL) { 
             ?>
-                <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png" alt="Profile picture">
-            <?php
-                }
-                else{
-                
+                <img src="<?php echo $tempImageURL; ?>" alt="Profile picture" id="profile-pic">
+            <?php 
+            } elseif ($imglink) { 
             ?>
-                <img src="<?php echo $imglink; ?>" alt="Profile picture">
-                
-            <?php
-                } 
+                <img src="<?php echo $imglink; ?>" alt="Profile picture" id="profile-pic">
+            <?php 
+            } else { 
+            ?>
+                <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png" alt="Profile picture" id="profile-pic">
+            <?php 
+            } 
             ?>
             
         </div>
@@ -212,6 +196,15 @@
                 <input type="file" id="profileImage" name="profileImage" accept="image/*" value="" >
                 
         </div>
+        <script>
+            let profilePic = document.getElementById("profile-pic");
+            let inputProfile = document.getElementById("profileImage");
+            
+            inputProfile.onchange = function(){
+                profilePic.src = URL.createObjectURL(inputProfile.files[0]);
+            }
+
+        </script>
 
         <div>
             <h1>
