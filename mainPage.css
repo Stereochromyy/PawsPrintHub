@@ -37,7 +37,7 @@ body {
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    display:inline-block;
+    display: inline-block;
 }
 
 /* Slogan, Motto*/
@@ -52,6 +52,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 300px;
 }
 
 #nav ul {
@@ -112,6 +113,34 @@ body {
 }
 
 #nav ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.notification-box img{
+    margin-right: 60px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: -10px;
+}
+
+.notification{
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 85%;
+    background-color: #e6ebf4;
+    margin-top: -20px;
+    text-align: center;
+}
+
+.notification-box:hover .notification{
     display: block;
     opacity: 1;
     visibility: visible;
