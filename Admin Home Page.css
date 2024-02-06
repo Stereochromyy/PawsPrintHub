@@ -84,7 +84,7 @@ body {
     font-size: 20px;
 }
 
-#nav a:hover{
+#nav a:hover {
     color: blueviolet;
 }
 
@@ -105,7 +105,7 @@ body {
 }
 
 #nav ul li ul li:hover {
-    color:#EEF5FF;
+    color: #EEF5FF;
     background-color: azure;
 }
 
@@ -115,16 +115,17 @@ body {
     visibility: visible;
 }
 
-a{
+a {
     color: #121212;
     text-decoration: none;
 }
 
-li a:hover{
+li a:hover {
     color: blueviolet;
     text-decoration: none;
 }
-li a:visited{
+
+li a:visited {
     color: #121212;
     text-decoration: none;
 }
@@ -154,7 +155,12 @@ li a:visited{
     height: 300px;
     width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: -480px 25px 20px 25px;
+    margin: -420px 25px 20px 25px;
+}
+
+.info2 img{
+    height: 100%;
+    width: 100%;
 }
 
 .info3 {
