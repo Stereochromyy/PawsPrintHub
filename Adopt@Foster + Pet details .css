@@ -238,7 +238,8 @@ body {
 .petprofile1 img{
     height: 100%;
     width: 100%;
-    display: block;
+    display: inline-block;
+    padding: 10px 20px;
     margin: auto;
 }
 
