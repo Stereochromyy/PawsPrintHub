@@ -29,21 +29,10 @@
                 <li><a href="Pet Management.php">Pet Management</a></li>
                 <li id="clear"><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
                     <ul>
-                        
-                        <?php
-                            if (!isset($_SESSION['email'])){                    
-                        ?>
-                            <li><a href="loginPPH.php" target="_blank">Log in/Sign Up</a></li>
-                        <?php
-                            }
-                            else{
-                        ?>
-                            <li><a href="User Profile Structure.php">View profile</a></li>
+                        <li><a href="User Profile Structure.php">View profile</a></li>
 
-                            <li><a href="Log Out.php"> Log Out</a></li>
-                        <?php        
-                            }
-                        ?>  
+                        <li><a href="Log Out.php"> Log Out</a></li>
+
                     </ul>
                     </li>
             </ul>
