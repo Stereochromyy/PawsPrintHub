@@ -25,8 +25,8 @@
 
         <nav id="nav" style="float: left;">
             <ul>
-                <li><a href="adoptfoster.php">Adopt/Foster</a></li>
-                <li><a href="donation.php">Donation</a></li>
+                <li><a href="Adopt@Foster.php">Adopt/Foster</a></li>
+                <li><a href="Donation Portal.php">Donation</a></li>
                 <li><a href="volunteer.php">Volunteer</a></li>
                 <li><a href="contactus.php">Contact Us</a></li>
                 <li><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo">
