@@ -9,29 +9,33 @@ body{
 }
 
 /* Under header */
-.header{
-    border-color: black;
-    background-color:rgba(204, 226, 245, 0.5);
-    padding: 10px;
+#header {
+    position: fixed;
+    height: 120px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EEF5FF;
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    flex: 50%; /*Length of item*/
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
 }
 
-#logo{
+#logo {
     border-radius: 50%;
-    margin-left: 20px;
-    margin-top: 20px;
-    float: left;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
 }
 
-.name_motto{
-    float: left; 
-    margin-top: 10px; 
-    margin-left: 50px;
-    width: 350px;
-    position: relative;
-} 
+/* Slogan, Motto*/
+#info {
+    display: inline-block;
+    margin-left: 110px;
+    position: fixed;
+}
 
 .header h1{
     display: flex;
@@ -42,7 +46,7 @@ body{
 /* Under Sign Up info */
 
 .info{ /*Adjust the content position*/
-    margin: 10px auto;
+    margin: 180px auto;
     width: 80%;
     max-width: 730px;
     height: 70%; 
