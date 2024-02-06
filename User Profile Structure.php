@@ -13,7 +13,7 @@
 
     //USER INFO
     // SQL queries
-    $query = "SELECT `userID`, `name`, `gender`, `dob`, `contactnum`, `address`,`password` FROM `user` WHERE `email_address` = '$email'";
+    $query = "SELECT `userID`, `name`, `gender`, `dob`, `contactnum`, `address`,`password`,`userroleID` FROM `user` WHERE `email_address` = '$email'";
 
     // Queries execution
     $result = mysqli_query($connection, $query); 
@@ -28,6 +28,19 @@
             $contactnum = $row['contactnum'];
             $address = $row['address'];
             $password = $row['password'];
+            $userroleID =$row['userroleID'];
+        }
+    }
+
+    //USER PROFILE
+    $query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID'";
+
+    $result2 = mysqli_query($connection, $query2); 
+    
+    $imglink = "";
+    if (mysqli_num_rows ($result2) > 0){
+        while ($row = mysqli_fetch_assoc($result2)){
+            $imglink = $row['user_image_link'];
         }
     }
 
@@ -68,7 +81,6 @@
     if (isset($_FILES["profileImage"]["tmp_name"]) && !empty($_FILES["profileImage"]["tmp_name"])) {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["profileImage"]["name"]);
-        $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         
         //Check file size
@@ -129,29 +141,14 @@
         $query= "UPDATE `user` 
         SET `name`='$name',`email_address`='$email',`contactnum`='$contactnum',`address`='$address' WHERE `email_address`='$_SESSION[email]' LIMIT 1";
 
-        // $updateProfile = "INSERT INTO `user_image`(`user_image_link`, `userID`) VALUES ('$target_file','$userID')";
-
-        // $profileResult = mysqli_query($connection, $updateProfile);
-
-    // Show message whether the update successful/failure
-    if (mysqli_query($connection, $query)) {
-    ?>
-        <script>window.alert("Changes saved")</script>
-    <?php
-    
-    }
-    }
-
-    //USER PROFILE
-    $query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID'";
-
-    $result2 = mysqli_query($connection, $query2); 
-
-    if (mysqli_num_rows ($result2) > 0){
-        while ($row = mysqli_fetch_assoc($result2)){
-            $imglink = $row['user_image_link'];
+        // Show message whether the update successful/failure
+        if (mysqli_query($connection, $query)) {
+        ?>
+            <script>window.alert("Changes saved")</script>
+        <?php
+        
         }
-    }
+        }
 
     // Close the database connection
     mysqli_close($connection);
@@ -167,7 +164,19 @@
 </head>
 <body>
     <div class="cross">
-        <a href="Main Page.php"><img src="https://static-00.iconduck.com/assets.00/cross-circle-icon-512x512-crxcbljw.png" alt="Back to Home Page" height="40px" width="40px"></a>
+        <?php // Validate whether the cross will direct back to admin main page or user main page
+            if ($userroleID === 'A2'){
+        ?>
+                <a href="AdminHomePage.php"><img src="https://static-00.iconduck.com/assets.00/cross-circle-icon-512x512-crxcbljw.png" alt="Back to Home Page" height="40px" width="40px"></a>
+        
+        <?php
+            }else{
+        ?>
+                <a href="Main Page.php"><img src="https://static-00.iconduck.com/assets.00/cross-circle-icon-512x512-crxcbljw.png" alt="Back to Home Page" height="40px" width="40px"></a>
+        <?php
+            }
+        ?>
+
     </div>
     <div class="container"> 
         <form action="#" method="POST" enctype="multipart/form-data">
