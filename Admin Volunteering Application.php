@@ -1,6 +1,8 @@
 <?php
     session_start();
+
     include 'dbConn.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -15,13 +17,10 @@
 </head>
 <body>
     <div class="header">
-        <a href="AdminHomePage.php">
-            <img src="images/logo.png" alt="Paws Print Hub Logo" id="logo">
-        </a>
-
-        <div id="info"> <!--Name and Motto-->
-            <h2>Paws Print Hub</h2>
-            <p>Connecting Paws, Creating Stories</p>
+        <a href="AdminHomePage.php"><img id="logo" src="images/logo.png" alt="Logo" height="100px" width="100px"></a>
+        <div class="name_motto"> <!--Name and motto-->
+            <h2>Paw Print Hub</h2>
+            <h4>- Connecting Paws, Connecting Stories -</h4>
         </div>
 
         <div id="nav" style="float: left;"> <!--Navigation bar-->
@@ -32,21 +31,9 @@
                 <li><a href="Pet Management.php">Pet Management</a></li>
                 <li id="clear"><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
                     <ul>
-                        
-                        <?php
-                            if (!isset($_SESSION['email'])){                    
-                        ?>
-                            <li><a href="loginPPH.php" target="_blank">Log in/Sign Up</a></li>
-                        <?php
-                            }
-                            else{
-                        ?>
-                            <li><a href="User Profile Structure.php">View profile</a></li>
+                        <li><a href="User Profile Structure.php">View profile</a></li>
 
-                            <li><a href="Log Out.php"> Log Out</a></li>
-                        <?php        
-                            }
-                        ?>  
+                        <li><a href="Log Out.php"> Log Out</a></li> 
                     </ul>
                     </li>
             </ul>
@@ -82,7 +69,7 @@
         ?>
         <form action="#" method="POST">
             <!-- Will display different color for different approval status -->
-            <div class="volunteer" style= "background-color: <?php echo ($approval_status == 'Approved') ? '#A1EEBD' : (($approval_status == 'Rejected') ? '#FF6868' : 'azure'); ?>;">
+            <a href="Admin Volunteering View Form.php?id=<?php echo $userID; ?>"><div class="volunteer" style= "background-color: <?php echo ($approval_status == 'Approved') ? '#A1EEBD' : (($approval_status == 'Rejected') ? '#FF6868' : 'azure'); ?>;">
                 <div class="content">
                     <div id="volunteerid">Volunteer ID: <?php echo $volunteerID; ?></div>
                     <br><br>
@@ -105,7 +92,7 @@
                 
                 ?>
                 
-            </div>
+            </div></a>
     </form>
     
 <?php
