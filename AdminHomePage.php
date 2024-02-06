@@ -1,11 +1,71 @@
+<?php
+    // session_start();
+    include "dbConn.php";
+
+    // Calc different animal species num
+    $query = "SELECT * FROM `animal`";
+
+    $result = mysqli_query($connection, $query);
+
+    $dog_num = 0;
+    $cat_num = 0;
+    $others_num = 0;
+
+    $records = array();
+
+    if(mysqli_num_rows($result)){
+        while($row = mysqli_fetch_assoc($result)){
+            $species = $row['species'];
+        
+
+            if ($species === 'dog'){
+                $dog_num +=1;
+            }
+            elseif($species ==='cat'){
+                $cat_num +=1;
+            }
+            else{
+                $others_num +=1;
+            }
+            $records[] = $row;
+        }
+    }
+
+    // Calc animals adopted
+    $adoption_query = "SELECT * FROM `adoption`";
+
+    $adoption_result = mysqli_query($connection, $adoption_query);
+
+    $adoption_num = 0;
+
+    if(mysqli_num_rows($adoption_result)){
+        while($row = mysqli_fetch_assoc($adoption_result)){
+            $adoption_num +=1;
+        }
+    }
+    // Calc animals fostered
+    $foster_query = "SELECT * FROM `foster`";
+
+    $foster_result = mysqli_query($connection, $foster_query);
+
+    $foster_num = 0;
+
+    if(mysqli_num_rows($foster_result)){
+        while($row = mysqli_fetch_assoc($foster_result)){
+            $foster_num +=1;
+        }
+    }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Admin Home Page</title>
     <link rel="stylesheet" href="Admin Home Page.css">
-    <link rel="stylesheet" href="PPH.css">
 
 </head>
 <body>
@@ -27,21 +87,9 @@
                 <li><a href="Pet Management.php">Pet Management</a></li>
                 <li id="clear"><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
                     <ul>
-                        
-                        <?php
-                            if (!isset($_SESSION['email'])){                    
-                        ?>
-                            <li><a href="loginPPH.php" target="_blank">Log in/Sign Up</a></li>
-                        <?php
-                            }
-                            else{
-                        ?>
-                            <li><a href="User Profile Structure.php">View profile</a></li>
+                        <li><a href="User Profile Structure.php">View profile</a></li>
 
-                            <li><a href="Log Out.php"> Log Out</a></li>
-                        <?php        
-                            }
-                        ?>  
+                        <li><a href="Log Out.php"> Log Out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -66,32 +114,32 @@
                 <h2>Others</h2>
             </div>
         </div>
-        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="clear">
             <div class="info2">
-                <img src="" alt="Dog">
+                <img src="images/dog.jpg" alt="Dog">
             </div>
 
             <div class="info2">
-                <img src="" alt="Cat">
+                <img src="images/cat.jpg" alt="Cat">
             </div>
 
             <div class="info2">
-                <img src="" alt="Others">
+                <img src="images/paw.jpg" alt="Others">
             </div>
         </div>
 
         <div class="clear">
             <div class="info3">
-                <p>2</p>
+                <p><?php echo $dog_num; ?></p>
             </div>
             
             <div class="info3">
-                <p>2</p>
+                <p><?php echo $cat_num; ?></p>
             </div>
 
             <div class="info3">
-                <p>4</p>
+                <p><?php echo $others_num; ?></p>
             </div>
         </div>
         
@@ -101,8 +149,8 @@
         </div>
 
         <div id="count">
-            <p>0</p>
-            <p>0</p>
+            <p><?php echo $adoption_num; ?></p>
+            <p><?php echo $foster_num; ?></p>
         </div>
         
     </main>
