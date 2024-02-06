@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include 'dbConn.php';
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if (isset($_POST['btnsignup'])){
@@ -50,15 +49,21 @@
     <link rel="stylesheet" href="Sign Up.css">
 </head>
 <body>
-    <div class="header">
-        <img id="logo" src="images/logo.png" alt="Logo" height="100px" width="100px">
-        <div class="name_motto"> <!--Name and motto-->
-            <h2>Paw Print Hub</h2>
-            <h4>- Connecting Paws, Connecting Stories -</h4>
+    <header id="header">
+        <a href="Main Page.php">
+            <img src="images//logo.png" alt="Paws Print Hub Logo" id="logo">
+        </a>
+
+        <div id="info"> <!--Name and Motto-->
+            <h2>Paws Print Hub</h2>
+            <p>Connecting Paws, Creating Stories</p>
         </div>
 
-        <h1>Sign Up</h1>
-    </div>
+        <div>
+            <h2 style="margin-left:-800px">Sign Up</h2>
+        </div>
+    </header>
+
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="info">
             <div>
