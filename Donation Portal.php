@@ -25,7 +25,7 @@
 
         <nav id="nav" style="float: left;">
             <ul>
-                <li><a href="adoptfoster.php">Adopt/Foster</a></li>
+                <li><a href="Adopt@Foster.php">Adopt/Foster</a></li>
                 <li><a href="Donation Portal.php">Donation</a></li>
                 <li><a href="volunteer.php">Volunteer</a></li>
                 <li><a href="contactus.php">Contact Us</a></li>
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="donationoption1" style="background-color: #dafade;">
                 <img src="https://static-00.iconduck.com/assets.00/money-send-icon-2048x2046-yh64gys6.png" alt="Monetary" height="50px" width="50px" id="icon">
-                <h2 style="display: flex;">Monetary</h2>
+                <h2 style="display: flex; margin-top: 20px;">Monetary</h2>
             </div>
 
             <div class="donationoption2" style="background-color: #c4e0ed;">
