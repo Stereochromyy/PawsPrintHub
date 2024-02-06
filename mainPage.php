@@ -1,7 +1,11 @@
 <?php
-    session_start();
+    // Bypass the session activation if it has activated
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
 
     include 'dbConn.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +71,7 @@
                         FROM `user`
                         LEFT JOIN `adoption` ON `user`.`userID` = `adoption`.`userID`
                         LEFT JOIN `foster` ON `user`.`userID` = `foster`.`userID`
-                        LEFT JOIN `volunteering` ON `user`.`userID` = `volunteering`.`userID`
+                        LEFT JOIN `volunteering` ON `user`.`userID` = `volunteering`.`userID` 
                         WHERE `user`.`email_address` = '$_SESSION[email]' AND `user`.`password` = '$_SESSION[password]'";
 
                         $result = mysqli_query($connection, $query); 
