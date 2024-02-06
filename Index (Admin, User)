@@ -1,6 +1,4 @@
 <?php
-    session_start();
-
     include 'dbConn.php';
 
     $email = $_SESSION['email'];
@@ -15,7 +13,7 @@
             $userroleID = $row['userroleID'];
 
         if($userroleID === 'A2'){
-            include 'Admin user management.php';
+            include 'AdminHomePage.php';
         }
         else{
             include 'Main Page.php';
