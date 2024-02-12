@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: snow;
+}
+
+/* Under header */
+#header {
+    position: fixed;
+    height: 120px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EEF5FF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+#logo {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+}
+
+/* Slogan, Motto*/
+#info {
+    display: inline-block;
+    margin-left: 110px;
+    position: fixed;
+}
+
+.header h1{
+    display: flex;
+    padding: 30px 20px 20px 220px; 
+    float: left;
+}
+
+/* Under Sign Up info */
+
+.info{ /*Adjust the content position*/
+    margin: 180px auto;
+    width: 80%;
+    max-width: 730px;
+    height: 70%; 
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    background-color: snow;
+}
+
+.aside{ /*Adjust alignment*/
+    float: left;
+    display: flex;
+    padding: 20px 10px 10px 45px;
+}
+
+text{
+    margin-bottom: 10px;
+}
+
+/* Customize the input space */
+input[type=text], input[type=email], input[type=password], input[type=date]{
+    width: 80%;
+    padding: 10px;
+    margin: 5px 100px 4px 0;
+    display: inline-block;
+    border:none;
+    background: rgb(228, 227, 227,0.5);
+    color: #312e2e;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+/* Input space while focusing */
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=date]:focus{
+    background-color: #ddd;
+}
+
+/* Address */
+#address{
+    padding: 10px 120px 10px 10px;
+    width: 100%;
+}
+
+/* Gender */
+.containerradio{
+    position: relative;
+    padding-left: 100px;
+    margin: 10px 0 50px 0;
+    cursor: pointer;/*highlight text or objects on the screen so that they can be selected*/
+}
+
+.containerradio input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; 
+}
+
+.cusradio{ /*Radio button customization*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    margin: 5px 0 10px 50px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.containerradio:hover input ~ .cusradio{ /*While hovering to the container and the radio button will change color*/
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.containerradio input:checked ~ .cusradio{
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.cusradio:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containerradio input:checked ~ .cusradio:after{
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containerradio .cusradio:after{
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#message{
+    display: none;
+    background-color: #FAE7F3;
+    color: #E0AED0;
+    position: relative;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 180px;
+    height: 300px;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+#message li{
+    padding: 10px 35px;
+    font-size: 20px;
+}
+
+.valid{
+    color: rgb(41, 251, 41);
+}
+
+.valid:before{
+    position:relative;
+    left: -35px;
+}
+
+.invalid{
+    color: red;
+}
+
+.invalid:before{
+    position: relative;
+    left: -35px;
+}
+
+#signup{
+    background-color: #6cf468;
+    color: white;
+    padding: 14px 20px;
+    margin: 50px 150px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    font-size: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+#signup:hover{
+    opacity: 1;
+}
+
+#clear{
+    clear: both;
+}
