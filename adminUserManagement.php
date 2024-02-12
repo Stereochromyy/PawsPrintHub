@@ -40,30 +40,20 @@ include 'dbConn.php';
                 $result2 = mysqli_query($connection, $query2);
 
                 if (mysqli_num_rows($result2) > 0) {
-                    while ($row = mysqli_fetch_assoc($result2)) {
-                        $imglink = $row['user_image_link'];
-                    }
-                }
+                    $row2 = mysqli_fetch_assoc($result2);
+                    $imglink = $row2['user_image_link'];
 
+                } else {
+                    // Set a default image link if no profile image is found
+                    $imglink = "https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png";
+                }   
                 ?>
 
                 <div class="userinfo">
                     <a href="adminViewProfileStructure.php?userID=<?php echo $userID; ?>">
                         <!--Pass the userID to admin view profile structure-->
-                        <div class="profile">
-                            <?php
-                            //Check if the profile is empty or exist
-                            if (empty($imglink)) {
-                                ?>
-                                <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png"
-                                    alt="Profile picture">
-                                <?php
-                            } else {
-                                ?>
-                                <img src="<?php echo $imglink; ?>" alt="Profile picture">
-                                <?php
-                            }
-                            ?>
+                        <div class="profile">   
+                            <img src="<?php echo $imglink; ?>" alt="Profile picture">         
                         </div>
                         <div class="name">
                             <?php echo $name; ?>
