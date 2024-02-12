@@ -38,7 +38,7 @@ include 'dbConn.php';
                         alt="Profile photo">
                     <ul>
                         <?php
-                        if (!isset($_SESSION['email'])) {
+                        if (!isset($_SESSION['email']) || !isset($_SESSION['password'])) {
                             ?>
                             <li><a href="loginPPH.php" target="_blank">Log in/Sign Up</a></li>
                             <?php
@@ -55,7 +55,7 @@ include 'dbConn.php';
             </ul>
         </nav>
         <?php
-        if (isset($_SESSION['email']) || isset($_SESSION['password'])) {
+        if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
             ?>
             <div class="notification-box" style="margin-left:-320px;">
                 <img src="images/notification.png" alt="Notification">
