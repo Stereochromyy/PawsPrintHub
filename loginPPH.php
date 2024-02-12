@@ -1,15 +1,19 @@
 <?php
-    session_start();
-    include 'dbConn.php';
+session_start();
+include 'dbConn.php';
 
-    if (isset($_POST['btnLogin'])) {
-        $email = $_POST['txtEmail'];
-        $password = $_POST['txtPassword'];
-        $query = "SELECT * FROM user WHERE email_address='$email' AND password='$password'";
-        $results = mysqli_query($connection, $query);
-        if (mysqli_num_rows($results) == 1) {
-            $row = mysqli_fetch_assoc($results);
-            // echo 'record found'; 
+$error_message1 = '';
+$error_message2 = '';
+
+if (isset($_POST['btnLogin'])) {
+    $email = $_POST['txtEmail'];
+    $input_password = $_POST['txtPassword'];
+
+    $query = "SELECT * FROM user WHERE `email_address`='$email'";
+    $results = mysqli_query($connection, $query);
+    if (mysqli_num_rows($results) == 1) {
+        $row = mysqli_fetch_assoc($results);
+        if (password_verify($input_password, $row['password'])) {
 
             // Set session variables
             $_SESSION['email'] = $row['email_address'];
@@ -17,16 +21,19 @@
 
             include "index.php";
             exit();
-        } else {
-            echo 'record not found';
+        } else{
+            $error_message1 = "ⓘ Incorrect Password";
         }
+    }else {
+        $error_message2 = "ⓘ Email not found";
     }
-
-    mysqli_close($connection);
+}
+mysqli_close($connection);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,12 +52,12 @@
             <p>Connecting Paws, Creating Stories</p>
         </div>
     </header>
-    
+
     <main class="container">
         <div class="leftside">
             <img src="images/animalshelter.jpg" alt="" id="loginimg">
         </div>
-        
+
         <div class="rightside">
             <form action="" method="post">
                 <h1 style="margin-top: 80px;">Welcome Back!</h1>
@@ -59,9 +66,18 @@
                     <p><label for="txtEmail">Email Address: </label><br></p>
                     <input type="email" name="txtEmail" placeholder="example@gmail.com" required><br>
                     
+                    <?php if ($error_message2 != ''){ ?>
+                        <br><p style="color: red; margin-top: -20px;"><?php echo $error_message2; ?></p>
+                    <?php } ?>
+
                     <p><label for="txtPassword">Password: </label><br></p>
-                    <input type="password" name="txtPassword" placeholder="Must have at least 8 characters"required><br>
+                    <input type="password" name="txtPassword" placeholder="Must have at least 8 characters"
+                        required><br>
                     
+                        <?php if ($error_message1 != ''){ ?>
+                        <br><p style="color: red; margin-top: -20px;"><?php echo $error_message1; ?></p>
+                    <?php } ?>
+
                     <div style="margin-top: 25px;">
                         <input type="submit" value="Login" name="btnLogin">
                     </div>
@@ -73,6 +89,7 @@
             </form>
         </div>
     </main>
-    
+
 </body>
+
 </html>
