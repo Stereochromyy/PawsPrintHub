@@ -8,5 +8,5 @@
     $connection = mysqli_connect($server, $user, $password, $database);
 
     if ($connection === false){ //Check database conenction
-        die ('Database connection failure'.mysqli($connection)); //If fail stop the execution
+        die ("Database connection failure".mysqli($connection)); //If fail stop the execution
     }
