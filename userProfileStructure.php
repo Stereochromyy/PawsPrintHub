@@ -2,12 +2,6 @@
     session_start();
     include 'dbConn.php';
 
-    // Check if the user is logged in
-    if (!isset($_SESSION['email']) || $_SESSION['email'] === null || !isset($_SESSION['password']) || $_SESSION['password'] === null) { 
-        header('Location: loginPPH.php');
-        exit;
-    }
-
     //Session variables
     $email = $_SESSION['email'];
 
