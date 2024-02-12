@@ -1,0 +1,84 @@
+.info{ /*Adjust the content position*/
+    margin: 120px auto;
+    width: 80%;
+    max-width: 1000px;
+    height: 70%;
+    min-height: 700px; 
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    background-color: snow;
+    border: 1px solid black;
+}
+
+.userinfo{
+    min-height: 300px;
+    height: 40%;
+    max-width: 900px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+
+.userinfo a:hover{
+    margin: 10px;
+    box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.2), 3px 4px 3px 4px rgb(0,0,0,0.2);
+}
+
+.profile{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 30px 0 70px 80px;
+    border: 1px solid black;
+}
+
+.profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.name{
+    height: 50px;
+    width: 220px;
+    border: 1px solid black;
+    margin: -40px 0 10px 50px;
+    background-color: rgb(242, 252, 252);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.details{
+    margin-left: 50%;
+    margin-top: -200px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+h4{
+    margin-right: 10px;
+}
+
+.output{
+    height: 45px;
+    min-width: 195px;
+    width: 60%;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: white;
+    padding: 5px;
+    padding-left: 10px;
+    align-items: center; /*Align the userID centre*/
+    justify-content: center; /*Align the userID centre*/
+    text-align: center;
+    word-wrap: break-word; /*Add word wrap property*/
+    box-sizing: border-box; 
+    font-size: 18px;
+}
