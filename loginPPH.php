@@ -36,7 +36,7 @@
 
 <body>
     <header id="header">
-        <a href="Main Page.php">
+        <a href="mainPage.php">
             <img src="images//logo.png" alt="Paws Print Hub Logo" id="logo">
         </a>
 
@@ -67,7 +67,7 @@
                     </div>
 
                     <div>
-                        Don't have an account? <a href="Sign Up.php">Sign up</a>
+                        Don't have an account? <a href="signUp.php">Sign up</a>
                     </div>
                 </div>
             </form>
