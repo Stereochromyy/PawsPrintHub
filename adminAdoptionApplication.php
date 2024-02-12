@@ -95,13 +95,13 @@ include 'dbConn.php';
                                             </div>
 
                                             <div class="button">
-                                                <a href="approveadoption.php?id=<?php echo $adoptionID; ?>">
+                                                <a href="approveAdoption.php?id=<?php echo $adoptionID; ?>">
                                                     <div class="button1">
                                                         <p>Approve</p>
                                                     </div>
                                                 </a>
 
-                                                <a href="rejectadoption.php?id=<?php echo $adoptionID; ?>">
+                                                <a href="rejectAdoption.php?id=<?php echo $adoptionID; ?>">
                                                     <div class="button2">
                                                         <p>Reject</p>
                                                     </div>
