@@ -87,26 +87,18 @@ if (mysqli_num_rows($result) > 0) {
             $imageresult = mysqli_query($connection, $image);
 
             if (mysqli_num_rows($imageresult) > 0) {
-                while ($image_row = mysqli_fetch_assoc($imageresult)) {
-                    $imglink = $image_row['user_image_link'];
-                }
+                $image_row = mysqli_fetch_assoc($imageresult);
+                $imglink = $image_row['user_image_link'];
+
             }
+            else {
+                // Set a default image link if no profile image is found
+                $imglink = "https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png";
+            }   
             ?>
             <div class="record">
                 <div class="profile">
-                    <?php
-                    //Check if the profile is empty or exist
-                    if (empty($imglink)) {
-                        ?>
-                        <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png"
-                            alt="Profile picture">
-                        <?php
-                    } else {
-                        ?>
-                        <img src="<?php echo $imglink; ?>" alt="Profile picture">
-                        <?php
-                    }
-                    ?>
+                    <img src="<?php echo $imglink; ?>" alt="Profile picture">
                 </div>
                 <div>
                     <p>DonationID:
