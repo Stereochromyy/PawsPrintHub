@@ -110,7 +110,7 @@ if (mysqli_num_rows($adoption_result) > 0) {
             <div>
                 <h2><b>Question 3:</b></h2>
                 <p><b>How much is your budget for pets per month? (in RM) *Max 999999</b><br><br>
-                    <?php echo $budget_for_pets; ?>
+                    RM <?php echo $budget_for_pets; ?>
                 </p>
             </div>
         </div>
