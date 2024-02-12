@@ -1,5 +1,8 @@
 <?php
     include 'dbConn.php';
+
+    $error_message = ''; // Initialize an error message variable
+
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if (isset($_POST['btnsignup'])){
             // Storing under variable
@@ -13,25 +16,33 @@
 
             // Hashing for password
             $password = password_hash($password, PASSWORD_DEFAULT);
-                    
-            // Insert into the database
-            $query= "INSERT INTO `user`(`name`, `dob`, `gender`, `email_address`, `password`, `contactnum`, `address`, `userroleID`) VALUES ('$name','$dob','$gender','$email','$password','$contactnum','$address','U1')";
-            
-            // Show message whether the registration successful/failure
-            if (mysqli_query($connection, $query)){
-    ?>
-            <script>
-                window.alert("Registered succesfully"); //successful pop up
-            </script>
-    <?php
-                header("refresh: 1"); 
-                exit();
-            }else{
-    ?>
-            <script>
-                window.alert("Registration failed."); //failure pop up
-            </script>
-<?php
+
+            // Check if the email is already in the database
+            $checkQuery = "SELECT * FROM `user` WHERE `email_address` = '$email'";
+            $result = mysqli_query($connection, $checkQuery);
+
+            if (mysqli_num_rows($result) > 0) {
+                $error_message = "ⓘ Email already exists. Please use a different email address.";
+
+            } else {
+                // Insert into the database
+                $query= "INSERT INTO `user`(`name`, `dob`, `gender`, `email_address`, `password`, `contactnum`, `address`, `userroleID`) VALUES ('$name','$dob','$gender','$email','$password','$contactnum','$address','U1')";
+                
+                // Show message whether the registration successful/failure
+                if (mysqli_query($connection, $query)){
+            ?>
+                <script>
+                    window.alert("Registered succesfully"); //successful pop up
+                </script>
+            <?php
+                    header("Refresh: 1");
+                }else{
+            ?>
+                <script>
+                    window.alert("Registration failed. Please try again..."); //failure pop up
+                </script>
+            <?php
+                }
             }
         }
     }
@@ -46,11 +57,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sign Up</title>
-    <link rel="stylesheet" href="Sign Up.css">
+    <link rel="stylesheet" href="signUp.css">
 </head>
 <body>
     <header id="header">
-        <a href="Main Page.php">
+        <a href="mainPage.php">
             <img src="images//logo.png" alt="Paws Print Hub Logo" id="logo">
         </a>
 
@@ -80,6 +91,10 @@
                 <!-- email -->
                 <div class="aside">
                     <label>Email Address <br><br><input type="email" name="txtemail" id="" placeholder="email@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></label>
+
+                    <?php if ($error_message != ''){ ?>
+                        <br><p style="color: red; font-size: 10px; margin-left: -300px; margin-top: 130px;"><?php echo $error_message; ?></p>
+                    <?php } ?>
                 </div>
                 <!-- phone num. -->
                 <div class="aside">
@@ -197,7 +212,7 @@
 
         function validatepassword(){
             if (input.value !== validate.value){
-                validate.setCustomValidity("Passwords not match."); //will show the customize message
+                validate.setCustomValidity("Passwords does not match."); //will show the customize message
             }
             else{
                 validate.setCustomValidity('');
