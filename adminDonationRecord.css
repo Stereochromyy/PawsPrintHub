@@ -1,0 +1,95 @@
+.info{ /*Adjust the content position*/
+    margin: 120px auto;
+    width: 80%;
+    max-width: 1000px;
+    height: 70%;
+    min-height: 700px; 
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    background-color: snow;
+    border: 1px solid black;
+}
+
+.title{
+    max-width: 1000px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    background-color: rgb(223, 247, 242); 
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.content{
+    height: 300px;
+    min-width: 400px;
+    width: 85%;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.content h3{
+    margin-left: 22%;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.content img{
+    height: 120px;
+    width: 120px;
+    margin-top: 120px;
+    margin-left: -45%;
+}
+
+.content p{
+    margin-top: 150px;
+    margin-left: 10%;
+    font-size: larger;
+}
+
+.record{
+    height: auto;
+    width: 85%;
+    min-width: 400px;
+    border: 1px solid black;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    clear: both;
+}
+
+.profile{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+}
+
+.profile img{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+p{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.option{
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+}
+
+.donation{
+    margin-top: 35px;
+    float: right;
+    margin-left: 30px;
+}
