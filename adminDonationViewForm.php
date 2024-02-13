@@ -68,39 +68,23 @@ if(isset($_POST['txtSubmit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Donation View Form</title>
-    <link rel="stylesheet" href="adminViewForm.css">
+    <!-- <link rel="stylesheet" href="adminViewForm.css"> -->
+    <link rel="stylesheet" href="adminDonationViewForm.css">
 </head>
 <style>
-    input[type="submit"]{
-        display: none;
-    }
     
-    #message{
-        color:green;
-        margin-left: 330px;
-        margin-top: -48px;
-    }
-
-    input[type="text"]{
-        height: 30px;
-        width: 150px;
-        border-radius: 10px;
-        font-size: 15px;
-        padding-left: 10px;
-        margin-left: 5px;
-    }
 
 </style>
 
 <body>
-    <div class="back">
-        <a href="adminDonationRecord.php"><img src="https://cdn-icons-png.flaticon.com/512/93/93634.png"
-                alt="Back to Home Page" height="40px" width="40px"></a>
-    </div>
     <form action="#" method="POST">
     <div class="container">
+        <div class="back">
+            <a href="adminDonationRecord.php"><img src="https://cdn-icons-png.flaticon.com/512/93/93634.png"
+                alt="Back to Home Page" height="40px" width="40px"></a>
+        </div>
         <div>
-            <h1>Donation Form</h1>
+            <h1>Donation Record</h1>
         </div>
         <div class="position">
             <div class="profile">
@@ -144,7 +128,7 @@ if(isset($_POST['txtSubmit'])){
                 </p>
             </div>
         </div>
-        <div class="question">
+        <div class="question"><br>
             <div>
                 <p><b>Donation Date: </b>
                     <?php echo $donation_date; ?>
