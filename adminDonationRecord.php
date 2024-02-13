@@ -24,7 +24,9 @@ if (mysqli_num_rows($result) > 0) {
         if ($donationtype === 'Monetary') {
             $total_amount += floatval($donationamount);
         } else {
-            $total_item += 1;
+            if ($status === 'Received') {
+                $total_item += 1;
+            }
         }
         $records[] = $row; // store data in array 
     }
@@ -90,50 +92,51 @@ if (mysqli_num_rows($result) > 0) {
                 $image_row = mysqli_fetch_assoc($imageresult);
                 $imglink = $image_row['user_image_link'];
 
-            }
-            else {
+            } else {
                 // Set a default image link if no profile image is found
                 $imglink = "https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png";
-            }   
+            }
             ?>
-            <div class="record">
-                <div class="profile">
-                    <img src="<?php echo $imglink; ?>" alt="Profile picture">
-                </div>
-                <div>
-                    <p>DonationID:
-                        <?php echo $donationID; ?>
-                    </p>
-                    <p>Name:
-                        <?php echo $name; ?>
-                    </p>
-                </div>
-                <div style="margin-left: 25%;">
-                    <?php
-                    if ($donationtype === 'Monetary') {
+            <a href="adminDonationViewForm.php?id=<?php echo $userID; ?>">
+                <div class="record">
+                    <div class="profile">
+                        <img src="<?php echo $imglink; ?>" alt="Profile picture">
+                    </div>
+                    <div>
+                        <p>DonationID:
+                            <?php echo $donationID; ?>
+                        </p>
+                        <p>Name:
+                            <?php echo $name; ?>
+                        </p>
+                    </div>
+                    <div style="margin-left: 25%;">
+                        <?php
+                        if ($donationtype === 'Monetary') {
+                            ?>
+
+                            <img src="https://cdn-icons-png.flaticon.com/512/9956/9956875.png" alt="Monetary" class="option">
+                            <?php
+                        } else {
+                            ?>
+                            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/add-item-3593618-3009209.png"
+                                alt="Item" class="option">
+                            <?php
+                        }
                         ?>
 
-                        <img src="https://cdn-icons-png.flaticon.com/512/9956/9956875.png" alt="Monetary" class="option">
+                    </div>
+                    <div class="donation">
                         <?php
-                    } else {
+                        if ($donationtype === 'Monetary') {
+                            echo 'RM' . $donationamount;
+                        } else {
+                            echo $donationitem;
+                        }
                         ?>
-                        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/add-item-3593618-3009209.png" alt="Item"
-                            class="option">
-                        <?php
-                    }
-                    ?>
-
+                    </div>
                 </div>
-                <div class="donation">
-                    <?php
-                    if ($donationtype === 'Monetary') {
-                        echo 'RM' . $donationamount;
-                    } else {
-                        echo $donationitem;
-                    }
-                    ?>
-                </div>
-            </div>
+            </a>
             <?php
         }
         ?>
