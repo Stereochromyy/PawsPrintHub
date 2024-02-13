@@ -89,6 +89,7 @@ if(isset($_POST['txtSubmit'])){
         padding-left: 10px;
         margin-left: 5px;
     }
+
 </style>
 
 <body>
@@ -145,13 +146,11 @@ if(isset($_POST['txtSubmit'])){
         </div>
         <div class="question">
             <div>
-                <h2><b>Question 1:</b></h2>
                 <p><b>Donation Date: </b>
                     <?php echo $donation_date; ?>
                 </p>
             </div><br>
             <div>
-                <h2><b>Question 2:</b></h2>
                 <p><b>Donation Type: </b>
                     <?php echo $donationtype; ?>
                 </p>
@@ -159,19 +158,16 @@ if(isset($_POST['txtSubmit'])){
             <?php if ($donationtype === 'Item') {
                 ?>
                 <div>
-                    <h2><b>Question 3:</b></h2>
                     <p><b>Donation Item: </b>
                         <?php echo $donationitem; ?>
                     </p>
                 </div><br>
                 <div>
-                    <h2><b>Question 4:</b></h2>
                     <p><b>Donation Quantity: </b>
                         <?php echo $donation_quantity . ' pax'; ?>
                     </p>
                 </div><br>
                 <div>
-                    <h2><b>Question 5:</b></h2>
                     <p><b>Donation Status: </b>
                         <input type="text" name="txtStatus" id="" value="<?php echo $status; ?>">
                         <label for="image-button">
@@ -190,13 +186,11 @@ if(isset($_POST['txtSubmit'])){
             } else {
                 ?>
                 <div>
-                    <h2><b>Question 3:</b></h2>
                     <p><b>Donation Amount: </b>RM
                         <?php echo $donationamount; ?>
                     </p>
                 </div><br>
                 <div>
-                    <h2><b>Question 4:</b></h2>
                     <p><b>Donation Status: </b>
                         <?php echo $status; ?>
                     </p>
