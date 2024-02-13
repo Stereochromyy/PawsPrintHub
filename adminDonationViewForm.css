@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    background-color: snow;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Back button */
+.back{
+    position: relative;
+    margin-left: 5%;
+    margin-top: 30px;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.back:hover{
+    background-color: rgb(235, 229, 229);
+}
+
+/* The box */
+.container{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 1000px;
+    height: 80%;
+    min-height: 500px;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    background-image: url(images/donationRecord.png);
+}
+
+h1{
+    text-align: center;
+    margin-top: -30px;
+}
+
+/* The profile pic */
+.profile{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+    margin: auto; /*centralise image*/
+    position: relative;
+    z-index: 0;
+}
+
+/* Info */
+.info{
+    margin-top: -200px;
+    margin-left: 28%;
+}
+
+/* Question */
+.question{
+    margin-top: -240px;
+    margin-left: 60%;
+}
+
+input[type="submit"]{
+    display: none;
+}
+
+#message{
+    color:green;
+    margin-left: 330px;
+    margin-top: -48px;
+}
+
+input[type="text"]{
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-left: 5px;
+}
