@@ -1,66 +1,65 @@
 <?php
-    // session_start();
-    include "dbConn.php";
+// session_start();
+include "dbConn.php";
 
-    // Calc different animal species num
-    $query = "SELECT * FROM `animal`";
+// Calc different animal species num
+$query = "SELECT * FROM `animal`";
 
-    $result = mysqli_query($connection, $query);
+$result = mysqli_query($connection, $query);
 
-    $dog_num = 0;
-    $cat_num = 0;
-    $others_num = 0;
+$dog_num = 0;
+$cat_num = 0;
+$others_num = 0;
 
-    $records = array();
+$records = array();
 
-    if(mysqli_num_rows($result)){
-        while($row = mysqli_fetch_assoc($result)){
-            $species = $row['species'];
-        
+if (mysqli_num_rows($result)) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $species = $row['species'];
 
-            if ($species === 'dog'){
-                $dog_num +=1;
-            }
-            elseif($species ==='cat'){
-                $cat_num +=1;
-            }
-            else{
-                $others_num +=1;
-            }
-            $records[] = $row;
+
+        if ($species === 'dog') {
+            $dog_num += 1;
+        } elseif ($species === 'cat') {
+            $cat_num += 1;
+        } else {
+            $others_num += 1;
         }
+        $records[] = $row;
     }
+}
 
-    // Calc animals adopted
-    $adoption_query = "SELECT * FROM `adoption` WHERE `approval_status` = 'Approved'";
+// Calc animals adopted
+$adoption_query = "SELECT * FROM `adoption` WHERE `approval_status` = 'Approve'";
 
-    $adoption_result = mysqli_query($connection, $adoption_query);
+$adoption_result = mysqli_query($connection, $adoption_query);
 
-    $adoption_num = 0;
+$adoption_num = 0;
 
-    if(mysqli_num_rows($adoption_result)){
-        while($row = mysqli_fetch_assoc($adoption_result)){
-            $adoption_num +=1;
-        }
+if (mysqli_num_rows($adoption_result)) {
+    while ($row = mysqli_fetch_assoc($adoption_result)) {
+        $adoption_num += 1;
     }
-    // Calc animals fostered
-    $foster_query = "SELECT * FROM `foster` WHERE `approval_status` = 'Approved'";
+}
+// Calc animals fostered
+$foster_query = "SELECT * FROM `foster` WHERE `approval_status` = 'Approve'";
 
-    $foster_result = mysqli_query($connection, $foster_query);
+$foster_result = mysqli_query($connection, $foster_query);
 
-    $foster_num = 0;
+$foster_num = 0;
 
-    if(mysqli_num_rows($foster_result)){
-        while($row = mysqli_fetch_assoc($foster_result)){
-            $foster_num +=1;
-        }
+if (mysqli_num_rows($foster_result)) {
+    while ($row = mysqli_fetch_assoc($foster_result)) {
+        $foster_num += 1;
     }
+}
 
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,12 +67,13 @@
     <link rel="stylesheet" href="adminHomePage.css">
 
 </head>
+
 <body>
     <?php include 'adminNavBar.php'; ?>
 
     <main>
         <div id="title">
-            <h1>Current Shelter Animal Count: </h1> 
+            <h1>Current Shelter Animal Count: </h1>
         </div>
 
         <div class="clear">
@@ -108,7 +108,7 @@
             <div class="info3">
                 <p><?php echo $dog_num; ?></p>
             </div>
-            
+
             <div class="info3">
                 <p><?php echo $cat_num; ?></p>
             </div>
@@ -117,9 +117,9 @@
                 <p><?php echo $others_num; ?></p>
             </div>
         </div>
-        
+
         <div id="ahpinfo">
-            <h2>Animals Adopted: </h2> 
+            <h2>Animals Adopted: </h2>
             <h2>Animals Fostered: </h2>
         </div>
 
@@ -127,7 +127,8 @@
             <p><?php echo $adoption_num; ?></p>
             <p><?php echo $foster_num; ?></p>
         </div>
-        
+
     </main>
 </body>
+
 </html>
