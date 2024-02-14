@@ -8,7 +8,7 @@ include 'dbConn.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Adoption Application</title>
+    <title>Admin Foster Application</title>
     <link rel="stylesheet" href="adminAdoptionFosterApplication.css">
 </head>
 
@@ -21,20 +21,20 @@ include 'dbConn.php';
         <div class="application">
 
             <div class="title">
-                <h1><b>Adoption Application</b></h1>
+                <h1><b>Foster Application</b></h1>
             </div>
 
             <?php
-            $query1 = "SELECT * FROM `adoption` INNER JOIN `animal` ON `animal`.`animalID` = `adoption`.`animalID` ORDER BY `adoption`.`adoptionID` ASC"; //for fetching adoption data
+            $query1 = "SELECT * FROM `foster` INNER JOIN `animal` ON `animal`.`animalID` = `foster`.`animalID` ORDER BY `foster`.`fosterID` ASC"; //for fetching adoption data
             $result = mysqli_query($connection, $query1);
 
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $adoptionID = $row[`adoption` . 'adoptionID'];
+                    $fosterID = $row[`foster` . 'fosterID'];
                     $petname = $row[`animal` . 'name'];
-                    $approval_status = $row[`adoption` . 'approval_status'];
-                    $animalID = $row[`adoption` . 'animalID'];
-                    $userID = $row[`adoption` . 'userID'];
+                    $approval_status = $row[`foster` . 'approval_status'];
+                    $animalID = $row[`foster` . 'animalID'];
+                    $userID = $row[`foster` . 'userID'];
 
 
                     $query2 = "SELECT `name` FROM `user` WHERE `userID` = '$userID'";
@@ -45,7 +45,7 @@ include 'dbConn.php';
                             $username = $row[`user` . 'name'];
 
 
-                            $query3 = "SELECT * FROM `animal` INNER JOIN `animal_image` ON `animal_image`.`animalID` = `animal`.`animalID` WHERE `animal`.`animalID` = $animalID";
+                            $query3 = "SELECT * FROM `animal` INNER JOIN `animal_image` ON `animal_image`.`animalID` = `animal`.`animalID` WHERE `animal`.`animalID` = $animalID LIMIT 1";
                             $result3 = mysqli_query($connection, $query3);
 
                             if (mysqli_num_rows($result3) > 0) {
@@ -53,7 +53,7 @@ include 'dbConn.php';
                                     $petimage = $row[`animal_image` . 'animal_image_link'];
 
 
-                                    $query4 = "SELECT * FROM `user` LEFT JOIN `user_image` ON `user_image`.`userID` = `user`.`userID` LEFT JOIN `adoption` ON `adoption`.`userID` = `user`.`userID` WHERE `user`.`userID` = $userID";
+                                    $query4 = "SELECT * FROM `user` LEFT JOIN `user_image` ON `user_image`.`userID` = `user`.`userID` LEFT JOIN `foster` ON `foster`.`userID` = `user`.`userID` WHERE `user`.`userID` = $userID";
                                     $result4 = mysqli_query($connection, $query4);
 
                                     if (mysqli_num_rows($result4) > 0) {
@@ -65,49 +65,48 @@ include 'dbConn.php';
 
                                     <form action="#" method="POST">
                                         <!-- Will display different color for different approval status -->
-                                        <a href="adminAdoptionViewForm.php?id=<?php echo $userID; ?>">
-                                        <div id="adoption" style="background-color: 
-                                        <?php echo ($approval_status == 'Approved') ? '#A1EEBD' : (($approval_status == 'Rejected') ? '#FF817E' : 'lightyellow'); ?>;">
+                                        <a href="adminFosterViewForm.php?id=<?php echo $userID; ?>">
+                                            <div id="adoption" style="background-color: 
+                                        <?php echo ($approval_status == 'Approve') ? '#A1EEBD' : (($approval_status == 'Reject') ? '#FF817E' : 'lightyellow'); ?>;">
 
 
-                                            <div class="content">
-                                                <div>
-                                                    <img src="<?php echo $petimage; ?>" alt="" id="adoptimg">
+                                                <div class="content">
+                                                    <div>
+                                                        <img src="<?php echo $petimage; ?>" alt="" id="adoptimg">
+                                                    </div>
+
+                                                    <div id="adoptionid">
+                                                        Foster ID: <?php echo $fosterID; ?>
+                                                    </div>
+
+                                                    <br><br>
+
+                                                    <div id="name">
+                                                        Pet's Name: <?php echo $petname; ?>
+                                                    </div>
+
+                                                    <div id="profile">
+                                                        <img src="<?php echo $userprofile; ?>" alt="">
+                                                    </div>
+
+                                                    <div id="username">
+                                                        <?php echo $username ?>
+                                                    </div>
                                                 </div>
 
-                                                <div id="adoptionid">
-                                                    Adoption ID: <?php echo $adoptionID; ?>
-                                                </div>
-
-                                                <br><br>
-
-                                                <div id="name">
-                                                    Pet's Name: <?php echo $petname; ?>
-                                                </div>
-
-                                                <div id="profile">
-                                                    <img src="<?php echo $userprofile; ?>" alt="">
-                                                </div>
-
-                                                <div id="username">
-                                                    <?php echo $username ?>
+                                                <div class="button">
+                                                    <a href="approveFoster.php?id=<?php echo $fosterID; ?>">
+                                                        <div class="button1">
+                                                            <p>Approve</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="rejectFoster.php?id=<?php echo $fosterID; ?>">
+                                                        <div class="button2">
+                                                            <p>Reject</p>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                             </div>
-
-                                            <div class="button">
-                                                <a href="approveAdoption.php?id=<?php echo $adoptionID; ?>">
-                                                    <div class="button1">
-                                                        <p>Approve</p>
-                                                    </div>
-                                                </a>
-
-                                                <a href="rejectAdoption.php?id=<?php echo $adoptionID; ?>">
-                                                    <div class="button2">
-                                                        <p>Reject</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
                                     </form>
 
             <?php
