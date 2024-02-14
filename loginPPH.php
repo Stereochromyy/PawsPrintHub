@@ -18,13 +18,14 @@ if (isset($_POST['btnLogin'])) {
             // Set session variables
             $_SESSION['email'] = $row['email_address'];
             $_SESSION['password'] = $row['password'];
+            $_SESSION['userID'] = $row['userID'];
 
             include "index.php";
             exit();
-        } else{
+        } else {
             $error_message1 = "ⓘ Incorrect Password";
         }
-    }else {
+    } else {
         $error_message2 = "ⓘ Email not found";
     }
 }
@@ -65,17 +66,18 @@ mysqli_close($connection);
                 <div id="content" style="margin-top: 35px;">
                     <p><label for="txtEmail">Email Address: </label><br></p>
                     <input type="email" name="txtEmail" placeholder="example@gmail.com" required><br>
-                    
-                    <?php if ($error_message2 != ''){ ?>
-                        <br><p style="color: red; margin-top: -20px;"><?php echo $error_message2; ?></p>
+
+                    <?php if ($error_message2 != '') { ?>
+                        <br>
+                        <p style="color: red; margin-top: -20px;"><?php echo $error_message2; ?></p>
                     <?php } ?>
 
                     <p><label for="txtPassword">Password: </label><br></p>
-                    <input type="password" name="txtPassword" placeholder="Must have at least 8 characters"
-                        required><br>
-                    
-                        <?php if ($error_message1 != ''){ ?>
-                        <br><p style="color: red; margin-top: -20px;"><?php echo $error_message1; ?></p>
+                    <input type="password" name="txtPassword" placeholder="Must have at least 8 characters" required><br>
+
+                    <?php if ($error_message1 != '') { ?>
+                        <br>
+                        <p style="color: red; margin-top: -20px;"><?php echo $error_message1; ?></p>
                     <?php } ?>
 
                     <div style="margin-top: 25px;">
