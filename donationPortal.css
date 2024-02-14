@@ -4,10 +4,10 @@ body{
 
 /* Design purpose */
 .rectangle{
-    margin-top: 550px;
+    margin-top: 350px;
     width: 100%;
-    height: 70px;
-    background-color: rgb(213, 230, 244);
+    height: 300px;
+    background-color: rgb(255, 242, 237);
     position: absolute;
     z-index: 0; /*Send it behind the donate info*/
 }
@@ -64,12 +64,26 @@ body{
 .donationoption1,.donationoption2{
     height: 80px;
     width: 25%;
-    display:flex;
+    display: flex;
     border: 1px solid rgb(127, 124, 124);
     margin-top: -20px;
     margin-bottom: 30px;
     margin-left: 15%;
     border-radius: 10px;
+}
+
+
+#monetarybtn:hover{
+    opacity: 50%;
+}
+
+#supplybtn{
+    display: flex;
+    align-items: center;
+}
+
+#supplybtn:hover{
+    opacity: 50%;
 }
 
 #icon{
