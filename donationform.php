@@ -70,7 +70,7 @@ if(isset($_POST['donationsubmitbutton'])) {
     ?>
         <script>
             window.alert("Donation successful, Thank you for your donation! :)");
-            window.location.href = "Donation Portal.php";
+            window.location.href = "donationPortal.php";
         </script>
     <?php
         } else {
@@ -85,7 +85,7 @@ if(isset($_POST['donationsubmitbutton'])) {
     ?>
         <script>
             window.alert("Donation successful, Thank you for your donation! :) ");
-            window.location.href = "Donation Portal.php";
+            window.location.href = "donationPortal.php";
         </script>
     <?php
         } else {
@@ -99,45 +99,6 @@ if(isset($_POST['donationsubmitbutton'])) {
 
 }
 
-    /*
-
-
-    
-
-    //If there is no account (guest), then check for 2 query
-    if ($account == "guest") {
-        if ($guest_result && $volunteerinsertresult) {
-    ?>
-        <script>
-            window.alert("Form submitted successfully");
-            window.location.href = "PawsPrintHub.php";
-        </script>
-    <?php
-        } else {
-        ?>
-        <script>
-            window.alert("Error occured, try again later :/")
-        </script>
-        <?php
-        }
-    } else{ //Else, means hes a user, that means runing 1 query is enough
-        if ($volunteerinsertresult) {
-    ?>
-        <script>
-            window.alert("Submitted successfully");
-            window.location.href = "PawsPrintHub.php";
-        </script>
-    <?php
-        } else {
-            ?>
-            <script>
-                window.alert("Error occured, try again later :/")
-            </script>
-        <?php
-        }
-    }
-
-}*/
     ?>
 
     <main id="va">
@@ -150,9 +111,9 @@ if(isset($_POST['donationsubmitbutton'])) {
         <?php
         if($account == "guest"){
             ?>
-            <label class="vguestdetail">Full Name:</label><input type="text" name="name"> <br>
-            <label class="vguestdetail">Email Address:</label><input type="text" name="email"> <br>
-            <label class="vguestdetail">Contact Number:</label><input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="012-345-6789" name="number"> <br><br><br> 
+            <label class="vguestdetail">Full Name:</label><input type="text" class="inputbox" name="name"> <br><br>
+            <label class="vguestdetail">Email Address:</label><input type="text" class="inputbox" name="email"> <br><br>
+            <label class="vguestdetail">Contact Number:</label><input type="tel" class="inputbox" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="012-345-6789" name="number"> <br><br><br> 
         <?php
         }
         ?>
@@ -229,3 +190,4 @@ if(isset($_POST['donationsubmitbutton'])) {
     
 </body>
 </html>
+
