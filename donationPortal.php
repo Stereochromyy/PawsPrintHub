@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,191 +9,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paws Print Hub | Malaysia</title>
-    <link rel="stylesheet" href="PPH.css">
+    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="donationPortal.css">
 </head>
 
 <body>
     <?php
-    session_start();
-    include 'dbConn.php';
-    include 'checkAccount.php';
+    include("userNavigationBar.php");
     ?>
 
-    <?php
-    if (isset($_POST['donationsubmitbutton'])) {
+    <!-- Rectangle for design purpose -->
+    <div class="rectangle"> </div>
 
-        $date = date("Y/m/d"); //define date first, because other variable need to be defined based on the type of donation (money or supply)
-        $Mdonationinsertquery = False;
-        $Sdonationinsertquery = False;
+    <!-- Donation info -->
+    <div class="donation">
+        <div class="donationinfo" id="text">
+            <h1 class="infotext"><b>DONATE ONLINE</b></h1>
+            <h2>Your support matters!!!</h2>
+            <p style="font-size: large; line-height: 30px; color: rgb(136, 115, 115);"><b>Make a One-Time Payment</b> <br> via Online Banking/ QR Payment
+            <p><br>
+            <p>Welcome to Paws Print Hub's Donation Portal! Your support transforms lives by providing shelter, medical care, and basic necessities for pets in need. Choose your donation options, and rest assured, our platform secure the confidentiality of your contribution. Every penny makes changes, let's join us in connecting paws and creating lasting stories. Click the donation options to make a difference today!</p>
+        </div>
+        <!-- Donation option linked to form -->
+        <div class="container">
+            <button id="monetarybtn" class="donationoption1" style="background-color: #dafade;">
+                <img src="https://static-00.iconduck.com/assets.00/money-send-icon-2048x2046-yh64gys6.png" alt="Monetary" height="50px" width="50px" id="icon">
+                <h1 style="display: flex; margin-top: 20px;">Monetary</h1>
+            </button>
 
-        // Before defining donation information, we have to define the userID first
-        if ($account === "guest") { // If this account is a guest account, first we must create a record for him in user table.
-            $name = $_POST["name"];
-            $contact_num = $_POST["number"];
-            $email = $_POST["email"];
+            <button id="supplybtn" class="donationoption2" style="background-color: #c4e0ed;">
+                <img src="https://static-00.iconduck.com/assets.00/box-icon-512x511-cu40u9gv.png" alt="Item" id="icon" height="50px" width="50px">
+                <h2 style="display: flex; margin-top: 10px;">Item supplies</h2>
+            </button>
+        </div>
 
-            $guestquery = "INSERT INTO `user`(`name`, `contactnum`,`email_address`,`userroleID`) VALUES ('$name','$contact_num','$email','G3')";
-            $guest_result = mysqli_query($connection, $guestquery);
+    </div>
 
-            // The reason we create a user record for guest here is so that he can have an userID, now we just need to retrieve his userID
+    <!-- Footer for additional info -->
+    <div id="footer">
+        <p style="margin-left: 30px; padding-top:10px;">If you have any enquiries, feel free to drop us a message at 01-2345 6789 or email us at pawsprinthub@gmail.com. <br><br> *All donations are tax-exempted. You will be mailed a tax-exempt receipt within 2-3 weeks.</p>
 
-            $retrieveid = "SELECT userID FROM `user` WHERE email_address = '$email' ORDER BY userID DESC limit 1";
-            $retrieveidresult = mysqli_query($connection, $retrieveid);
-            while ($idrow = mysqli_fetch_assoc($retrieveidresult)) {
-                $userid = $idrow["userID"];
-            }
-        } else { // If it is a user account, just get his userID with the $SESSION function that are defined at the login page.
-            $userid = $_SESSION['userID'];
-        }
+        <footer>Copyright &copy; 2024 Paws Print Hub, Malaysia. All Rights Reserved.</footer>
 
-        // After obtaining the needed user info (userID), now we starts to define donation information to put it into donation table of database
-
-        $donation_type = $_POST["donationtype"]; // Defining the donation type the user picked
-
-        if ($donation_type == "Monetary") { // Checking the donation type
-            $donation_amount = $_POST["Damount"];
-
-            // just a quick explain on naming convention, the "Mdonation" means Money-typed donation
-            $Mdonationinsertquery = "INSERT INTO `donation`(`donation_type`, `donation_amount`, `donation_date`,`donation_status`,`userID`) VALUES ('$donation_type','$donation_amount','$date','Received','$userid')";
-            $Mdonationinsertresult = mysqli_query($connection, $Mdonationinsertquery);
-        } else { //else it's a supply-typed donation
-            $donation_item = $_POST["donationitem"];
-            $donation_quantity = $_POST["Damount"];
-
-            $Sdonationinsertquery = "INSERT INTO `donation`(`donation_type`, `donation_item`, `donation_quantity`, `donation_date`,`donation_status`,`userID`) VALUES ('$donation_type','$donation_item','$donation_quantity','$date','Not received','$userid')";
-            $Sdonationinsertresult = mysqli_query($connection, $Sdonationinsertquery);
-        }
-
-        // Checking if query is successfully ran, guest have 2 queries, user only have 1, so lets use if else statement to do this
-        // First we define a donation_result, which will be "True" if either Money or Supply donation result query are successful
-        if ($Mdonationinsertresult || $Sdonationinsertresult) {
-            $donation_result = True;
-        }
-
-        if ($account == "guest") {
-            if ($guest_result && $donation_result) {
-    ?>
-                <script>
-                    window.alert("Donation successful, Thank you for your donation! :)");
-                    window.location.href = "donationPortal.php";
-                </script>
-            <?php
-            } else {
-            ?>
-                <script>
-                    window.alert("Error occured, try again later :/")
-                </script>
-            <?php
-            }
-        } else { //Else, means hes a user, that means runing 1 query is enough
-            if ($donation_result) {
-            ?>
-                <script>
-                    window.alert("Donation successful, Thank you for your donation! :) ");
-                    window.location.href = "donationPortal.php";
-                </script>
-            <?php
-            } else {
-            ?>
-                <script>
-                    window.alert("Error occured, try again later :/")
-                </script>
-    <?php
-            }
-        }
-    }
-
-    ?>
-
-    <main id="va">
-        <h1><b>Donation Form</b></h1>
-        <br>
-        <p>Welcome to our donation page! Your support means the world to us and the animals we care for. With your generosity, we can continue our mission of rescuing, nurturing, and finding loving homes for pets in need. Together, let's make a paw-sitive impact on the lives of our furry friends. Thank you for your kindness and compassion.
-        </p>
-
-        <form action="" method="post" id="vform">
-            <?php
-            if ($account == "guest") {
-            ?>
-                <label class="vguestdetail">Full Name:</label><input type="text" class="inputbox" name="name"> <br><br>
-                <label class="vguestdetail">Email Address:</label><input type="text" class="inputbox" name="email"> <br><br>
-                <label class="vguestdetail">Contact Number:</label><input type="tel" class="inputbox" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="012-345-6789" name="number"> <br><br><br>
-            <?php
-            }
-            ?>
-            <?php
-            // Close connection
-            mysqli_close($connection); ?>
-            <h2><u>Donation Type:</u></h2>
-            <h5>kindly select a donation type below</h5><br>
-            <h3><input type="radio" id="money" name="donationtype" value="Monetary"> Monetary</h3><br>
-            <h3><input type="radio" id="supply" name="donationtype" value="Item"> Supplies</h3><br><br>
-
-            <div id="supplychoice">
-                <h3>Donation item:</h3>
-                <select id="donationitems" name="donationitem" onchange="updatelabel()">
-                    <option value="Animal food">Animal Food</option>
-                    <option value="Canned food">Canned Food</option>
-                    <option value="Medical supplies">Medical supplies</option>
-                    <option value="Cleaning supplies">Cleaning supplies</option>
-                    <option value="Vitamin">Vitamins</option>
-                </select>
-                <br><br>
-            </div>
-
-            <div id="donationamount">
-                <span id="damountlabel">
-                    <h3>Donation Amount:</h3>
-                </span><br>
-                <input type="number" id="Damountinput" name="Damount" min="1" max="999" value="1">
-            </div>
-
-            <br>
-
-            <input type="submit" value="Donate" id="vsubmitbtn" name="donationsubmitbutton">
-        </form>
-    </main>
+    </div>
 
     <script>
-        document.getElementById("money").onclick = function() { //when user chose the monetary option
-            var Dinput = document.getElementById("Damountinput");
-            document.getElementById("donationamount").style.display = "block";
-            document.getElementById("supplychoice").style.display = "none";
-            Dinput.type = "text";
-            Dinput.min = "";
-            Dinput.max = "";
-            Dinput.value = "";
-            Dinput.pattern = "[0-9]{1,6}";
-            Dinput.placeholder = "Enter an amount";
+        var moneybtn = document.getElementById("monetarybtn");
+        var supplybtn = document.getElementById("supplybtn");
 
-            document.getElementById("damountlabel").innerHTML = "Donation Amount (RM) *Max 999999";
+        moneybtn.onclick = function() {
+            <?php
+            $_SESSION["donationtype"] = "monetary";
+            ?>
+            window.location.href = "donationForm.php";
         }
-
-        document.getElementById("supply").onclick = function() {
-            var Dinput = document.getElementById("Damountinput");
-            document.getElementById("supplychoice").style.display = "block";
-            document.getElementById("donationamount").style.display = "block";
-            Dinput.pattern = "";
-            Dinput.type = "number";
-            Dinput.min = "1";
-            Dinput.max = "999";
-            Dinput.value = "1";
-            updatelabel();
-
-        }
-
-        function updatelabel() {
-            var amountlabel = document.getElementById("damountlabel");
-            var donationitem = document.getElementById("donationitems").value;
-
-            if (donationitem == "medical" || donationitem == "clean") {
-                amountlabel.innerHTML = "Donation Amount (Box)";
-            } else {
-                amountlabel.innerHTML = "Donation Amount (KG)";
-            }
+        supplybtn.onclick = function() {
+            <?php
+            $_SESSION["donationtype"] = "supply";
+            ?>
+            window.location.href = "donationForm.php";
         }
     </script>
-
-</body>
+    </bod>
 
 </html>
