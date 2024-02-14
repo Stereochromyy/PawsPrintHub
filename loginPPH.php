@@ -20,7 +20,7 @@ if (isset($_POST['btnLogin'])) {
             $_SESSION['password'] = $row['password'];
             $_SESSION['userID'] = $row['userID'];
 
-            include "index.php";
+            include 'index.php';
             exit();
         } else {
             $error_message1 = "ⓘ Incorrect Password";
@@ -86,6 +86,11 @@ mysqli_close($connection);
 
                     <div>
                         Don't have an account? <a href="signUp.php">Sign up</a>
+                    </div>
+                    <div><br>
+                    ━━━━━━━ or ━━━━━━━
+                    <br><br>
+                    <a href="mainPage.php" id="view">View As Guest</a>
                     </div>
                 </div>
             </form>
