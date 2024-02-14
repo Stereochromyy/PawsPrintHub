@@ -11,7 +11,7 @@
 <?php
     session_start();
     include 'dbConn.php';
-    include 'checkaccount.php';
+    include 'checkAccount.php';
 ?>
 
 <?php
