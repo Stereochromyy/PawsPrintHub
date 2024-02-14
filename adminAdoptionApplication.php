@@ -8,7 +8,7 @@ include 'dbConn.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Foster Application</title>
+    <title>Admin Adoption Application</title>
     <link rel="stylesheet" href="adminAdoptionFosterApplication.css">
 </head>
 
@@ -21,20 +21,20 @@ include 'dbConn.php';
         <div class="application">
 
             <div class="title">
-                <h1><b>Foster Application</b></h1>
+                <h1><b>Adoption Application</b></h1>
             </div>
 
             <?php
-            $query1 = "SELECT * FROM `foster` INNER JOIN `animal` ON `animal`.`animalID` = `foster`.`animalID` ORDER BY `foster`.`fosterID` ASC"; //for fetching adoption data
+            $query1 = "SELECT * FROM `adoption` INNER JOIN `animal` ON `animal`.`animalID` = `adoption`.`animalID` ORDER BY `adoption`.`adoptionID` ASC"; //for fetching adoption data
             $result = mysqli_query($connection, $query1);
 
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $fosterID = $row[`foster` . 'fosterID'];
+                    $adoptionID = $row[`adoption` . 'adoptionID'];
                     $petname = $row[`animal` . 'name'];
-                    $approval_status = $row[`foster` . 'approval_status'];
-                    $animalID = $row[`foster` . 'animalID'];
-                    $userID = $row[`foster` . 'userID'];
+                    $approval_status = $row[`adoption` . 'approval_status'];
+                    $animalID = $row[`adoption` . 'animalID'];
+                    $userID = $row[`adoption` . 'userID'];
 
 
                     $query2 = "SELECT `name` FROM `user` WHERE `userID` = '$userID'";
@@ -53,7 +53,7 @@ include 'dbConn.php';
                                     $petimage = $row[`animal_image` . 'animal_image_link'];
 
 
-                                    $query4 = "SELECT * FROM `user` LEFT JOIN `user_image` ON `user_image`.`userID` = `user`.`userID` LEFT JOIN `foster` ON `foster`.`userID` = `user`.`userID` WHERE `user`.`userID` = $userID";
+                                    $query4 = "SELECT * FROM `user` LEFT JOIN `user_image` ON `user_image`.`userID` = `user`.`userID` LEFT JOIN `adoption` ON `adoption`.`userID` = `user`.`userID` WHERE `user`.`userID` = $userID";
                                     $result4 = mysqli_query($connection, $query4);
 
                                     if (mysqli_num_rows($result4) > 0) {
@@ -65,9 +65,9 @@ include 'dbConn.php';
 
                                     <form action="#" method="POST">
                                         <!-- Will display different color for different approval status -->
-                                        <a href="adminFosterViewForm.php?id=<?php echo $userID; ?>">
+                                        <a href="adminAdoptionViewForm.php?id=<?php echo $userID; ?>">
                                             <div id="adoption" style="background-color: 
-                                        <?php echo ($approval_status == 'Approve') ? '#A1EEBD' : (($approval_status == 'Reject') ? '#FF817E' : 'lightyellow'); ?>;">
+                                            <?php echo ($approval_status == 'Approve') ? '#A1EEBD' : (($approval_status == 'Reject') ? '#FF817E' : 'lightyellow'); ?>;">
 
 
                                                 <div class="content">
@@ -76,7 +76,7 @@ include 'dbConn.php';
                                                     </div>
 
                                                     <div id="adoptionid">
-                                                        Foster ID: <?php echo $fosterID; ?>
+                                                        Adoption ID: <?php echo $adoptionID; ?>
                                                     </div>
 
                                                     <br><br>
@@ -95,12 +95,13 @@ include 'dbConn.php';
                                                 </div>
 
                                                 <div class="button">
-                                                    <a href="approveFoster.php?id=<?php echo $fosterID; ?>">
+                                                    <a href="approveAdoption.php?id=<?php echo $adoptionID; ?>">
                                                         <div class="button1">
                                                             <p>Approve</p>
                                                         </div>
                                                     </a>
-                                                    <a href="rejectFoster.php?id=<?php echo $fosterID; ?>">
+
+                                                    <a href="rejectAdoption.php?id=<?php echo $adoptionID; ?>">
                                                         <div class="button2">
                                                             <p>Reject</p>
                                                         </div>
