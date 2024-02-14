@@ -45,7 +45,7 @@ include 'dbConn.php';
                             $username = $row[`user` . 'name'];
 
 
-                            $query3 = "SELECT * FROM `animal` INNER JOIN `animal_image` ON `animal_image`.`animalID` = `animal`.`animalID` WHERE `animal`.`animalID` = $animalID";
+                            $query3 = "SELECT * FROM `animal` INNER JOIN `animal_image` ON `animal_image`.`animalID` = `animal`.`animalID` WHERE `animal`.`animalID` = $animalID LIMIT 1";
                             $result3 = mysqli_query($connection, $query3);
 
                             if (mysqli_num_rows($result3) > 0) {
