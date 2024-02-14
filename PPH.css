@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/background.jpg) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#header {
+    position: fixed;
+    height: 120px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EEF5FF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+#logo {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+}
+
+#info {
+    display: inline-block;
+    margin-left: 110px;
+    position: fixed;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1;
+}
+
+#navbar a {
+    margin-right: 60px;
+    text-decoration:none;
+    color:#333;
+    font-weight: 500;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+#icon {
+   margin-right: 90px;
+   font-size: 19px;
+}
+
+.box {
+    margin: auto;
+    height: auto;
+    width: 80%;
+    margin-top: 125px;
+    margin-bottom: -90px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+}
+
+.box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.box p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+#va {
+    max-width: 800px;
+    margin: 25px auto; /* Center the form on the page */
+    background-color: #ebf1fd;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#va p {
+    text-align: justify;
+    color: #555;
+    line-height: 1.8;
+}
+
+#va h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+#va form {
+    margin-top: 25px;
+}
+
+#va form h3 {
+    margin-bottom: 10px;
+}
+
+#vform input[type="radio"] {
+    margin-bottom: 10px;
+}
+
+#vsubmitbtn {
+    background-color: lightskyblue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: large;
+}
+
+#vsubmitbtn:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.vguestdetail{
+    padding: 0px 20px 0px 0px;
+    
+}
+
+#supplychoice{
+    display: none;
+}
+
+#donationamount{
+    display: none;
+}
+
+.donationoption1:hover{
+    opacity: 80%;
+}
+
+.donationoption2:hover{
+    opacity: 80%;
+}
+
+.inputbox{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+}
