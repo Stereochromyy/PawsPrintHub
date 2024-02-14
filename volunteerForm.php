@@ -55,7 +55,7 @@
         ?>
             <script>
                 window.alert("Form submitted successfully");
-                window.location.href = "PawsPrintHub.php";
+                window.location.href = "mainPage.php";
             </script>
         <?php
             } else {
@@ -70,7 +70,7 @@
         ?>
             <script>
                 window.alert("Submitted successfully");
-                window.location.href = "PawsPrintHub.php";
+                window.location.href = "mainPage.php";
             </script>
         <?php
             } else {
