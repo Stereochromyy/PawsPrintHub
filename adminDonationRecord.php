@@ -98,7 +98,7 @@ if (mysqli_num_rows($result) > 0) {
             }
             ?>
             <a href="adminDonationViewForm.php?id=<?php echo $userID; ?>">
-                <div class="record">
+                <div class="record" style="background-color: <?php echo ($donationtype == 'Monetary') ? 'hsl(109, 85%, 95%)' : 'hsl(36, 100%, 94%)'; ?>;">
                     <div class="profile">
                         <img src="<?php echo $imglink; ?>" alt="Profile picture">
                     </div>
@@ -110,11 +110,10 @@ if (mysqli_num_rows($result) > 0) {
                             <?php echo $name; ?>
                         </p>
                     </div>
-                    <div style="margin-left: 25%;">
+                    <div>
                         <?php
                         if ($donationtype === 'Monetary') {
                             ?>
-
                             <img src="https://cdn-icons-png.flaticon.com/512/9956/9956875.png" alt="Monetary" class="option">
                             <?php
                         } else {
