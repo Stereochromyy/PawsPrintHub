@@ -49,8 +49,10 @@ include 'dbConn.php';
                 <form action="#" method="POST">
                     <!-- Will display different color for different approval status -->
                     <a href="adminVolunteeringViewForm.php?id=<?php echo $userID; ?>">
-                        <div class="volunteer"
-                            style="background-color: <?php echo ($approval_status == 'Approve') ? '#A1EEBD' : (($approval_status == 'Reject') ? '#FF6868' : 'azure'); ?>;">
+                        <div class="volunteer" style="background-color: <?php echo ($approval_status == 'Approve') ? 'background: rgb(255,255,255);
+                        background: linear-gradient(90deg, rgba(255,255,255,1) 46%, rgba(203,255,197,1) 100%);' : (($approval_status == 'Reject') ? 'background: rgb(255,255,255);
+                        background: linear-gradient(90deg, rgba(255,255,255,1) 46%, rgba(255,197,197,1) 100%);' : 'background: rgb(255,255,255);
+                        background: linear-gradient(90deg, rgba(255,255,255,1) 46%, rgba(197,240,255,1) 100%);'); ?>;">
                             <div class="content">
                                 <div id="volunteerid">Volunteer ID:
                                     <?php echo $volunteerID; ?>
