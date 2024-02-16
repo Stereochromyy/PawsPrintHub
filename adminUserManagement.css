@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     font-size: 22px;
-    background-color: snow;
+    background-color: #f3f1fb;
     border: 1px solid black;
 }
 
@@ -16,22 +16,30 @@
     height: 40%;
     max-width: 900px;
     width: 80%;
+    box-shadow: lightgrey 1px 8px 1px;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
     margin: 20px auto;
+    background-image: url(images/purpleBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: 100%;
+    font-size: medium;
+    transition: 0.6s;
 }
 
-.userinfo a:hover{
-    margin: 10px;
-    box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.2), 3px 4px 3px 4px rgb(0,0,0,0.2);
+.userinfo:hover{
+    box-shadow: none;
+    transform: translateY(8px);
 }
 
 .profile{
     border-radius: 50%;
     height: 150px;
     width: 150px;
-    margin: 30px 0 70px 80px;
+    margin: 40px 0 70px 100px;
     border: 1px solid black;
 }
 
@@ -44,41 +52,51 @@
 .name{
     height: 50px;
     width: 220px;
-    border: 1px solid black;
-    margin: -40px 0 10px 50px;
-    background-color: rgb(242, 252, 252);
+    margin: -40px 0 10px 80px;
+    background-color: rgb(252, 242, 245);
     text-align: center;
     padding-top: 10px;
+    border-radius: 10px;
 }
 
 .details{
-    margin-left: 50%;
-    margin-top: -200px;
+    margin-left: 40%;
+    margin-top: -210px;
     margin-bottom: 60px;
     display: flex;
     flex-direction: column;
+    background-color: rgba(120, 142, 255, 0.1);
+    padding: 20px;
+    border-radius: 30px;
+    width: 420px;
 }
 
 h4{
     margin-right: 10px;
+    min-width: 150px;
+    margin-top: 4px;
+}
+
+.position{
+    display: flex;
+    flex-direction: row;
 }
 
 .output{
     height: 45px;
-    min-width: 195px;
-    width: 60%;
-    display: flex;
-    border: 1px solid black;
-    border-radius: 20px;
+    min-width: 250px;
+    overflow: clip;
+    overflow-clip-margin: 50px;
+    width: auto;
     margin-left: 10px;
-    margin-top: 5px;
-    background-color: white;
+    /* background-color: white; */
     padding: 5px;
     padding-left: 10px;
     align-items: center; /*Align the userID centre*/
     justify-content: center; /*Align the userID centre*/
-    text-align: center;
+    text-align: left;
     word-wrap: break-word; /*Add word wrap property*/
     box-sizing: border-box; 
-    font-size: 18px;
+    font-size: 15px;
 }
+
