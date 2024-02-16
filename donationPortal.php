@@ -9,13 +9,12 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paws Print Hub | Malaysia</title>
-    <link rel="stylesheet" href="mainPage.css">
     <link rel="stylesheet" href="donationPortal.css">
 </head>
 
 <body>
     <?php
-    include("userNavigationBar.php");
+    include 'userNavigationBar.php';
     ?>
 
     <!-- Rectangle for design purpose -->
@@ -39,7 +38,7 @@ session_start();
 
             <button id="supplybtn" class="donationoption2" style="background-color: #c4e0ed;">
                 <img src="https://static-00.iconduck.com/assets.00/box-icon-512x511-cu40u9gv.png" alt="Item" id="icon" height="50px" width="50px">
-                <h2 style="display: flex; margin-top: 10px;">Item supplies</h2>
+                <h2 style="display: flex; margin-top: 25px;">Item supplies</h2>
             </button>
         </div>
 
@@ -61,13 +60,13 @@ session_start();
             <?php
             $_SESSION["donationtype"] = "monetary";
             ?>
-            window.location.href = "donationForm.php";
+            window.location.href = "donationForm.php?type=monetary";
         }
         supplybtn.onclick = function() {
             <?php
             $_SESSION["donationtype"] = "supply";
             ?>
-            window.location.href = "donationForm.php";
+            window.location.href = "donationForm.php?type=supply";
         }
     </script>
     </bod>
