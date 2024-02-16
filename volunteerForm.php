@@ -97,10 +97,10 @@
         <?php
         if($account == "guest"){
             ?>
-            <label class="vguestdetail">Full Name:</label><input type="text" class="inputbox" name="name"> <br><br>
-            <label class="vguestdetail">Date of Birth:</label><input type="date" class="inputbox" name="dob"> <br><br>
-            <label class="vguestdetail">Contact Number:</label><input type="tel" class="inputbox" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" name="number"> <br><br>
-            <label class="vguestdetail">Email Address:</label><input type="text" class="inputbox"name="email"> <br><br><br>
+            <label class="vguestdetail">Full Name:</label><input type="text" class="inputbox" name="name" pattern= "/^[a-zA-Z-' ]*$/" required> <br><br>
+            <label class="vguestdetail">Date of Birth:</label><input type="date" class="inputbox" name="dob" required> <br><br>
+            <label class="vguestdetail">Contact Number:</label><input type="tel" class="inputbox" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="999-999-9999" name="number" required> <br><br>
+            <label class="vguestdetail">Email Address:</label><input type="text" class="inputbox"name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="email@mail.com" required> <br><br><br>
             
         <?php
         }
@@ -126,4 +126,3 @@
     </main>
 </body>
 </html>
-
