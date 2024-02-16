@@ -2,8 +2,8 @@
 session_start();
 include 'dbConn.php';
 
-//Session variables
-$userID = $_GET['id']; //Get the user ID from admin volunteer page
+//GET variables
+$userID = $_GET['id']; //Get the user ID from admin donation page
 
 //USER PROFILE
 $query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID'";
@@ -68,7 +68,6 @@ if(isset($_POST['txtSubmit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Donation View Form</title>
-    <!-- <link rel="stylesheet" href="adminViewForm.css"> -->
     <link rel="stylesheet" href="adminDonationViewForm.css">
 </head>
 <style>
