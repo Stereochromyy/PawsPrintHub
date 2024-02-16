@@ -22,7 +22,7 @@ include 'dbConn.php';
     <div class="info">
         <?php
         //User details
-        $query = "SELECT `userID`, `name`, `email_address` FROM `user` WHERE `userroleID`= 'U1'  ORDER BY `userID` ASC";
+        $query = "SELECT `userID`, `name`, `email_address`, `contactnum` FROM `user` WHERE `userroleID`= 'U1'  ORDER BY `userID` ASC";
 
         // Queries execution
         $result = mysqli_query($connection, $query);
@@ -33,6 +33,7 @@ include 'dbConn.php';
                 $userID = $row['userID'];
                 $name = $row['name'];
                 $email = $row['email_address'];
+                $contact_num = $row['contactnum'];
 
                 //USER PROFILE
                 $query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID'";
@@ -46,29 +47,38 @@ include 'dbConn.php';
                 } else {
                     // Set a default image link if no profile image is found
                     $imglink = "https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png";
-                }   
+                }
                 ?>
 
                 <div class="userinfo">
                     <a href="adminViewProfileStructure.php?userID=<?php echo $userID; ?>">
                         <!--Pass the userID to admin view profile structure-->
-                        <div class="profile">   
-                            <img src="<?php echo $imglink; ?>" alt="Profile picture">         
+                        <div class="profile">
+                            <img src="<?php echo $imglink; ?>" alt="Profile picture">
                         </div>
+
                         <div class="name">
-                            <?php echo $name; ?>
-                        </div>
+                            <b><?php echo $name; ?></b>
+                        </div><br>
                         <div class="details">
-                            <h4>User ID: </h4>
-                            <div class="output">
-                                <?php echo $userID; ?>
-                            </div> <br>
-
-                            <h4>Email Address: </h4>
-                            <div class="output" style="min-width: 300px;">
-                                <?php echo $email; ?>
-                            </div> <br>
-
+                            <div class="position">
+                                <h4>User ID: </h4>
+                                <div class="output">
+                                    <?php echo $userID; ?>
+                                </div>
+                            </div>
+                            <div class="position">
+                                <h4>Email:</h4>
+                                <div class="output">
+                                    <?php echo $email; ?>
+                                </div>
+                            </div>
+                            <div class="position">
+                                <h4>Contact Number:</h4>
+                                <div class="output">
+                                    <?php echo $contact_num; ?>
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </div>
