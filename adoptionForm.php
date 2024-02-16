@@ -11,6 +11,10 @@
 <?php
     session_start();
     include 'dbConn.php';
+
+    if(!isset($_SESSION['userID'])){
+        header('Location: loginPPH.php');
+    }
 ?>
 
 <?php
@@ -130,4 +134,3 @@
     </main>
 </body>
 </html>
-
