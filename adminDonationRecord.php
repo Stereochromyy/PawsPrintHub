@@ -54,13 +54,13 @@ if (mysqli_num_rows($result) > 0) {
         </div><br><br>
 
         <div class="content">
-            <h3>Total Item Received</h3>
+            <h3>Total Item Received:</h3>
             <img src="https://cdn-icons-png.flaticon.com/512/1380/1380608.png" alt="boxes">
             <p>
                 <?php echo $total_item; ?>
             </p>
 
-            <h3 style="margin-left: 35%;">Total Fund Received:</h3>
+            <h3 style="margin-left: 30%;">Total Fund Received:</h3>
             <img src="https://cdn-icons-png.flaticon.com/512/8107/8107512.png" alt="Money" style="margin-left: -380px;">
             <p>
                 <?php echo 'RM ' . $total_amount; ?>
@@ -102,7 +102,7 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="profile">
                         <img src="<?php echo $imglink; ?>" alt="Profile picture">
                     </div>
-                    <div>
+                    <div id="details">
                         <p>DonationID:
                             <?php echo $donationID; ?>
                         </p>
