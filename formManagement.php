@@ -20,6 +20,13 @@
         padding: 50px;
         border-radius: 25px;
         border: 2px solid;
+        transition: 0.5s;
+    }
+
+    .fmbox:hover{
+        box-shadow: lightslategray 4px 4px 2px;
+        transform: translateY(8px);
+        transition: ease-in 0.3s;
     }
 
     .fmbox a {
@@ -40,7 +47,7 @@
             </a>
         </div>
         <div class="fmbox">
-            <a href="#">
+            <a href="adminFosterApplication.php">
                 <h2>View Fostering Application</h2>
             </a>
         </div>
