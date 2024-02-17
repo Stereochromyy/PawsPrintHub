@@ -92,13 +92,13 @@ include 'dbConn.php';
                             if (!is_null($adoption_status)) {
                                 echo "<b>Animal Name:</b>
                                 $animal_name <br>";
-                                echo "<b>Adoption Status:</b> $adoption_status<br>";
+                                echo "<b>Adoption Status:</b> $adoption_status<br><br>";
                             }
 
                             if (!is_null($foster_status)) {
                                 echo "<b>Animal Name:</b>
                                 $animal_name <br>";
-                                echo "<b>Foster Status:</b> $foster_status<br>";
+                                echo "<b>Foster Status:</b> $foster_status<br><br>";
                             }
 
                             if (!is_null($volunteering_status)) {
@@ -111,8 +111,6 @@ include 'dbConn.php';
                             }
                             echo "<br>";
                         }
-                    } else {
-                        echo "No results found.";
                     }
         }
         ?>
