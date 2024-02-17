@@ -58,20 +58,22 @@ include 'dbConn.php';
         if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
             ?>
             <div class="notification-box" style="margin-left:-320px;">
-                <img src="images/notification.png" alt="Notification">
+                <img src="images/notification.png" alt="Notification" id="notification_icon">
 
-                <div class="notification">
+                <div class="notification" id="notification">
 
                     <?php
                     $query = "SELECT *,
                         `user`.`userID`,
                         `adoption`.`approval_status` AS adoption_approval_status,
                         `foster`.`approval_status` AS foster_approval_status,
-                        `volunteering`.`approval_status` AS volunteering_approval_status
+                        `volunteering`.`approval_status` AS volunteering_approval_status,
+                        `animal`.`name` AS animal_name
                         FROM `user`
                         LEFT JOIN `adoption` ON `user`.`userID` = `adoption`.`userID`
                         LEFT JOIN `foster` ON `user`.`userID` = `foster`.`userID`
                         LEFT JOIN `volunteering` ON `user`.`userID` = `volunteering`.`userID` 
+                        LEFT JOIN `animal` ON `animal`.`animalID` = `adoption`.`animalID` OR `animal`.`animalID` = `foster`.`animalID`
                         WHERE `user`.`email_address` = '$_SESSION[email]' AND `user`.`password` = '$_SESSION[password]'";
 
                     $result = mysqli_query($connection, $query);
@@ -83,23 +85,29 @@ include 'dbConn.php';
                             $adoption_status = $row['adoption_approval_status'];
                             $foster_status = $row['foster_approval_status'];
                             $volunteering_status = $row['volunteering_approval_status'];
+                            $animal_name = $row['animal_name'];
 
                             // Display approval status for each table if the userID is in the respective table
                 
                             if (!is_null($adoption_status)) {
-                                echo "Adoption Status: $adoption_status<br>";
+                                echo "<b>Animal Name:</b>
+                                $animal_name <br>";
+                                echo "<b>Adoption Status:</b> $adoption_status<br>";
                             }
 
                             if (!is_null($foster_status)) {
-                                echo "Foster Status: $foster_status<br>";
+                                echo "<b>Animal Name:</b>
+                                $animal_name <br>";
+                                echo "<b>Foster Status:</b> $foster_status<br>";
                             }
 
                             if (!is_null($volunteering_status)) {
-                                echo "Volunteering Status: $volunteering_status<br>";
+                                echo "<b>Volunteering Status:</b> $volunteering_status<br>";
                             }
 
                             if (is_null($adoption_status) && is_null($foster_status) && is_null($volunteering_status)) {
-                                echo "<p>No Notifications Displayed...</p>";
+
+                                echo "<div style='text-align: center;'><a href= 'adopt@Foster.php'>Let's adopt/foster a pet </a> <br> OR <br> <a href= 'volunteer.php'>Volunteering</a> </div>";
                             }
                             echo "<br>";
                         }
@@ -111,6 +119,21 @@ include 'dbConn.php';
             </div>
         </div>
     </header>
+    <script>
+        var notification_icon = document.getElementById('notification_icon');
+        var notification = document.getElementById('notification');
+
+        notification_icon.onclick = function () {
+            notification.style.display = "block";
+        }
+
+        // Hide while they click outside the notification
+        window.onclick = function (event) {
+            if (event.target != notification && event.target != notification_icon) {
+                notification.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
