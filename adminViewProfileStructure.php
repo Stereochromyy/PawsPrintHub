@@ -160,7 +160,7 @@ mysqli_close($connection);
                             if ($imglink) {
                                 echo "<img src='" . $imglink . "' alt= 'Pet Image'>";
                             } else {
-                                echo "No Adopted Pets.";
+                                echo "No image for the pets.";
                             }
                             echo "</div>";
                         }
