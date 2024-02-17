@@ -112,7 +112,7 @@
     
 
             <h3><u>Question 1:</u></h3><h4>Could you share and describe any previous experience you have with animal volunteering?</h4>
-            <textarea name="comment" class="inputbox" form="vform" cols="100" rows="5"></textarea>
+            <textarea name="comment" class="inputbox" form="vform" cols="100" rows="5" required></textarea>
             <br><br><br>
 
             <h3><u>Question 2:</u></h3><h4>In case of an emergency, please provide the contact number of someone we can reach out to.</h4><br>
