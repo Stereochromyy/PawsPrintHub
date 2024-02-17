@@ -112,7 +112,7 @@
                     <br>
                     <p>If there's any emergency, feel free to contact us at 01-2345 6789 (9am - 4pm, Monday-Saturday) to lodge your 
                         report on animals requiring our help. If the incidents occur outside of the operating hours, here are ways you 
-                        could follow:</p>
+                        could follow:</p><br>
                     <a href="https://oacu.oir.nih.gov/system/files/media/file/2023-12/b12-PainDistress.pdf" target="_blank">
                         <img src="https://static.vecteezy.com/system/resources/thumbnails/002/219/582/small/illustration-of-book-icon-free-vector.jpg" alt="animal distress manual" class="optimg">
                     </a>
