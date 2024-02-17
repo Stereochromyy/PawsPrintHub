@@ -3,12 +3,26 @@
 body{
     background-color: snow;
     font-family: 'Poppins', sans-serif;
+    background-image: url(images/viewFormBG.png);
+}
+
+/* The box */
+.container{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    background-color: hsla(270, 54%, 95%, 0.8);
+    box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.2), 3px 4px 3px 4px rgb(0,0,0,0.2);
 }
 
 /* Back button */
 .back{
     position: relative;
-    margin-left: 80%;
+    margin-left: 3%;
     margin-top: 30px;
     background-color: white;
     height: 40px;
@@ -20,21 +34,8 @@ body{
     background-color: rgb(235, 229, 229);
 }
 
-/* The box */
-.container{
-    margin: 60px auto;
-    width: 100%;
-    max-width: 800px;
-    height: 80%;
-    min-height: 800px;
-    display: flex;
-    border: 1px solid black;
-    flex-direction: column;
-    background-color: hsl(64, 56%, 95%,0.3);
-    box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.2), 3px 4px 3px 4px rgb(0,0,0,0.2);
-}
-
 h1{
+    margin-top: -20px;
     text-align: center;
 }
 
@@ -73,4 +74,8 @@ h1{
 /* Question */
 .question{
     margin: 40px;
+}
+
+.answer{
+    text-align: justify;
 }
