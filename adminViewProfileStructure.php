@@ -71,12 +71,12 @@ mysqli_close($connection);
 </head>
 
 <body>
-    <div class="cross">
-        <a href="adminUserManagement.php"><img
-                src="https://static-00.iconduck.com/assets.00/cross-circle-icon-512x512-crxcbljw.png"
-                alt="Back to Home Page" height="40px" width="40px"></a>
-    </div>
     <div class="container">
+        <div class="cross">
+            <a href="adminUserManagement.php"><img
+                    src="https://static-00.iconduck.com/assets.00/cross-circle-icon-512x512-crxcbljw.png"
+                    alt="Back to Home Page" height="40px" width="40px"></a>
+        </div>
         <div class="profile">
             <?php
             //Check if the profile is empty or exist
