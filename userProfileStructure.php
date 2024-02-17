@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 //USER PROFILE
-$query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID'";
+$query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID' ORDER BY `userimageID` DESC LIMIT 1";
 
 $result2 = mysqli_query($connection, $query2);
 
@@ -263,8 +263,6 @@ mysqli_close($connection);
                     </div>
                 </div><br><br><br><br>
                 <div>
-                    <!-- <h4>Adopted Pet:</h4>
-                    <div class="petframe"> -->
                     <?php
                     $num_colums = count($ani_imglinks);
                     if ($num_colums > 0) {
@@ -276,7 +274,7 @@ mysqli_close($connection);
                             if ($imglink) {
                                 echo "<img src='" . $imglink . "' alt= 'Pet Image'>";
                             } else {
-                                echo "No Adopted Pets.";
+                                echo "No image for the pets.";
                             }
                             echo "</div>";
                         }
