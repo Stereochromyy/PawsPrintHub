@@ -102,7 +102,7 @@
                 include 'dbConn.php'; 
 
                     // Step 2: create SQL command - select, insert, update, delete
-                    $query = "SELECT * FROM animal";
+                    $query = "SELECT * FROM adoption RIGHT JOIN animal ON adoption.animalID = animal.animalID WHERE adoption.approval_status IS NULL OR adoption.approval_status IN ('Pending', 'Reject') OR animal.animalID IS NULL";
 
                     // Step 3: execute query
                     $results = mysqli_query($connection, $query);
