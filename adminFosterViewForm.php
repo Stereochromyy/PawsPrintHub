@@ -58,10 +58,11 @@ if (mysqli_num_rows($foster_result) > 0) {
 </head>
 
 <body>
-    <div class="back">
-        <a href="adminFosterApplication.php"><img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Back to Home Page" height="40px" width="40px"></a>
-    </div>
     <div class="container">
+        <div class="back">
+            <a href="adminFosterApplication.php"><img src="https://cdn-icons-png.flaticon.com/512/93/93634.png"
+                    alt="Back to Home Page" height="40px" width="40px"></a>
+        </div>
         <div>
             <h1>Foster Form</h1>
         </div>
@@ -70,13 +71,14 @@ if (mysqli_num_rows($foster_result) > 0) {
                 <?php
                 //Check if the profile is empty or exist
                 if (empty($imglink)) {
-                ?>
-                    <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png" alt="Profile picture">
-                <?php
+                    ?>
+                    <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png"
+                        alt="Profile picture">
+                    <?php
                 } else {
-                ?>
+                    ?>
                     <img src="<?php echo $imglink; ?>" alt="Profile picture">
-                <?php
+                    <?php
                 }
                 ?>
             </div>
@@ -88,11 +90,20 @@ if (mysqli_num_rows($foster_result) > 0) {
                     } else {
                         echo 'Guest';
                     }
-                    ?></p>
-                <p><b>Name:</b> <?php echo $name; ?></p>
-                <p><b>Email:</b> <?php echo $email; ?></p>
-                <p><b>Date of Birth:</b> <?php echo $dob; ?></p>
-                <p><b>Contact Number:</b> <?php echo $contact_num; ?></p>
+                    ?>
+                </p>
+                <p><b>Name:</b>
+                    <?php echo $name; ?>
+                </p>
+                <p><b>Email:</b>
+                    <?php echo $email; ?>
+                </p>
+                <p><b>Date of Birth:</b>
+                    <?php echo $dob; ?>
+                </p>
+                <p><b>Contact Number:</b>
+                    <?php echo $contact_num; ?>
+                </p>
             </div>
         </div>
         <div class="question">
@@ -104,7 +115,8 @@ if (mysqli_num_rows($foster_result) > 0) {
             </div><br>
             <div>
                 <h2><b>Question 2:</b></h2>
-                <p><b>How is your living environment? Tell us your property type, may add any description. (if any)</b><br><br>
+                <p><b>How is your living environment? Tell us your property type, may add any description. (if
+                        any)</b><br><br>
                     <?php echo $living_situation; ?>
                 </p>
             </div><br>
