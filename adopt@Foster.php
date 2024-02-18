@@ -15,7 +15,7 @@
 <body>
 
     <?php
-    include("userNavigationBar.php");
+    include "userNavigationBar.php";
     ?>
 
     <main>
