@@ -1,0 +1,110 @@
+#filler{
+    min-height: 120px;
+}
+
+#formbtngroup{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.fmbox {
+    position: relative;
+    margin: 0 auto;
+    height: 130px;
+    text-align: center;
+    width: 60%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    position: relative;
+    padding: 50px;
+    border-radius: 25px;
+    border: 2px solid;
+    overflow: clip;
+    transition: 0.5s;
+}
+
+.fmbox a {
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+    cursor: pointer;
+}
+
+
+.fmbox:hover{
+    transform: translateY(-15px);
+    box-shadow: 1px 15px 3px lightgrey;
+}
+
+.fmbox:hover .decoration1{
+    width: 30px;
+    left: 120px;
+    opacity: 50%;
+}
+
+.fmbox:hover .decoration2{
+    width: 50px;
+    left: 200px;
+    opacity: 50%;
+}
+
+.fmbox:hover .decoration3{
+    width: 100px;
+    left: 1100px;
+    opacity: 100%;
+}
+
+
+
+.decoration1{
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    background-color: white;
+    opacity: 0%;
+    top: -40px;
+    left: -200px;
+    rotate: 20deg;
+    transition: 0.7s;
+}
+
+.decoration2{
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    background-color: white;
+    opacity: 0%;
+    top: -40px;
+    left: -200px;
+    rotate: 20deg;
+    transition: 0.7s;
+}
+
+.decoration3{
+    position: absolute;
+    width: 30px;
+    height: 250px;
+    background-color: white;
+    opacity: 0%;
+    top: -50px;
+    left: -300px;
+    rotate: 30deg;
+    transition: 0.7s;
+}
+
+#adoptformbtn{
+    background: linear-gradient(to bottom right,rgb(82, 93, 246),rgb(110, 190, 243),rgb(255, 255, 255) );
+}
+
+
+#fosterformbtn{
+    background: linear-gradient(to bottom right,rgb(246, 191, 82), rgb(236, 242, 150),rgb(255, 255, 255) );
+}
+
+#volunteerformbtn{
+    background: linear-gradient(to bottom right,rgb(120, 246, 82), rgb(187, 255, 163),rgb(255, 255, 255) );
+}
