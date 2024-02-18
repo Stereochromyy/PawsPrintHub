@@ -25,7 +25,9 @@
                 <li><a href="formManagement.php">Form Management</a></li>
                 <li><a href="adminUserManagement.php"> User Management</a></li>
                 <li><a href="adminPetManagement.php">Pet Management</a></li>
-                <li id="clear"><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
+                <li id="clear"><img
+                        src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
+                        alt="Profile photo" height="40px" width="40px" style="float: left; margin-left: 20%;">
                     <ul>
                         <li><a href="userProfileStructure.php">View profile</a></li>
 
