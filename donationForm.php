@@ -116,7 +116,7 @@
             if ($account == "guest") {
                 ?>
                 <label class="vguestdetail">Full Name:</label><input type="text" class="inputbox" name="name" pattern= "/^[a-zA-Z-' ]*$/" required> <br><br>
-                <label class="vguestdetail">Email Address:</label><input type="text" class="inputbox" name="email" placeholder="email@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required> <br><br>
+                <label class="vguestdetail">Email Address:</label><input type="text" class="inputbox" name="email" placeholder="email@mail.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$" required> <br><br>
                 <label class="vguestdetail">Contact Number:</label><input type="tel" class="inputbox"
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="012-345-6789" name="number" required> <br><br><br>
                 <?php
