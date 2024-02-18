@@ -1,3 +1,15 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/600x315/f1/a0/a3/f1a0a3ad92ce9d03e096dc91406573d5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
 #title {
     margin: auto;
     height: auto;
@@ -11,10 +23,10 @@
     display: inline-block;
     width: 300px;
     height: 55px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: solid 1px black;
     text-align: center;
     font-size: medium;
+    border-radius: 20px;
     margin: 125px 25px 20px 25px;
 }
 
@@ -22,21 +34,45 @@
     display: inline-block;
     height: 300px;
     width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 0.5px solid black;
     margin: -420px 25px 20px 25px;
+    transition: 0.5s;
+    overflow: clip;
 }
+
 
 .info2 img{
     height: 100%;
     width: 100%;
 }
 
+.info2:hover{
+    border: 1px solid black;
+    border-radius: 50%;
+    transform: translateY(-60px);
+}
+
+#Dog{
+    background: linear-gradient(to top, #fbccb6, white);
+}
+
+
+#Cat{
+    background: linear-gradient(to top, #b6dbfb, white); 
+}
+
+
+#Others{
+    background: linear-gradient(to top, #fbf4b6, white);
+}
+
+
+
+
 .info3 {
     display: inline-block;
     width: 250px;
     height: 55px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     font-size: medium;
     margin: 0 50px 20px 50px;
@@ -47,34 +83,38 @@
     font-size: xx-large;
 }
 
-#ahpinfo {
-    padding: 50px 50px 0 50px;
-    display: flex;
-    margin-bottom: 20px;
-}
 
-#ahpinfo h2 {
-    margin-left: 280px;
-
-}
 
 #count {
-    height: 150px;
     width: 1000px;
-    border-radius: 35px;
-    border: 2px solid;
-    margin: 0 auto 25px auto;
-    background-color: #f9f9f9;
     display: flex;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
     text-align: center;
-    font-size: medium;
+    font-weight: bold;
 }
 
-#count p {
+#ahpinfo {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px grey;
+    padding: 10px;
+    border-radius: 25px;
+    color: grey;
+    transition: 0.5s;
+}
+
+#ahpinfo:hover{
+    transform: translateY(-50px);
+    color: black;
+    border: solid 5px black;
+    background-color: #fcffd8;
+}
+
+#ahpinfo p {
     font-size: xx-large;
-    padding: 50px;
-    margin: 0 200px 0 200px;
+    padding: 25px 170px;
 }
 
 .clear {
