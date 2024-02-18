@@ -100,7 +100,7 @@
             <label class="vguestdetail">Full Name:</label><input type="text" class="inputbox" name="name" pattern= "/^[a-zA-Z-' ]*$/" required> <br><br>
             <label class="vguestdetail">Date of Birth:</label><input type="date" class="inputbox" name="dob" required> <br><br>
             <label class="vguestdetail">Contact Number:</label><input type="tel" class="inputbox" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="999-999-9999" name="number" required> <br><br>
-            <label class="vguestdetail">Email Address:</label><input type="text" class="inputbox"name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="email@mail.com" required> <br><br><br>
+            <label class="vguestdetail">Email Address:</label><input type="text" class="inputbox"name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$" placeholder="email@mail.com" required> <br><br><br>
             
         <?php
         }
@@ -112,7 +112,7 @@
     
 
             <h3><u>Question 1:</u></h3><h4>Could you share and describe any previous experience you have with animal volunteering?</h4>
-            <textarea name="comment" class="inputbox" form="vform" cols="100" rows="5" required></textarea>
+            <textarea name="comment" class="inputbox" form="vform" cols="100" rows="5"></textarea>
             <br><br><br>
 
             <h3><u>Question 2:</u></h3><h4>In case of an emergency, please provide the contact number of someone we can reach out to.</h4><br>
