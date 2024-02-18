@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*----------------------------------------------------------------------------------*/
+/* PawPrintHub.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/background.jpg) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 17px;
+    background-color: #e1edfb;
+}
+
+
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+    height: auto;
+    margin: 0 auto;
+}
+  
+  /* The back Button */
+.back {
+    color: #cec0c0;
+    background-color: #e1edfb;
+    border: none;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    height: auto;
+    width: auto;
+    margin: 40px;
+}
+  
+.back:hover,
+.back:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.petprofile{
+    width: 90%; /* This will means it follows 90% of the width of it's parent container, which is.modal-content container)*/
+    margin-left: 43px; /* This is some micro adjustment so that it looks like it align in the center */
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+#imgframe{
+    height: 220px;
+    width: 220px;
+    position: relative;
+    margin: 5px;
+}
+
+#imgframe img{
+    height: 220px;
+    width: 220px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+#delimgbtn{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    background-color: rgb(174, 7, 7);
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+#delimgbtn:hover{
+    background-color: red;
+}
+
+#uploadpetimgicon{
+    margin-left: 43px;
+    margin-top: 10px;
+}
+
+.petdetails{
+    color: #206293;
+    background-color: #EEF7FF;
+    height: 45%;
+    width: 50%;
+    border-radius: 40px;
+    margin: 30px auto;
+    padding: 60px;
+    text-align: justify;
+    line-height: 2em;
+    display: block;
+}
+
+.edit_pet_input_box{
+    color: #206293;
+    background-color: #EEF7FF;
+    height: 45%;
+    width: 50%;
+    border-radius: 40px;
+    margin: 0 auto 30px auto;
+    padding: 60px;
+    text-align: justify;
+    line-height: 2em;
+    display: none;
+}
+
+.edit_pet_input_box input,select,textarea{
+    border: none;
+    border-radius: 5px;
+}
+
+.buttongroup{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+
+.manage_btn{
+    display: flex;
+    justify-content:space-between;
+    width: 430px;
+    margin-left: auto;
+}
+
+.manage_btn a{
+    text-decoration: none;
+}
+
+
+
+.button{
+    font-size: 0.5em;
+    height: 60px;
+    width: 200px;
+    border: 1px solid black;
+    opacity: 0.8;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2), 0 6px 20px 0 rgb(0,0,0,0.2);
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#editbtn{
+    display: block;
+}
+
+
+.button:hover{
+    opacity: 1;
+}
+
+.button img{
+    height: 30px;
+    width: 30px;
+}
+
+#upload_animal_pic input button{
+    border: none;
+}
+
+/* Delete confirmation pop up styling */
+
+#popuppage{
+    display: none;
+}
+
+#blank{
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(1px);
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    height: 250px;
+    width: 500px;
+    padding: 15px;
+    background-color: rgb(250, 250, 250);
+    border: solid 1px black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup h2{
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    text-align: center;
+}
+
+#popup p{
+    text-align: center;
+}
+
+.pubtn{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.pubtn:hover{
+    font-weight: bold;
+    filter: brightness(1.1);
+}
+
+#popupbtngroup{
+    width: 300px;
+    height: auto;
+    margin: 30px auto 0px;
+    display: flex;
+    justify-content: space-between;
+}
