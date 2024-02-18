@@ -23,7 +23,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #EEF5FF;
+    background-color: #afcfa3;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -85,7 +85,8 @@ body {
 }
 
 #nav a:hover {
-    color: blueviolet;
+    color: rgb(10, 92, 4);
+    font-weight: bold;
 }
 
 #nav ul li ul {
@@ -100,13 +101,13 @@ body {
 }
 
 #nav ul li ul li {
-    background-color: azure;
+    background-color: rgb(194, 255, 177);
     display: block;
 }
 
 #nav ul li ul li:hover {
-    color: #EEF5FF;
-    background-color: azure;
+    color: rgb(10, 92, 4);
+    background-color: rgb(226, 255, 218);
 }
 
 #nav ul li:hover ul {
