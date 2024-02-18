@@ -110,20 +110,6 @@
     margin-bottom: 20px;
 }
 
-#logo2 {
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    margin: 20px;
-}
-
-#footericon {
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    float: left;
-    margin: 0 0 0 25px;
-}
 
 #wrapper {
     width: 900px;
@@ -134,4 +120,72 @@
 .clear {
     clear: both;
     text-align: center;
+}
+
+#footer{
+    min-height: 700px;
+    height: auto;
+    width: auto;
+    margin: 120px 0 -120px 0;
+    position: relative;
+    background-image: url(https://t3.ftcdn.net/jpg/06/33/08/86/240_F_633088681_I3bwVFvQosYEEZjromE9zJndbrEZAQrS.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    
+}
+
+#footerbg{
+    width: 100%;
+    height: 400px;
+}
+
+#footercontent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 170px;
+}
+
+.footersubcontent{
+    text-align: center;
+    margin-top: -20px;
+}
+
+.footersubcontent a{
+    text-decoration: none;
+    color: rgb(79, 36, 9);
+}
+
+.footersubcontent a:hover{
+    color: rgb(163, 74, 19);
+}
+
+#footerline{
+    height: 2px;
+    width: 1200px;
+    background-color: black;
+    margin: 10px auto;
+}
+
+#socialmediagroup{
+    display: flex;
+    width: 300px;
+    height: 50px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+#footericon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+
+#copyrighttxt{
+    float: right;
 }
