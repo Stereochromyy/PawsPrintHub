@@ -120,12 +120,64 @@
             </div>
         </div>
 
-    <footer id="box" style="background-color:snow;">
-        <a href="mainPage.php">
-            <img src="images/logo.png" alt="Paws Print Hub Logo" id="logo2">
-        </a>
-        
-        <div style="padding: 55px 10px 0 20px; margin-left: -45px;">
+    <footer id="footer">
+        <div id="footerbg"></div>
+        <div id="footercontent">
+            <div class="footersubcontent">
+                <a href="mainPage.php">
+                    <img src="images/logo.png" alt="Paws Print Hub Logo" id="footericon" style="height: 100px; width: 100px; border: solid 0.5px black;">
+                </a>
+                <p style="color: rgb(79, 36, 9);">Connecting Paws,<br>Connecting Stories.</p>
+            </div>
+
+            <div class="footersubcontent">
+                <h4 style="margin: 10px; color: rgb(79, 36, 9);"><u>Services:</u></h4>
+                <a href="adopt@Foster.php">
+                    <p>Animal Adoption</p>
+                </a>
+                <a href="adopt@Foster.php">
+                    <p>Fostering Animal</p>
+                </a>
+                <a href="volunteer.php">
+                    <p>Volunteering services</p>
+                </a>
+                <a href="donationPortal.php">
+                    <p>Donation</p>
+                </a>
+            </div>
+
+            <div class="footersubcontent">
+                <h4 style="margin: 10px; color: rgb(79, 36, 9);"><u>About Us:</u></h4>
+                <a href="contactus.php">
+                    <p>Contact Us</p>
+                </a>
+                <a href="contactus.php">
+                    <p>Email Address</p>
+                </a>
+                <a href="contactus.php">
+                    <p>Shelter Address</p>
+                </a>
+                <a href="contactus.php">
+                    <p>Operation Info</p>
+                </a>
+            </div>
+
+            <div class="footersubcontent">
+                <h4 style="margin: 10px; color: rgb(79, 36, 9);"><u>Web Designer:</u></h4>
+                <a href="#">
+                    <p>Kok Jia Yin</p>
+                </a>
+                <a href="#">
+                    <p>Lee Aik Yen</p>
+                </a>
+                <a href="#">
+                    <p>Leong Weng Peng</p>
+                </a>
+            </div>
+
+        </div>
+        <div id="footerline"></div>
+        <div id="socialmediagroup">
             <div>
                 <a href="https://www.facebook.com/" target="_blank">
                     <img src="images/facebook_logo.png" alt="Facebook" id="footericon">
@@ -144,10 +196,25 @@
                 </a>
             </div>
 
-            <p style="margin: 60px 0 0 920px; font-size: 15px;">
-                Copyright &copy; 2024 Paws Print Hub, Malaysia. All Rights Reserved.
-            </p>
+            <div>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="Twitter" id="footericon">
+                </a>
+            </div>
+
+            <div>
+                <a href="https://www.pinterest.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174863.png" alt="Twitter" id="footericon">
+                </a>
+            </div>
         </div>
+        <div>
+        </div>
+
+        <p id="copyrighttxt">
+            Copyright &copy; 2024 Paws Print Hub, Malaysia. All Rights Reserved.
+        </p>
+        
     </footer>
     
 </body>
