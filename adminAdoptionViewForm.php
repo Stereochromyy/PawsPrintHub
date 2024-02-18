@@ -6,7 +6,7 @@ include 'dbConn.php';
 $userID = $_GET['id']; //Get the user ID from admin adoption page
 
 //USER PROFILE
-$query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID'";
+$query2 = "SELECT `user_image_link` FROM `user_image` WHERE `userID`= '$userID' ORDER BY `userimageID` DESC LIMIT 1";
 
 $result2 = mysqli_query($connection, $query2);
 
