@@ -212,7 +212,7 @@
             var amountlabel = document.getElementById("damountlabel");
             var donationitem = document.getElementById("donationitems").value;
 
-            if (donationitem == "medical" || donationitem == "clean") {
+            if (donationitem == "Medical supplies" || donationitem == "Cleaning supplies") {
                 amountlabel.innerHTML = "Donation Amount (Box)";
             }
             else {
