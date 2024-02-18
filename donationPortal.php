@@ -57,15 +57,9 @@ session_start();
         var supplybtn = document.getElementById("supplybtn");
 
         moneybtn.onclick = function() {
-            <?php
-            $_SESSION["donationtype"] = "monetary";
-            ?>
             window.location.href = "donationForm.php?type=monetary";
         }
         supplybtn.onclick = function() {
-            <?php
-            $_SESSION["donationtype"] = "supply";
-            ?>
             window.location.href = "donationForm.php?type=supply";
         }
     </script>
