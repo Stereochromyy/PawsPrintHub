@@ -8,12 +8,14 @@
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
-    background: url(images/background.jpg) no-repeat;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/600x315/f1/a0/a3/f1a0a3ad92ce9d03e096dc91406573d5.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     font-size: 17px;
 }
 
