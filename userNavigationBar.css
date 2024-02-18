@@ -18,7 +18,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #EEF5FF;
+    background-color: rgb(172, 200, 232);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -80,7 +80,7 @@ body {
 }
 
 #nav a:hover {
-    color: blueviolet;
+    color: azure;
 }
 
 #nav ul li ul {
