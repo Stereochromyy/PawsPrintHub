@@ -34,7 +34,7 @@ include 'dbConn.php';
                 <li><a href="donationPortal.php">Donation</a></li>
                 <li><a href="volunteer.php">Volunteer</a></li>
                 <li><a href="contactUs.php">Contact Us</a></li>
-                <li><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
+                <li><img src="images/usericon.png"
                         alt="Profile photo">
                     <ul>
                         <?php
