@@ -30,7 +30,7 @@
         $date = date("Y/m/d");
         $approval_status = "Pending";
 
-        if($$animal_adoption == "adopt"){ // If the user is adopting the pet
+        if($animal_adoption == "adopt"){ // If the user is adopting the pet
             $adoptioninsertquery = "INSERT INTO `adoption`(`adoption_date`, `experience_with_pets`, `living_environment`,`budget_for_pets`,`approval_status`,`animalID`,`userID`) VALUES ('$date','$pet_experience','$living_environment','$pet_budget','$approval_status','$animalid','$userid')";
             $adoptioninsertresult = mysqli_query($connection, $adoptioninsertquery);
 
@@ -38,7 +38,7 @@
             ?>
                 <script>
                     window.alert("Form submitted successfully");
-                    window.location.href = "Main Page.php";
+                    window.location.href = "adopt@Foster.php";
                 </script>
             <?php
             } else {
@@ -58,7 +58,7 @@
             ?>
                 <script>
                     window.alert("Form submitted successfully");
-                    window.location.href = "Main Page.php";
+                    window.location.href = "adopt@Foster.php";
                 </script>
             <?php
             } else{
