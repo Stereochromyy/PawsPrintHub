@@ -31,6 +31,18 @@ if (mysqli_num_rows($user_result) > 0) {
     }
 }
 
+//UPDATE DONATION STATUS
+$success_message='';
+if(isset($_POST['txtSubmit'])){
+    $update = $_POST['txtStatus'];
+    $update_status = "UPDATE `donation` SET `donation_status`='$update' WHERE `userID` = '$userID'";
+
+    $update_result = mysqli_query($connection, $update_status);
+    if ($update_result) {
+        $success_message = "Done";
+    }
+}
+
 //DONATION INFO
 $donation_info = "SELECT * FROM `donation` WHERE `userID` = '$userID'";
 
@@ -48,17 +60,7 @@ if (mysqli_num_rows($donation_result) > 0) {
     }
 }
 
-//UPDATE DONATION STATUS
-$success_message='';
-if(isset($_POST['txtSubmit'])){
-    $update = $_POST['txtStatus'];
-    $update_status = "UPDATE `donation` SET `donation_status`='$update' WHERE `userID` = '$userID'";
-
-    $update_result = mysqli_query($connection, $update_status);
-    if ($update_result) {
-        $success_message = "Done";
-    }
-}
+mysqli_close($connection);
 ?>
 
 <!DOCTYPE html>
