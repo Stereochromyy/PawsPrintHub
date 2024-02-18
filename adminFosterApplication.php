@@ -66,9 +66,7 @@ include 'dbConn.php';
                                     <form action="#" method="POST">
                                         <!-- Will display different color for different approval status -->
                                         <a href="adminFosterViewForm.php?id=<?php echo $userID; ?>">
-                                            <div id="adoption" style="background-color: 
-                                        <?php echo ($approval_status == 'Approve') ? '#A1EEBD' : (($approval_status == 'Reject') ? '#FF817E' : 'lightyellow'); ?>;">
-
+                                        <div id="adoption" style="<?php echo ($approval_status == 'Approve') ? 'background: linear-gradient(90deg, rgba(255,255,255,1) 46%, rgba(203,255,197,1) 100%);' : (($approval_status == 'Reject') ? 'background: linear-gradient(90deg, rgba(255,255,255,1) 46%, rgba(255,197,197,1) 100%);' : (($approval_status == 'Pending') ? 'background: linear-gradient(90deg, rgba(255,255,255,1) 46%, rgba(255,255,153,1) 100%);' : 'background: linear-gradient(90deg, rgba(255,255,255,1) 46%, rgba(197,240,255,1) 100%);')); ?>">
 
                                                 <div class="content">
                                                     <div>
