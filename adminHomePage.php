@@ -92,15 +92,21 @@ if (mysqli_num_rows($foster_result)) {
         <br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="clear">
             <div class="info2">
-                <img src="images/dog.jpg" alt="Dog">
+                <a href="adminPetManagement.php">
+                <img src="images/dog.png" id="Dog" style="padding: 30px;">
+                </a>
             </div>
 
             <div class="info2">
-                <img src="images/cat.jpg" alt="Cat">
+                <a href="adminPetManagement.php">
+                <img src="images/cat.png" id="Cat" style="padding: 30px;">
+                </a>
             </div>
 
             <div class="info2">
-                <img src="images/paw.jpg" alt="Others">
+                <a href="adminPetManagement.php">
+                <img src="images/paw.png" id="Others" style="padding: 30px;">
+                </a>
             </div>
         </div>
 
@@ -118,16 +124,25 @@ if (mysqli_num_rows($foster_result)) {
             </div>
         </div>
 
-        <div id="ahpinfo">
-            <h2>Animals Adopted: </h2>
-            <h2>Animals Fostered: </h2>
-        </div>
-
         <div id="count">
-            <p><?php echo $adoption_num; ?></p>
-            <p><?php echo $foster_num; ?></p>
+
+            <a href="formManagement.php">
+            <div id="ahpinfo">
+                <h2>Animals Adopted: </h2>
+                <p><?php echo $adoption_num; ?></p>
+            </div>
+            </a>
+
+            <a href="formManagement.php">
+            <div id="ahpinfo">
+            <h2>Animals Fostered: </h2>
+                <p><?php echo $foster_num; ?></p>
+            </div>
+            </a>
+
         </div>
 
+        <div id="void" style="min-height: 100px;"></div>
     </main>
 </body>
 
