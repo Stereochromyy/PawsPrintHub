@@ -5,6 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 include 'dbConn.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -34,8 +35,7 @@ include 'dbConn.php';
                 <li><a href="donationPortal.php">Donation</a></li>
                 <li><a href="volunteer.php">Volunteer</a></li>
                 <li><a href="contactUs.php">Contact Us</a></li>
-                <li><img src="images/usericon.png"
-                        alt="Profile photo">
+                <li><img src="images/usericon.png" alt="Profile photo">
                     <ul>
                         <?php
                         if (!isset($_SESSION['email']) || !isset($_SESSION['password'])) {
@@ -63,56 +63,60 @@ include 'dbConn.php';
                 <div class="notification" id="notification">
 
                     <?php
-                    $query = "SELECT *,
-                        `user`.`userID`,
-                        `adoption`.`approval_status` AS adoption_approval_status,
-                        `foster`.`approval_status` AS foster_approval_status,
-                        `volunteering`.`approval_status` AS volunteering_approval_status,
-                        `animal`.`name` AS animal_name
-                        FROM `user`
-                        LEFT JOIN `adoption` ON `user`.`userID` = `adoption`.`userID`
-                        LEFT JOIN `foster` ON `user`.`userID` = `foster`.`userID`
-                        LEFT JOIN `volunteering` ON `user`.`userID` = `volunteering`.`userID` 
-                        LEFT JOIN `animal` ON `animal`.`animalID` = `adoption`.`animalID` OR `animal`.`animalID` = `foster`.`animalID`
-                        WHERE `user`.`email_address` = '$_SESSION[email]' AND `user`.`password` = '$_SESSION[password]'";
 
-                    $result = mysqli_query($connection, $query);
+                    $notif1 = 0;
+                    $notif2 = 0;
+                    $notif3 = 0;
 
-                    // Fetch the results
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $userID = $row['userID'];
+                    $query1 = "SELECT *, adoption.approval_status AS adoption_approval_status, animal.name AS animal_name FROM adoption LEFT JOIN animal ON animal.animalID = adoption.animalID WHERE `adoption`.`userID` = '$_SESSION[userID]' ORDER BY adoption.adoptionID DESC LIMIT 1";
+                    $result1 = mysqli_query($connection, $query1);
+
+                    if ($result1) {
+                        while ($row = mysqli_fetch_assoc($result1)) {
                             $adoption_status = $row['adoption_approval_status'];
-                            $foster_status = $row['foster_approval_status'];
-                            $volunteering_status = $row['volunteering_approval_status'];
                             $animal_name = $row['animal_name'];
-
-                            // Display approval status for each table if the userID is in the respective table
-                
+                            $notif1 = 1;
                             if (!is_null($adoption_status)) {
                                 echo "<b>Animal Name:</b>
                                 $animal_name <br>";
                                 echo "<b>Adoption Status:</b> $adoption_status<br><br>";
                             }
+                        }
+                    }
 
+                    $query2 = "SELECT *, foster.approval_status AS foster_approval_status, animal.name AS animal_name FROM foster LEFT JOIN animal ON animal.animalID = foster.animalID WHERE `foster`.`userID` = '$_SESSION[userID]' ORDER BY foster.fosterID DESC LIMIT 1";
+                    $result2 = mysqli_query($connection, $query2);
+
+                    if ($result2) {
+                        while ($row = mysqli_fetch_assoc($result2)) {
+                            $foster_status = $row['foster_approval_status'];
+                            $animal_name = $row['animal_name'];
+                            $notif2 = 1;
                             if (!is_null($foster_status)) {
                                 echo "<b>Animal Name:</b>
                                 $animal_name <br>";
                                 echo "<b>Foster Status:</b> $foster_status<br><br>";
                             }
+                        }
+                    }
 
+                    $query3 = "SELECT *, volunteering.approval_status AS volunteering_approval_status FROM volunteering WHERE `volunteering`.`userID` = '$_SESSION[userID]' ORDER BY volunteering.volunteerID DESC LIMIT 1";
+                    $result3 = mysqli_query($connection, $query3);
+
+                    if ($result3) {
+                        while ($row = mysqli_fetch_assoc($result3)) {
+                            $volunteering_status = $row['volunteering_approval_status'];
+                            $notif3 = 1;
                             if (!is_null($volunteering_status)) {
                                 echo "<b>Volunteering Status:</b> $volunteering_status<br>";
                             }
-
-                            if (is_null($adoption_status) && is_null($foster_status) && is_null($volunteering_status)) {
-
-                                echo "<div style='text-align: center;'><a href= 'adopt@Foster.php'>Let's adopt/foster a pet </a> <br> OR <br> <a href= 'volunteer.php'>Volunteering</a> </div>";
-                            }
-                            echo "<br>";
                         }
                     }
-        }
+
+                    if ($notif1 == 0 && $notif2 == 0 && $notif3 == 0) {
+                        echo "<div style='text-align: center;'><a href= 'adopt@Foster.php'>Let's adopt/foster a pet </a> <br> OR <br> <a href= 'volunteer.php'>Volunteering</a> </div>";
+                    }
+                }
         ?>
             </div>
         </div>
