@@ -24,7 +24,7 @@
 
 ## Major functions
 **1.	Administrators view**
-Administrators, also considered community organizers, will have the authorization to administer the web page. They will facilitate event management and volunteer coordination. Unlike users, the administrator will be given access by the community organizers.
+- Administrators, also considered community organizers, will have the authorization to administer the web page. They will facilitate event management and volunteer coordination. Unlike users, the administrator will be given access by the community organizers.
 
 **a)	Form submission management**
 -	Manage the form submission for volunteering, donations, adoption and fostering.
@@ -37,7 +37,7 @@ Administrators, also considered community organizers, will have the authorizatio
 -	Facilitate community engagement activities, ensuring active participation from users by contacting and sending out update info via emails.
 
 **2.	User/member view**
-Upon selecting "Login/Register" on the website, users may create an account for full access to available features. The account details will require their full name as per IC, ID, password, email address etc. After registering the user will be redirected to log into their account.   
+- Upon selecting "Login/Register" on the website, users may create an account for full access to available features. The account details will require their full name as per IC, ID, password, email address etc. After registering the user will be redirected to log into their account.   
  
 **a)	Animal care**
 -	Participate in animal foster care and adoption by browsing the pet lists and selecting pets for adoption or fostering.
@@ -51,10 +51,21 @@ Upon selecting "Login/Register" on the website, users may create an account for 
 -	Manage their profile information like names, profile photos, contact numbers, and home addresses for personalized experiences.
 
 **3.	Guest view:**
-Guest is any person who viewed our website without registering as a user. 
+- Guest is any person who viewed our website without registering as a user. 
 
 **a)	Accessing level**
 -	Access donation and volunteer portals without the need for registration.
 -	Browse pet lists with limited access to adoption and fostering features.
 
+
+## References:
+
+_basename. (2024). The PHP Group. https://www.php.net/manual/en/function.basename.php
+How to hash passwords in PHP The complete step-by-step tutorial. (2024, February 8). Alexwebdevelop. https://alexwebdevelop.com/php-password-hashing/
+PHP 8.1: $_FILES: New full_path value for directory-uploads. (2024). PHP.Watch. https://php.watch/versions/8.1/$_FILES-full-path#:~:text=%24_FILES%20is%20a%20PHP,in%20the%20current%20HTTP%20request.
+session_status. (2024). THE PHP GROUP. https://www.php.net/manual/en/function.session-status.php
+w3schools. (2024a). HTML <input> pattern Attribute. W3schools. https://www.w3schools.com/tags/att_input_pattern.asp
+w3schools. (2024b). PHP Conditional Assignment Operators. W3schools. https://www.w3schools.com/php/php_operators.asp
+w3schools. (2024c). PHP File Upload. W3schools. https://www.w3schools.com/php/php_file_upload.asp
+w3schools. (2024d). PHP Form Validation. W3schools. https://www.w3schools.com/php/php_form_validation.asp_
 
