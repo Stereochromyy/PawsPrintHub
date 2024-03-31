@@ -60,12 +60,12 @@
 
 ## References:
 
-_basename. (2024). The PHP Group. https://www.php.net/manual/en/function.basename.php
-How to hash passwords in PHP The complete step-by-step tutorial. (2024, February 8). Alexwebdevelop. https://alexwebdevelop.com/php-password-hashing/
-PHP 8.1: $_FILES: New full_path value for directory-uploads. (2024). PHP.Watch. https://php.watch/versions/8.1/$_FILES-full-path#:~:text=%24_FILES%20is%20a%20PHP,in%20the%20current%20HTTP%20request.
-session_status. (2024). THE PHP GROUP. https://www.php.net/manual/en/function.session-status.php
-w3schools. (2024a). HTML <input> pattern Attribute. W3schools. https://www.w3schools.com/tags/att_input_pattern.asp
-w3schools. (2024b). PHP Conditional Assignment Operators. W3schools. https://www.w3schools.com/php/php_operators.asp
-w3schools. (2024c). PHP File Upload. W3schools. https://www.w3schools.com/php/php_file_upload.asp
-w3schools. (2024d). PHP Form Validation. W3schools. https://www.w3schools.com/php/php_form_validation.asp_
+_basename. (2024). The PHP Group. https://www.php.net/manual/en/function.basename.php <br>
+How to hash passwords in PHP The complete step-by-step tutorial. (2024, February 8). Alexwebdevelop. https://alexwebdevelop.com/php-password-hashing/ <br>
+PHP 8.1: $_FILES: New full_path value for directory-uploads. (2024). PHP.Watch. https://php.watch/versions/8.1/$_FILES-full-path#:~:text=%24_FILES%20is%20a%20PHP,in%20the%20current%20HTTP%20request. <br>
+session_status. (2024). THE PHP GROUP. https://www.php.net/manual/en/function.session-status.php <br>
+w3schools. (2024a). HTML <input> pattern Attribute. W3schools. https://www.w3schools.com/tags/att_input_pattern.asp <br>
+w3schools. (2024b). PHP Conditional Assignment Operators. W3schools. https://www.w3schools.com/php/php_operators.asp <br>
+w3schools. (2024c). PHP File Upload. W3schools. https://www.w3schools.com/php/php_file_upload.asp <br>
+w3schools. (2024d). PHP Form Validation. W3schools. https://www.w3schools.com/php/php_form_validation.asp_ <br>
 
