@@ -6,7 +6,7 @@
 
 
 ## Project Objectives
-**![image](https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/ef444bb2-fed3-4e2d-b1de-9390cf9405ce) Serve as a platform for animal welfare and advocacy**
+**<img src= "https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/9ed161a2-da3e-4250-b5d5-4bf6c8b5abfa" height= 30px width = 30px>  </img> Serve as a platform for animal welfare and advocacy**
 -	This platform will provide all the information about animal protection by the non-profit organisation named, Paws Print Hub.
 -	The online platform will impart knowledge and insights on animal care, and rescue, and play a vital role of empathy in fostering a better world for our beloved furry companions.
 -	Via this platform, we ensure that every animal receives the care and attention they deserve to thrive as the happiest and healthiest pets possible.
