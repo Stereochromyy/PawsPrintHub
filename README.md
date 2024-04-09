@@ -14,7 +14,7 @@
 
 ## Major functions
   **1.	Administrators view**
-[X] Administrators, also considered community organizers, will have the authorization to administer the web page. They will facilitate event management and volunteer coordination. Unlike users, the administrator will be given access by the community organizers.
+[x] Administrators, also considered community organizers, will have the authorization to administer the web page. They will facilitate event management and volunteer coordination. Unlike users, the administrator will be given access by the community organizers.
 
 **<img src="https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/1009fd77-9941-4f19-bd75-ff2f4a1b9619" height="20px" width="20px"> Form submission management**
 -	Manage the form submission for volunteering, donations, adoption and fostering.
@@ -27,7 +27,7 @@
 -	Facilitate community engagement activities, ensuring active participation from users by contacting and sending out update info via emails.
 
   **2.	User/member view**
-[X] Upon selecting "Login/Register" on the website, users may create an account for full access to available features. The account details will require their full name as per IC, ID, password, email address etc. After registering the user will be redirected to log into their account.   
+[x] Upon selecting "Login/Register" on the website, users may create an account for full access to available features. The account details will require their full name as per IC, ID, password, email address etc. After registering the user will be redirected to log into their account.   
  
 **<img src="https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/232d2503-431a-4f2d-9931-c577a31b1185" height="20px" width="20px">	Animal care**
 -	Participate in animal foster care and adoption by browsing the pet lists and selecting pets for adoption or fostering.
@@ -41,7 +41,7 @@
 -	Manage their profile information like names, profile photos, contact numbers, and home addresses for personalized experiences.
 
   **3.	Guest view:**
-[X] Guest is any person who viewed our website without registering as a user. 
+[x] Guest is any person who viewed our website without registering as a user. 
 
 **<img src="https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/b27c5762-407b-49d4-ac59-edcd6d24d1b1" height="20px" width="20px">Accessing level**
 -	Access donation and volunteer portals without the need for registration.
