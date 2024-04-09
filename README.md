@@ -2,7 +2,7 @@
 > Notes:
 > This is a project associated with the tasks assigned under our module named, Web Development. The following organisation is purely fictional. Any resemblance to actual activites or organisations is purely coincidental.
 
-- Connecting Paws, Creating Stories 
+:dog2: Connecting Paws, Creating Stories :cat2:
 
 
 ## Project Objectives
@@ -13,8 +13,8 @@
 **<img src= "https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/76bf9a0d-e3e8-48d0-9dfb-05bf7c8f8ccb" height = 20px width = 20px> </img>	Engaging the Community**
 
 ## Major functions
-  **1.	Administrators view**
-:EMOJICODE::white_check_mark: Administrators, also considered community organizers, will have the authorization to administer the web page. They will facilitate event management and volunteer coordination. Unlike users, the administrator will be given access by the community organizers.
+  **1.	Administrators view** <br><br>
+:white_check_mark: Administrators, also considered community organizers, will have the authorization to administer the web page. They will facilitate event management and volunteer coordination. Unlike users, the administrator will be given access by the community organizers.
 
 **<img src="https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/1009fd77-9941-4f19-bd75-ff2f4a1b9619" height="20px" width="20px"> Form submission management**
 -	Manage the form submission for volunteering, donations, adoption and fostering.
@@ -26,8 +26,8 @@
 **<img src="https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/7726e508-8d5b-496c-ad35-d29d4d7098e2" height="20px" width="20px">	Community engagement**
 -	Facilitate community engagement activities, ensuring active participation from users by contacting and sending out update info via emails.
 
-  **2.	User/member view**
-:EMOJICODE::white_check_mark: Upon selecting "Login/Register" on the website, users may create an account for full access to available features. The account details will require their full name as per IC, ID, password, email address etc. After registering the user will be redirected to log into their account.   
+  **2.	User/member view** <br><br>
+:white_check_mark: Upon selecting "Login/Register" on the website, users may create an account for full access to available features. The account details will require their full name as per IC, ID, password, email address etc. After registering the user will be redirected to log into their account.   
  
 **<img src="https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/232d2503-431a-4f2d-9931-c577a31b1185" height="20px" width="20px">	Animal care**
 -	Participate in animal foster care and adoption by browsing the pet lists and selecting pets for adoption or fostering.
@@ -40,8 +40,8 @@
 **<img src="https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/e054c3d6-a527-4dea-8d39-cc8978ff23e6" height="20px" width="20px">	Profile Management**
 -	Manage their profile information like names, profile photos, contact numbers, and home addresses for personalized experiences.
 
-  **3.	Guest view:**
-:EMOJICODE::white_check_mark: Guest is any person who viewed our website without registering as a user. 
+  **3.	Guest view:** <br><br>
+:white_check_mark: Guest is any person who viewed our website without registering as a user. 
 
 **<img src="https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/b27c5762-407b-49d4-ac59-edcd6d24d1b1" height="20px" width="20px">Accessing level**
 -	Access donation and volunteer portals without the need for registration.
