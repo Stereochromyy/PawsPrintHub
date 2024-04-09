@@ -6,21 +6,11 @@
 
 
 ## Project Objectives
-**<img src= "https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/9ed161a2-da3e-4250-b5d5-4bf6c8b5abfa" height= 30px width = 30px>  </img> Serve as a platform for animal welfare and advocacy**
--	This platform will provide all the information about animal protection by the non-profit organisation named, Paws Print Hub.
--	The online platform will impart knowledge and insights on animal care, and rescue, and play a vital role of empathy in fostering a better world for our beloved furry companions.
--	Via this platform, we ensure that every animal receives the care and attention they deserve to thrive as the happiest and healthiest pets possible.
+**<img src= "https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/9ed161a2-da3e-4250-b5d5-4bf6c8b5abfa" height= 25px width = 25px>  </img> Serve as a platform for animal welfare and advocacy**
 
-**2)	Rescue and Rehabilitation**
--	Our goal in this endeavour is to leverage the power of media to aid in the rescue of animals in distress, ensuring they receive the vital medical care and rehabilitation they require.
--	Additionally, we aim to provide a secure haven for their physical and emotional recuperation.
--	Ultimately, we aspire for these animals to experience the love and compassion of a caring family through adoption or fostering.
+**2)<img src= "![image](https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/d93a7748-607e-46bb-82cd-10992fcb888f)" height= 25px width = 25px>	Rescue and Rehabilitation**
 
-**3)	Engaging the Community**
--	On top of that, we hope that we can find like-minded pet lovers who are willing to contribute to community services in terms of donating the necessary items or funding the for maintaining the operation of the non-profit organisation, Paws Print Hub.
--	Other than that, we aimed to find a way of reaching out to the community to locate someone who could participate in our noble cause like volunteering to create a positive impact on the lives of animals.
--	Through this endeavour, we hope to cultivate a greater understanding and respect for the humane treatment of all living beings.
-
+**3)<img src= "![image](https://github.com/Stereochromyy/PawsPrintHub/assets/154343987/76bf9a0d-e3e8-48d0-9dfb-05bf7c8f8ccb)" height = 25px width = 25px>	Engaging the Community**
 
 ## Major functions
 **1.	Administrators view**
