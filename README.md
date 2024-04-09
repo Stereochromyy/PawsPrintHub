@@ -6,7 +6,9 @@
 
 
 ## Project Objectives
-**1)	Serve as a platform for animal welfare and advocacy**
+**<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+</svg> Serve as a platform for animal welfare and advocacy**
 -	This platform will provide all the information about animal protection by the non-profit organisation named, Paws Print Hub.
 -	The online platform will impart knowledge and insights on animal care, and rescue, and play a vital role of empathy in fostering a better world for our beloved furry companions.
 -	Via this platform, we ensure that every animal receives the care and attention they deserve to thrive as the happiest and healthiest pets possible.
